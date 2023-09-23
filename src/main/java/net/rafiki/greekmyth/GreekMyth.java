@@ -1,6 +1,8 @@
 package net.rafiki.greekmyth;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -11,19 +13,27 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.rafiki.greekmyth.block.ModBlocks;
+import net.rafiki.greekmyth.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(GeekMythMod.MOD_ID)
-public class GeekMythMod
+@Mod(GreekMyth.MOD_ID)
+public class GreekMyth
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "greekmyth";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-    public GeekMythMod()
+    public GreekMyth()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        //Register mod items in ModItems class
+        ModItems.register(modEventBus);
+
+        //Register mod blocks in ModBlocks class
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -43,7 +53,25 @@ public class GeekMythMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.BRONZE_INGOT);
+            event.accept(ModItems.CELESTIAL_BRONZE_INGOT);
+            event.accept(ModItems.IMPERIAL_GOLD_INGOT);
+            event.accept(ModItems.STYGIAN_IRON_INGOT);
+            event.accept(ModItems.ADAMANTINE);
+            event.accept(ModItems.RAW_ADAMANTINE);
+            event.accept(ModItems.GODLY_ESSENCE);
+            event.accept(ModItems.ESSENCE_OF_TARTARUS);
+        }
 
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BRONZE_BLOCK);
+            event.accept(ModBlocks.CELESTIAL_BRONZE_BLOCK);
+            event.accept(ModBlocks.IMPERIAL_GOLD_BLOCK);
+            event.accept(ModBlocks.STYGIAN_IRON_BLOCK);
+            event.accept(ModBlocks.ADAMANTINE_BLOCK);
+            event.accept(ModBlocks.RAW_ADAMATINE_ORE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

@@ -1,0 +1,17 @@
+{
+  "item.greekmyth.bronze_ingot": "Bronze Ingot",
+  "item.greekmyth.celestial_bronze_ingot": "Celestail Bronze Ingot",
+  "item.greekmyth.imperial_gold_ingot": "Imperial Gold Ingot",
+  "item.greekmyth.stygian_iron_ingot": "Stygian Iron Ingot",
+  "item.greekmyth.godly_essence": "Godly Essence",
+  "item.greekmyth.essence_of_tartarus": "Essence of Tartarus",
+  "item.greekmyth.adamantine": "Adamantine",
+  "item.greekmyth.raw_adamantine": "Raw Adamantine",
+
+  "block.greekmyth.bronze_block": "Block of Bronze",
+  "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
+  "block.greekmyth.imperial_gold_block": "Block of Imperial Gold",
+  "block.greekmyth.stygian_iron_block": "Block of Stygian Iron",
+  "block.greekmyth.adamantine_block": "Block of Adamantine",
+  "block.greekmyth.raw_adamantine_ore": "Raw Adamantine Ore"
+}
