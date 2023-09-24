@@ -13,5 +13,10 @@
   "block.greekmyth.imperial_gold_block": "Block of Imperial Gold",
   "block.greekmyth.stygian_iron_block": "Block of Stygian Iron",
   "block.greekmyth.adamantine_block": "Block of Adamantine",
-  "block.greekmyth.adamantine_ore": "Adamantine Ore"
+  "block.greekmyth.adamantine_ore": "Adamantine Ore",
+  "block.greekmyth.deepslate_adamantine_ore": "Deepslate Adamantine Ore",
+  "block.greekmyth.nether_adamantine_ore": "Nether Adamantine Ore",
+  "block.greekmyth.end_stone_adamantine_ore": "End Stone Adamantine Ore",
+
+  "creativetab.course_tab": "Greek Mythology"
 }

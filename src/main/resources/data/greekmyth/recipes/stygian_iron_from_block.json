@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "greekmyth:stygian_iron_block"
+    }
+  ],
+  "result": {
+    "item": "greekmyth:stygian_iron_ingot",
+    "count": 9
+  }
+}

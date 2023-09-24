@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "greekmyth.block/stygian_iron_block"
+      "model": "greekmyth:block/stygian_iron_block"
     }
   }
 }

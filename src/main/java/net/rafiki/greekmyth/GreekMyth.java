@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rafiki.greekmyth.block.ModBlocks;
+import net.rafiki.greekmyth.item.ModCreativeModeTabs;
 import net.rafiki.greekmyth.item.ModItems;
 import org.slf4j.Logger;
 
@@ -28,6 +29,8 @@ public class GreekMyth
     public GreekMyth()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         //Register mod items in ModItems class
         ModItems.register(modEventBus);
@@ -53,25 +56,7 @@ public class GreekMyth
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.BRONZE_INGOT);
-            event.accept(ModItems.CELESTIAL_BRONZE_INGOT);
-            event.accept(ModItems.IMPERIAL_GOLD_INGOT);
-            event.accept(ModItems.STYGIAN_IRON_INGOT);
-            event.accept(ModItems.ADAMANTINE);
-            event.accept(ModItems.RAW_ADAMANTINE);
-            event.accept(ModItems.GODLY_ESSENCE);
-            event.accept(ModItems.ESSENCE_OF_TARTARUS);
-        }
 
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.BRONZE_BLOCK);
-            event.accept(ModBlocks.CELESTIAL_BRONZE_BLOCK);
-            event.accept(ModBlocks.IMPERIAL_GOLD_BLOCK);
-            event.accept(ModBlocks.STYGIAN_IRON_BLOCK);
-            event.accept(ModBlocks.ADAMANTINE_BLOCK);
-            event.accept(ModBlocks.ADAMATINE_ORE);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

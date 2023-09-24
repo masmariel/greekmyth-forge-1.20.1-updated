@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "greekmyth:celestial_bronze_ingot"
+    }
+  },
+  "result": {
+    "item": "greekmyth:celestial_bronze_block"
+  }
+}
