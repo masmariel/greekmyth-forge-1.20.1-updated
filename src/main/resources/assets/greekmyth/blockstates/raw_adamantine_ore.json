@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "greekmyth.block/raw_adamantine_block"
+      "model": "greekmyth.block/adamantine_ore"
     }
   }
 }
