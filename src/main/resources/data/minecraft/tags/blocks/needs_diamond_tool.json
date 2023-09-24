@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "greekmyth:adamantine_ore",
+    "greekmyth:nether_adamantine_ore",
+    "greekmyth:deepslate_adamantine_ore",
+    "greekmyth:end_stone_adamantine_ore"
+
+  ]
+}

@@ -4,6 +4,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -36,13 +37,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> ADAMANTINE_BLOCK = registerBlock("adamantine_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> ADAMANTINE_ORE = registerBlock("adamantine_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
     public static final RegistryObject<Block> NETHER_ADAMANTINE_ORE = registerBlock("nether_adamantine_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
     public static final RegistryObject<Block> END_STONE_ADAMANTINE_ORE = registerBlock("end_stone_adamantine_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
     public static final RegistryObject<Block> DEEPSLATE_ADAMANTINE_ORE = registerBlock("deepslate_adamantine_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
 
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {

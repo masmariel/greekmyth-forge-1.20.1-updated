@@ -1,0 +1,21 @@
+{
+  "type": "greekmyth:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "greekmyth:imperial_gold_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "greekmyth:blocks/imperial_gold_block"
+}
