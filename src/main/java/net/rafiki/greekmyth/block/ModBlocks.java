@@ -35,7 +35,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> ADAMANTINE_BLOCK = registerBlock("adamantine_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-    public static final RegistryObject<Block> RAW_ADAMATINE_ORE = registerBlock("raw_adamantine_ore",
+    public static final RegistryObject<Block> ADAMATINE_ORE = registerBlock("adamantine_ore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
 
 
