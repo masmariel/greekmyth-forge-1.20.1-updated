@@ -70,7 +70,7 @@ public class GreekMyth
             event.accept(ModBlocks.IMPERIAL_GOLD_BLOCK);
             event.accept(ModBlocks.STYGIAN_IRON_BLOCK);
             event.accept(ModBlocks.ADAMANTINE_BLOCK);
-            event.accept(ModBlocks.RAW_ADAMATINE_ORE);
+            event.accept(ModBlocks.ADAMATINE_ORE);
         }
     }
 
