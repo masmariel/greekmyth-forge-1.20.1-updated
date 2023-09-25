@@ -1,7 +1,6 @@
 package net.rafiki.greekmyth.item.custom;
 
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
@@ -10,8 +9,8 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.core.Direction;
 import net.minecraft.world.phys.Vec3;
+import net.rafiki.greekmyth.sound.ModSounds; // Import your custom sound events class
 
-import java.util.Random;
 
 public class LyreOfApolloItem extends Item {
     private boolean isPlaying = false; // Flag to track if music is currently playing
@@ -43,33 +42,21 @@ public class LyreOfApolloItem extends Item {
 
     private void toggleMusic(Level world, LivingEntity entity) {
         if (isPlaying) {
-            stopMusic(world, entity);
+            stopMusic();
         } else {
-            playRandomMusicDisc(world, entity);
+            playCustomSound(world, entity); // Play your custom sound
         }
         isPlaying = !isPlaying; // Toggle the music on and off
     }
 
-    private void playRandomMusicDisc(Level world, LivingEntity entity) {
-        // Create a list of music discs you want to include.
-        SoundEvent[] musicDiscs = {
-                SoundEvents.MUSIC_DISC_CAT,
-                SoundEvents.MUSIC_DISC_BLOCKS,
-                SoundEvents.MUSIC_DISC_CHIRP, // Example: Additional music disc
-                SoundEvents.MUSIC_DISC_FAR,   // Example: Additional music disc
-                // Add more music discs as needed
-        };
-
-        // Generate a random index to select a music disc from the list.
-        Random random = new Random();
-        int randomIndex = random.nextInt(musicDiscs.length);
-
-        // Play the selected music disc at the entity's location.
-        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), musicDiscs[randomIndex], entity.getSoundSource(), 1.0F, 1.0F);
+    private void playCustomSound(Level world, LivingEntity entity) {
+        // Play your custom sound event at the entity's location.
+        SoundEvent customSound = ModSounds.LYRE_OF_APOLLO_MELODY.get(); // Use the correct reference
+        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), customSound, entity.getSoundSource(), 1.0F, 1.0F);
     }
 
-    private void stopMusic(Level world, LivingEntity entity) {
-        // Stop the music (you may need to implement this depending on your mod's audio system)
-        // For example, you could stop the sound associated with the LyreOfApolloItem.
+    private void stopMusic() {
+        // Stop the music by playing a silent sound or using your mod's audio system.
+        // For example, you can play a silent sound event to stop the music:
     }
 }

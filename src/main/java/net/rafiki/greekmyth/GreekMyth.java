@@ -16,6 +16,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rafiki.greekmyth.block.ModBlocks;
 import net.rafiki.greekmyth.item.ModCreativeModeTabs;
 import net.rafiki.greekmyth.item.ModItems;
+import net.rafiki.greekmyth.sound.ModSounds;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -30,6 +31,7 @@ public class GreekMyth
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        //Register all in ModCreativeModeTabs class
         ModCreativeModeTabs.register(modEventBus);
 
         //Register mod items in ModItems class
@@ -37,6 +39,9 @@ public class GreekMyth
 
         //Register mod blocks in ModBlocks class
         ModBlocks.register(modEventBus);
+
+        //Register sounds in ModSounds class
+        ModSounds.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
