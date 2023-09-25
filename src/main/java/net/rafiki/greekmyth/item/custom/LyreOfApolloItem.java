@@ -42,7 +42,7 @@ public class LyreOfApolloItem extends Item {
 
     private void toggleMusic(Level world, LivingEntity entity) {
         if (isPlaying) {
-            stopMusic();
+            stopMusic(world, entity);
         } else {
             playCustomSound(world, entity); // Play your custom sound
         }
@@ -55,8 +55,7 @@ public class LyreOfApolloItem extends Item {
         world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), customSound, entity.getSoundSource(), 1.0F, 1.0F);
     }
 
-    private void stopMusic() {
-        // Stop the music by playing a silent sound or using your mod's audio system.
-        // For example, you can play a silent sound event to stop the music:
+    private void stopMusic(Level world, LivingEntity entity) {
+
     }
 }
