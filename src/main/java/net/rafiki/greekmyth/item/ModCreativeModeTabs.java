@@ -45,6 +45,7 @@ public class ModCreativeModeTabs {
                         //FOODS
 
                         //OTHER ITEMS
+                        output.accept(ModItems.LYRE_OF_APOLLO.get());
 
                     }).build());
 
