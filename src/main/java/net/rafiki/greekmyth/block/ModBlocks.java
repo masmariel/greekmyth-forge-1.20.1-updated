@@ -1,5 +1,6 @@
 package net.rafiki.greekmyth.block;
 
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -64,6 +65,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> ADAMANTINE_BUTTON = registerBlock("adamantine_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.DIORITE_SLAB)
                     .sound(SoundType.METAL), BlockSetType.IRON, 10, false));
+
+    //FENCES & WALLS
+    public static final RegistryObject<Block> ADAMANTINE_FENCE = registerBlock("adamantine_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> ADAMANTINE_FENCE_GATE = registerBlock("adamantine_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> ADAMANTINE_WALL = registerBlock("adamantine_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    //DOORS & TRAPDOORS
+    public static final RegistryObject<Block> ADAMANTINE_DOOR = registerBlock("adamantine_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), BlockSetType.IRON));
+    public static final RegistryObject<Block> ADAMANTINE_TRAP_DOOR = registerBlock("adamantine_trap_door",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), BlockSetType.IRON));
 
     //EXAMPLE BLOCKS
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",

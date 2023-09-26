@@ -46,6 +46,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ADAMANTINE_BUTTON.get());
         this.dropSelf(ModBlocks.ADAMANTINE_PRESSURE_PLATE.get());
 
+        //WALLS & FENCES
+        this.dropSelf(ModBlocks.ADAMANTINE_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.ADAMANTINE_FENCE.get());
+        this.dropSelf(ModBlocks.ADAMANTINE_WALL.get());
+
+        //DOORS & TRAP DOORS
+        this.dropSelf(ModBlocks.ADAMANTINE_TRAP_DOOR.get());
+        this.add(ModBlocks.ADAMANTINE_DOOR.get(),
+                block -> createDoorTable(ModBlocks.ADAMANTINE_DOOR.get()));
+
     }
 
     @Override

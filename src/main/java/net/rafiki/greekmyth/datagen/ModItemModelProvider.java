@@ -42,14 +42,33 @@ public class ModItemModelProvider extends ItemModelProvider {
         //CUSTOM ITEMS
         simpleItem(ModItems.LYRE_OF_APOLLO);
 
-        //BUTTON
+        //SPECIAL
         buttonItem(ModBlocks.ADAMANTINE_BUTTON, ModBlocks.ADAMANTINE_BLOCK);
+        fenceItem(ModBlocks.ADAMANTINE_FENCE, ModBlocks.ADAMANTINE_BLOCK);
+        wallItem(ModBlocks.ADAMANTINE_WALL, ModBlocks.ADAMANTINE_BLOCK);
+        simpleBlockItem(ModBlocks.ADAMANTINE_DOOR);
 
+    }
+
+    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  new ResourceLocation(GreekMyth.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  new ResourceLocation(GreekMyth.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
                 .texture("texture",  new ResourceLocation(GreekMyth.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(GreekMyth.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

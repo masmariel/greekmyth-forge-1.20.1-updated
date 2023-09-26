@@ -28,6 +28,11 @@
   "block.greekmyth.adamantine_slab": "Adamantine Slab",
   "block.greekmyth.adamantine_button": "Adamantine Button",
   "block.greekmyth.adamantine_pressure_plate": "Adamantine Pressure Plate",
+  "block.greekmyth.adamantine_wall": "Adamantine Wall",
+  "block.greekmyth.adamantine_fence": "Adamantine Fence",
+  "block.greekmyth.adamantine_fence_gate": "Adamantine Fence Gate",
+  "block.greekmyth.adamantine_door": "Adamantine Door",
+  "block.greekmyth.adamantine_trap_door": "Adamantine Trap Door",
 
   "block.greekmyth.sound_block": "Sound Block",
 

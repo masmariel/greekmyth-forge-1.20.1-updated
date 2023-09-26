@@ -46,7 +46,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         pressurePlateBlock((PressurePlateBlock) ModBlocks.ADAMANTINE_PRESSURE_PLATE.get(),blockTexture(ModBlocks.ADAMANTINE_BLOCK.get()));
         blockItem(ModBlocks.ADAMANTINE_PRESSURE_PLATE);
 
+        //WALLS & FENCES
+        wallBlock((WallBlock) ModBlocks.ADAMANTINE_WALL.get(),blockTexture(ModBlocks.ADAMANTINE_BLOCK.get()));
+        fenceBlock((FenceBlock) ModBlocks.ADAMANTINE_FENCE.get(),blockTexture(ModBlocks.ADAMANTINE_BLOCK.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.ADAMANTINE_FENCE_GATE.get(),blockTexture(ModBlocks.ADAMANTINE_BLOCK.get()));
+        blockItem(ModBlocks.ADAMANTINE_FENCE_GATE);
 
+        //DOORS & TRAPDOORS
+        doorBlockWithRenderType((DoorBlock) ModBlocks.ADAMANTINE_DOOR.get(), modLoc("block/adamantine_door_bottom"), modLoc("block/adamantine_door_top"), "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.ADAMANTINE_TRAP_DOOR.get(), modLoc("block/adamantine_trap_door"), true, "cutout");
+        blockItem(ModBlocks.ADAMANTINE_TRAP_DOOR, "_bottom");
+
+
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("greekmyth:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {

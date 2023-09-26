@@ -42,6 +42,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ADAMANTINE_ORE.get());
                         output.accept(ModBlocks.ADAMANTINE_BUTTON.get());
                         output.accept(ModBlocks.ADAMANTINE_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.ADAMANTINE_WALL.get());
+                        output.accept(ModBlocks.ADAMANTINE_FENCE.get());
+                        output.accept(ModBlocks.ADAMANTINE_FENCE_GATE.get());
+                        output.accept(ModBlocks.ADAMANTINE_DOOR.get());
+                        output.accept(ModBlocks.ADAMANTINE_TRAP_DOOR.get());
                         output.accept(ModBlocks.NETHER_ADAMANTINE_ORE.get());
                         output.accept(ModBlocks.END_STONE_ADAMANTINE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get());
