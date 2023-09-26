@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "greekmyth:adamantine_block"
+    }
+  },
+  "pattern": [
+    "   ",
+    "   ",
+    "AA "
+  ],
+  "result": {
+    "item": "greekmyth:adamantine_pressure_plate"
+  },
+  "show_notification": true
+}
