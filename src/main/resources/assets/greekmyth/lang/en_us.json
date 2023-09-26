@@ -22,5 +22,10 @@
 
   "creativetab.course_tab": "Greek Mythology",
 
-  "sounds.greekmyth.lyre_of_apollo_melody": "Lyre of Apollo Melody"
+  "sounds.greekmyth.lyre_of_apollo_melody": "Lyre of Apollo Melody",
+  "sounds.greekmyth.ginger": "Ginger",
+  "sounds.greekmyth.mason": "Mason",
+  "sounds.greekmyth.ben": "Ben",
+
+  "block.greekmtyh.sound_block": "Sound Block"
 }

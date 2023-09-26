@@ -13,6 +13,10 @@ public class ModSounds {
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, GreekMyth.MOD_ID);
 
     public static final RegistryObject<SoundEvent> LYRE_OF_APOLLO_MELODY = registerSoundEvents("lyre_of_apollo_melody");
+    public static final RegistryObject<SoundEvent> MASON = registerSoundEvents("mason");
+    public static final RegistryObject<SoundEvent> GINGER = registerSoundEvents("ginger");
+    public static final RegistryObject<SoundEvent> BEN = registerSoundEvents("ben");
+
 
     private static final RegistryObject<SoundEvent> registerSoundEvents(String name){
         ResourceLocation id = new ResourceLocation(GreekMyth.MOD_ID, name);

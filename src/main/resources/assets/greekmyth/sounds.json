@@ -4,5 +4,23 @@
     "sounds": [
       "greekmyth:lyre_of_apollo_melody"
     ]
+  },
+  "mason": {
+    "subtitle": "sound.greekmyth.mason",
+    "sounds": [
+      "greekmyth:mason"
+    ]
+  },
+  "ginger": {
+    "subtitle": "sound.greekmyth.ginger",
+    "sounds": [
+      "greekmyth:ginger"
+    ]
+  },
+  "ben": {
+    "subtitle": "sound.greekmyth.ben",
+    "sounds": [
+      "greekmyth:ben"
+    ]
   }
 }
