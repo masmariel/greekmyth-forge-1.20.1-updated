@@ -41,12 +41,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                     ModBlocks.ADAMANTINE_STAIRS.get()
             );
 
-        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-            .add(ModBlocks.ADAMANTINE_ORE.get(),
-                    ModBlocks.END_STONE_ADAMANTINE_ORE.get(),
-                    ModBlocks.NETHER_ADAMANTINE_ORE.get(),
-                    ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get()
-            );
+        /*this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
+
+            );*/
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
             .add(ModBlocks.ADAMANTINE_BLOCK.get(),
@@ -72,6 +69,29 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ADAMANTINE_WALL.get()
 
                 );
+
+        /*this.tag(ModTags.Blocks.NEEDS_STYGIAN_IRON_TOOL)
+
+                );*/
+
+        /*this.tag(ModTags.Blocks.NEEDS_ADAMANTINE_TOOL)
+
+                );*/
+
+        this.tag(ModTags.Blocks.NEEDS_IMPERIAL_GOLD_TOOL)
+                .add(ModBlocks.ADAMANTINE_ORE.get(),
+                        ModBlocks.END_STONE_ADAMANTINE_ORE.get(),
+                        ModBlocks.NETHER_ADAMANTINE_ORE.get(),
+                        ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get()
+                );
+
+        /*this.tag(ModTags.Blocks.NEEDS_CELESTIAL_BRONZE_TOOL)
+
+                );*/
+
+        /*this.tag(ModTags.Blocks.NEEDS_BRONZE_TOOL)
+
+                );*/
 
     }
 

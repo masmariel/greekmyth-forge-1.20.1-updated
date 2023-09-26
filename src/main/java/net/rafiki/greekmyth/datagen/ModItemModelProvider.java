@@ -48,6 +48,28 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.ADAMANTINE_WALL, ModBlocks.ADAMANTINE_BLOCK);
         simpleBlockItem(ModBlocks.ADAMANTINE_DOOR);
 
+        //TOOLS
+        handheldItem(ModItems.STYGIAN_IRON_SWORD);
+        handheldItem(ModItems.STYGIAN_IRON_PICKAXE);
+        handheldItem(ModItems.STYGIAN_IRON_SHOVEL);
+        handheldItem(ModItems.STYGIAN_IRON_AXE);
+        handheldItem(ModItems.ADAMANTINE_SWORD);
+        handheldItem(ModItems.ADAMANTINE_PICKAXE);
+        handheldItem(ModItems.ADAMANTINE_SHOVEL);
+        handheldItem(ModItems.ADAMANTINE_AXE);
+        handheldItem(ModItems.IMPERIAL_GOLD_SWORD);
+        handheldItem(ModItems.IMPERIAL_GOLD_PICKAXE);
+        handheldItem(ModItems.IMPERIAL_GOLD_SHOVEL);
+        handheldItem(ModItems.IMPERIAL_GOLD_AXE);
+        handheldItem(ModItems.CELESTIAL_BRONZE_SWORD);
+        handheldItem(ModItems.CELESTIAL_BRONZE_PICKAXE);
+        handheldItem(ModItems.CELESTIAL_BRONZE_SHOVEL);
+        handheldItem(ModItems.CELESTIAL_BRONZE_AXE);
+        handheldItem(ModItems.BRONZE_SWORD);
+        handheldItem(ModItems.BRONZE_PICKAXE);
+        handheldItem(ModItems.BRONZE_SHOVEL);
+        handheldItem(ModItems.BRONZE_AXE);
+
     }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
@@ -63,6 +85,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
                 .texture("texture",  new ResourceLocation(GreekMyth.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(GreekMyth.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {

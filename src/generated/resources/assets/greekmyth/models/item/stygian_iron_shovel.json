@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "greekmyth:item/stygian_iron_shovel"
+  }
+}

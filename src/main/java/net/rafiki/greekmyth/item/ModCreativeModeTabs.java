@@ -61,6 +61,28 @@ public class ModCreativeModeTabs {
                         //OTHER ITEMS
                         output.accept(ModItems.LYRE_OF_APOLLO.get());
 
+                        //TOOLS
+                        output.accept(ModItems.STYGIAN_IRON_SWORD.get());
+                        output.accept(ModItems.STYGIAN_IRON_PICKAXE.get());
+                        output.accept(ModItems.STYGIAN_IRON_SHOVEL.get());
+                        output.accept(ModItems.STYGIAN_IRON_AXE.get());
+                        output.accept(ModItems.ADAMANTINE_SWORD.get());
+                        output.accept(ModItems.ADAMANTINE_PICKAXE.get());
+                        output.accept(ModItems.ADAMANTINE_SHOVEL.get());
+                        output.accept(ModItems.ADAMANTINE_AXE.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_SWORD.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_PICKAXE.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_SHOVEL.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_AXE.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_SWORD.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_PICKAXE.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_SHOVEL.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_AXE.get());
+                        output.accept(ModItems.BRONZE_SWORD.get());
+                        output.accept(ModItems.BRONZE_PICKAXE.get());
+                        output.accept(ModItems.BRONZE_SHOVEL.get());
+                        output.accept(ModItems.BRONZE_AXE.get());
+
                     }).build());
 
 

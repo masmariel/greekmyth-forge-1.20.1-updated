@@ -23,6 +23,13 @@ public class ModTags {
         /* Example
             public static final TagKey<Block> METAL_DETECTOR_VALUABLES = tag("metal_detector_valuables");
         */
+
+        public static final TagKey<Block> NEEDS_STYGIAN_IRON_TOOL = tag("needs_stygian_iron_tool");
+        public static final TagKey<Block> NEEDS_ADAMANTINE_TOOL = tag("needs_adamantine_tool");
+        public static final TagKey<Block> NEEDS_IMPERIAL_GOLD_TOOL = tag("needs_imperial_gold_tool");
+        public static final TagKey<Block> NEEDS_CELESTIAL_BRONZE_TOOL = tag("needs_celestial_bronze_tool");
+        public static final TagKey<Block> NEEDS_BRONZE_TOOL = tag("needs_bronze_tool");
+
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(GreekMyth.MOD_ID, name));
         }
