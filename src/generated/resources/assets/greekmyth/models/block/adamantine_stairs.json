@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "greekmyth:block/adamantine_block",
+    "side": "greekmyth:block/adamantine_block",
+    "top": "greekmyth:block/adamantine_block"
+  }
+}

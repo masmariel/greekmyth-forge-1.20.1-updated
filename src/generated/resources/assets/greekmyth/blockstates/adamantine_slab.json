@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "greekmyth:block/adamantine_slab"
+    },
+    "type=double": {
+      "model": "greekmyth:block/adamantine_block"
+    },
+    "type=top": {
+      "model": "greekmyth:block/adamantine_slab_top"
+    }
+  }
+}

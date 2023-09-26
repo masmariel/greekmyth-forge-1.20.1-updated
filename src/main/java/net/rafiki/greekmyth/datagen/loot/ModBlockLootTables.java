@@ -35,6 +35,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.END_STONE_ADAMANTINE_ORE.get(),
                 block -> createOreDrop(ModBlocks.END_STONE_ADAMANTINE_ORE.get(), ModItems.RAW_ADAMANTINE.get()));
 
+        //STAIRS
+        this.dropSelf(ModBlocks.ADAMANTINE_STAIRS.get());
+
+        //SLABS
+        this.add(ModBlocks.ADAMANTINE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ADAMANTINE_SLAB.get()));
+
+        //BUTTON & PRESSURE PLATE
+        this.dropSelf(ModBlocks.ADAMANTINE_BUTTON.get());
+        this.dropSelf(ModBlocks.ADAMANTINE_PRESSURE_PLATE.get());
+
     }
 
     @Override

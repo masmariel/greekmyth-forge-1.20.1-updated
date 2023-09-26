@@ -36,21 +36,27 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                     ModBlocks.END_STONE_ADAMANTINE_ORE.get(),
                     ModBlocks.NETHER_ADAMANTINE_ORE.get(),
                     ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get(),
-                    ModBlocks.SOUND_BLOCK.get());
+                    ModBlocks.SOUND_BLOCK.get(),
+                    ModBlocks.ADAMANTINE_SLAB.get(),
+                    ModBlocks.ADAMANTINE_STAIRS.get()
+            );
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
             .add(ModBlocks.ADAMANTINE_ORE.get(),
                     ModBlocks.END_STONE_ADAMANTINE_ORE.get(),
                     ModBlocks.NETHER_ADAMANTINE_ORE.get(),
-                    ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get());
+                    ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get()
+            );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
             .add(ModBlocks.ADAMANTINE_BLOCK.get(),
                     ModBlocks.BRONZE_BLOCK.get(),
                     ModBlocks.CELESTIAL_BRONZE_BLOCK.get(),
                     ModBlocks.IMPERIAL_GOLD_BLOCK.get(),
-                    ModBlocks.STYGIAN_IRON_BLOCK.get());
-
+                    ModBlocks.STYGIAN_IRON_BLOCK.get(),
+                    ModBlocks.ADAMANTINE_SLAB.get(),
+                    ModBlocks.ADAMANTINE_STAIRS.get()
+            );
 
     }
 

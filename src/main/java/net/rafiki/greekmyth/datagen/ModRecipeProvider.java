@@ -34,6 +34,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModItems.ADAMANTINE.get()).build()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ADAMANTINE_STAIRS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.ADAMANTINE_BLOCK.get())
+                .unlockedBy("has_adamantine_block", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.ADAMANTINE_BLOCK.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ADAMANTINE_SLAB.get())
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("AAA")
+                .define('A', ModBlocks.ADAMANTINE_BLOCK.get())
+                .unlockedBy("has_adamantine_block", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.ADAMANTINE_BLOCK.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ADAMANTINE_PRESSURE_PLATE.get())
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("AA ")
+                .define('A', ModBlocks.ADAMANTINE_BLOCK.get())
+                .unlockedBy("has_adamantine_block", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.ADAMANTINE_BLOCK.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ADAMANTINE_BUTTON.get())
+                .pattern("   ")
+                .pattern(" A ")
+                .pattern("   ")
+                .define('A', ModBlocks.ADAMANTINE_BLOCK.get())
+                .unlockedBy("has_adamantine_block", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.ADAMANTINE_BLOCK.get()).build()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ADAMANTINE.get(), 9)
                 .requires(ModBlocks.ADAMANTINE_BLOCK.get())
                 .unlockedBy("has_adamantine_block", inventoryTrigger(ItemPredicate.Builder.item()
@@ -51,6 +87,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pWriter, ADAMANTINE_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTINE.get(), 0.25f, 200, "adamantine");
         oreBlasting(pWriter, ADAMANTINE_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTINE.get(), 0.4f, 100, "adamantine");
+
 
     }
 

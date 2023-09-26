@@ -4,6 +4,8 @@
     "greekmyth:bronze_block",
     "greekmyth:celestial_bronze_block",
     "greekmyth:imperial_gold_block",
-    "greekmyth:stygian_iron_block"
+    "greekmyth:stygian_iron_block",
+    "greekmyth:adamantine_slab",
+    "greekmyth:adamantine_stairs"
   ]
 }

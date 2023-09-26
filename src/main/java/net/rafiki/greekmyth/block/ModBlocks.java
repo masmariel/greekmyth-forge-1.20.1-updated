@@ -2,11 +2,11 @@ package net.rafiki.greekmyth.block;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -27,6 +27,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
      */
 
+    //BLOCKS
     public static final RegistryObject<Block> BRONZE_BLOCK = registerBlock("bronze_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)));
     public static final RegistryObject<Block> CELESTIAL_BRONZE_BLOCK = registerBlock("celestial_bronze_block",
@@ -37,6 +38,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> ADAMANTINE_BLOCK = registerBlock("adamantine_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+
+
+    //ORES
     public static final RegistryObject<Block> ADAMANTINE_ORE = registerBlock("adamantine_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
     public static final RegistryObject<Block> NETHER_ADAMANTINE_ORE = registerBlock("nether_adamantine_ore",
@@ -46,9 +50,26 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_ADAMANTINE_ORE = registerBlock("deepslate_adamantine_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
 
+
+    //STAIRS & SLABS
+    public static final RegistryObject<Block> ADAMANTINE_STAIRS = registerBlock("adamantine_stairs",
+            () -> new StairBlock(() -> ModBlocks.ADAMANTINE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DIORITE_STAIRS).sound(SoundType.METAL)));
+    public static final RegistryObject<Block> ADAMANTINE_SLAB = registerBlock("adamantine_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DIORITE_SLAB).sound(SoundType.METAL)));
+
+    //BUTTONS & PRESSURE PLATES
+    public static final RegistryObject<Block> ADAMANTINE_PRESSURE_PLATE = registerBlock("adamantine_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE_PRESSURE_PLATE)
+                    .sound(SoundType.METAL), BlockSetType.IRON));
+    public static final RegistryObject<Block> ADAMANTINE_BUTTON = registerBlock("adamantine_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.DIORITE_SLAB)
+                    .sound(SoundType.METAL), BlockSetType.IRON, 10, false));
+
     //EXAMPLE BLOCKS
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK)));
+
+
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));

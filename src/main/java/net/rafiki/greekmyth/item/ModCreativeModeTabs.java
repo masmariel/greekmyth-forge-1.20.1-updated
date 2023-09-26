@@ -37,7 +37,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.IMPERIAL_GOLD_BLOCK.get());
                         output.accept(ModBlocks.STYGIAN_IRON_BLOCK.get());
                         output.accept(ModBlocks.ADAMANTINE_BLOCK.get());
+                        output.accept(ModBlocks.ADAMANTINE_SLAB.get());
+                        output.accept(ModBlocks.ADAMANTINE_STAIRS.get());
                         output.accept(ModBlocks.ADAMANTINE_ORE.get());
+                        output.accept(ModBlocks.ADAMANTINE_BUTTON.get());
+                        output.accept(ModBlocks.ADAMANTINE_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.NETHER_ADAMANTINE_ORE.get());
                         output.accept(ModBlocks.END_STONE_ADAMANTINE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get());

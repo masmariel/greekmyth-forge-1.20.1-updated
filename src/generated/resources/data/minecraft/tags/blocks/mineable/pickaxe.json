@@ -9,6 +9,8 @@
     "greekmyth:end_stone_adamantine_ore",
     "greekmyth:nether_adamantine_ore",
     "greekmyth:deepslate_adamantine_ore",
-    "greekmyth:sound_block"
+    "greekmyth:sound_block",
+    "greekmyth:adamantine_slab",
+    "greekmyth:adamantine_stairs"
   ]
 }
