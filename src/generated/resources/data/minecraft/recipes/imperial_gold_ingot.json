@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "greekmyth:imperial_gold_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "greekmyth:imperial_gold_ingot"
+  }
+}

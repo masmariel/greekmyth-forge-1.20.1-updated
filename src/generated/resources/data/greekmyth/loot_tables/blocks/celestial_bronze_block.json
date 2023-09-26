@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "greekmyth:celestial_bronze_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "greekmyth:blocks/celestial_bronze_block"
+}

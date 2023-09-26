@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "greekmyth:item/lyre_of_apollo"
+  }
+}
