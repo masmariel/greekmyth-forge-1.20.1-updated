@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "greekmyth:block/nether_adamantine_ore"
-  }
-}

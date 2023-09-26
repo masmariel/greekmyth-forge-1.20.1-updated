@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "greekmyth:item/celestial_bronze_ingot"
-  }
-}

@@ -3,8 +3,12 @@ package net.rafiki.greekmyth.datagen;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.crafting.AbstractCookingRecipe;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.rafiki.greekmyth.GreekMyth;
 import net.rafiki.greekmyth.block.ModBlocks;
 import net.rafiki.greekmyth.item.ModItems;
 
@@ -36,13 +40,35 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModBlocks.ADAMANTINE_BLOCK.get()).build()))
                 .save(pWriter);
 
-        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.BRONZE_INGOT.get(), RecipeCategory.MISC, ModBlocks.BRONZE_BLOCK.get());
-        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.CELESTIAL_BRONZE_INGOT.get(), RecipeCategory.MISC, ModBlocks.CELESTIAL_BRONZE_BLOCK.get());
-        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.IMPERIAL_GOLD_INGOT.get(), RecipeCategory.MISC, ModBlocks.IMPERIAL_GOLD_BLOCK.get());
-        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.STYGIAN_IRON_INGOT.get(), RecipeCategory.MISC, ModBlocks.STYGIAN_IRON_BLOCK.get());
+        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.BRONZE_INGOT.get(),RecipeCategory.MISC, ModBlocks.BRONZE_BLOCK.get(),
+                "greekmyth:bronze_ingot", null, "greekmyth:bronze_block", null );
+        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.CELESTIAL_BRONZE_INGOT.get(), RecipeCategory.MISC, ModBlocks.CELESTIAL_BRONZE_BLOCK.get(),
+                "greekmyth:celestial_bronze_ingot", null, "greekmyth:celestial_bronze_block", null );
+        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.IMPERIAL_GOLD_INGOT.get(), RecipeCategory.MISC, ModBlocks.IMPERIAL_GOLD_BLOCK.get(),
+                "greekmyth:imperial_gold_ingot", null, "greekmyth:imperial_gold_block", null );
+        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.STYGIAN_IRON_INGOT.get(), RecipeCategory.MISC, ModBlocks.STYGIAN_IRON_BLOCK.get(),
+                "greekmyth:stygian_iron_ingot", null, "greekmyth:stygian_iron_block", null );
 
         oreSmelting(pWriter, ADAMANTINE_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTINE.get(), 0.25f, 200, "adamantine");
         oreBlasting(pWriter, ADAMANTINE_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANTINE.get(), 0.4f, 100, "adamantine");
 
     }
+
+    protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
+        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
+    }
+
+    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
+        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
+    }
+
+    protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
+        for(ItemLike itemlike : pIngredients) {
+            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime,
+                    pCookingSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
+                    .save(pFinishedRecipeConsumer, GreekMyth.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
+        }
+
+    }
+
 }
