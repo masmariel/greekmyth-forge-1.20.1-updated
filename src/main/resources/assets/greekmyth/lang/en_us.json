@@ -3,10 +3,15 @@
   "item.greekmyth.celestial_bronze_ingot": "Celestail Bronze Ingot",
   "item.greekmyth.imperial_gold_ingot": "Imperial Gold Ingot",
   "item.greekmyth.stygian_iron_ingot": "Stygian Iron Ingot",
-  "item.greekmyth.godly_essence": "Godly Essence",
-  "item.greekmyth.essence_of_tartarus": "Essence of Tartarus",
   "item.greekmyth.adamantine": "Adamantine",
   "item.greekmyth.raw_adamantine": "Raw Adamantine",
+
+  "item.greekmyth.godly_essence": "Godly Essence",
+  "item.greekmyth.essence_of_tartarus": "Essence of Tartarus",
+
+  "item.greekmyth.forge_coal": "Forge Coal",
+
+  "item.greekmyth.ambrosia": "Ambrosia",
 
   "item.greekmyth.lyre_of_apollo": "Lyre of Apollo",
 
@@ -20,6 +25,8 @@
   "block.greekmyth.nether_adamantine_ore": "Nether Adamantine Ore",
   "block.greekmyth.end_stone_adamantine_ore": "End Stone Adamantine Ore",
 
+  "block.greekmyth.sound_block": "Sound Block",
+
   "creativetab.course_tab": "Greek Mythology",
 
   "sounds.greekmyth.lyre_of_apollo_melody": "Lyre of Apollo Melody",
@@ -27,5 +34,8 @@
   "sounds.greekmyth.mason": "Mason",
   "sounds.greekmyth.ben": "Ben",
 
-  "block.greekmtyh.sound_block": "Sound Block"
+  "tooltip.greekmyth.lyre_of_apollo_shift": "Right Click to play the Lyre!",
+  "tooltip.greekmyth.lyre_of_apollo": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.sound_block": "Plays nice sounds when walked on or clicked!"
+
 }

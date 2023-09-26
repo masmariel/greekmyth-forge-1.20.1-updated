@@ -1,16 +1,19 @@
 package net.rafiki.greekmyth.item.custom;
 
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.core.Direction;
-import net.minecraft.world.phys.Vec3;
 import net.rafiki.greekmyth.sound.ModSounds; // Import your custom sound events class
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 
 public class LyreOfApolloItem extends Item {
     private boolean isPlaying = false; // Flag to track if music is currently playing
@@ -20,27 +23,15 @@ public class LyreOfApolloItem extends Item {
     }
 
     @Override
-    public InteractionResult onItemUseFirst(ItemStack stack, UseOnContext context) {
+    public InteractionResult useOn(UseOnContext context) {
         Level world = context.getLevel();
-        if (!world.isClientSide) {
-            if (isRightClick(context)) {
-                toggleMusic(world, context.getPlayer());
-            }
+        if (!world.isClientSide()) {
+            toggleMusic(world, context.getPlayer());
         }
         return InteractionResult.SUCCESS;
     }
 
-    private boolean isRightClick(UseOnContext context) {
-        // Check if it's a right-click based on the click location
-        Vec3 clickLocation = context.getClickLocation();
-        Direction direction = context.getClickedFace();
-
-        // You can adjust the conditions here based on where you want the right-click to be detected.
-        // This example checks if the player clicked on the top face of a block.
-        return clickLocation != null && direction != null && direction == Direction.UP;
-    }
-
-    private void toggleMusic(Level world, LivingEntity entity) {
+    private void toggleMusic(Level world, @Nullable LivingEntity entity) {
         if (isPlaying) {
             stopMusic();
         } else {
@@ -49,14 +40,27 @@ public class LyreOfApolloItem extends Item {
         isPlaying = !isPlaying; // Toggle the music on and off
     }
 
-    private void playCustomSound(Level world, LivingEntity entity) {
-        // Play your custom sound event at the entity's location.
-        SoundEvent customSound = ModSounds.LYRE_OF_APOLLO_MELODY.get(); // Use the correct reference
-        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), customSound, entity.getSoundSource(), 1.0F, 1.0F);
+    private void playCustomSound(Level world, @Nullable LivingEntity entity) {
+        if (entity != null) {
+            // Play your custom sound event at the entity's location.
+            SoundEvent customSound = ModSounds.LYRE_OF_APOLLO_MELODY.get(); // Use the correct reference
+            world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), customSound, entity.getSoundSource(), 1.0F, 1.0F);
+        }
     }
 
     private void stopMusic() {
         // Stop the music by playing a silent sound or using your mod's audio system.
         // For example, you can play a silent sound event to stop the music:
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        if (Screen.hasShiftDown()) {
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_apollo_shift"));
+        } else {
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_apollo"));
+        }
+
+        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 }

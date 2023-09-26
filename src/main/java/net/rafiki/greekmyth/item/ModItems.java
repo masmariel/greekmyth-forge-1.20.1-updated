@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rafiki.greekmyth.GreekMyth;
+import net.rafiki.greekmyth.item.custom.FuelItem;
 import net.rafiki.greekmyth.item.custom.LyreOfApolloItem;
 
 public class ModItems {
@@ -35,6 +36,15 @@ public class ModItems {
     //CUSTOM
     public static final RegistryObject<Item> LYRE_OF_APOLLO = ITEMS.register("lyre_of_apollo",
             () -> new LyreOfApolloItem(new Item.Properties()));
+
+    //FUEL
+    public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",
+            () -> new FuelItem(new Item.Properties(), 3200));
+
+    //FOOD
+    public static final RegistryObject<Item> AMBROSIA = ITEMS.register("ambrosia",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.AMBROSIA)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

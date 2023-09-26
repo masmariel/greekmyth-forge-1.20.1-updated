@@ -44,6 +44,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SOUND_BLOCK.get());
 
                         //FOODS
+                        output.accept(ModItems.AMBROSIA.get());
+
+                        //FUEL
+                        output.accept(ModItems.FORGE_COAL.get());
 
                         //OTHER ITEMS
                         output.accept(ModItems.LYRE_OF_APOLLO.get());
