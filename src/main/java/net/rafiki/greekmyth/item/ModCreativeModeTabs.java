@@ -84,6 +84,28 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BRONZE_SHOVEL.get());
                         output.accept(ModItems.BRONZE_AXE.get());
 
+                        //ARMOR
+                        output.accept(ModItems.STYGIAN_IRON_HELMET.get());
+                        output.accept(ModItems.STYGIAN_IRON_CHESTPLATE.get());
+                        output.accept(ModItems.STYGIAN_IRON_LEGGINGS.get());
+                        output.accept(ModItems.STYGIAN_IRON_BOOTS.get());
+                        output.accept(ModItems.ADAMANTINE_HELMET.get());
+                        output.accept(ModItems.ADAMANTINE_CHESTPLATE.get());
+                        output.accept(ModItems.ADAMANTINE_LEGGINGS.get());
+                        output.accept(ModItems.ADAMANTINE_BOOTS.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_HELMET.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_CHESTPLATE.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_LEGGINGS.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_BOOTS.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_HELMET.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_CHESTPLATE.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_LEGGINGS.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_BOOTS.get());
+                        output.accept(ModItems.BRONZE_HELMET.get());
+                        output.accept(ModItems.BRONZE_CHESTPLATE.get());
+                        output.accept(ModItems.BRONZE_LEGGINGS.get());
+                        output.accept(ModItems.BRONZE_BOOTS.get());
+
                     }).build());
 
 

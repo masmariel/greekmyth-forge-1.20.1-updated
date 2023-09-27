@@ -101,6 +101,56 @@ public class ModItems {
     public static final RegistryObject<Item> BRONZE_AXE = ITEMS.register("bronze_axe",
             () -> new AxeItem(ModToolTiers.BRONZE, 5f, -3, new Item.Properties()));
 
+    //ARMOR
+        //STYGIAN IRON
+    public static final RegistryObject<Item> STYGIAN_IRON_HELMET = ITEMS.register("stygian_iron_helmet",
+            () -> new ArmorItem(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> STYGIAN_IRON_CHESTPLATE = ITEMS.register("stygian_iron_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> STYGIAN_IRON_LEGGINGS = ITEMS.register("stygian_iron_leggings",
+            () -> new ArmorItem(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> STYGIAN_IRON_BOOTS = ITEMS.register("stygian_iron_boots",
+            () -> new ArmorItem(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+        //ADAMANTINE
+    public static final RegistryObject<Item> ADAMANTINE_HELMET = ITEMS.register("adamantine_helmet",
+                () -> new ArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> ADAMANTINE_CHESTPLATE = ITEMS.register("adamantine_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> ADAMANTINE_LEGGINGS = ITEMS.register("adamantine_leggings",
+            () -> new ArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> ADAMANTINE_BOOTS = ITEMS.register("adamantine_boots",
+            () -> new ArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+        //IMPERIAL_GOLD
+    public static final RegistryObject<Item> IMPERIAL_GOLD_HELMET = ITEMS.register("imperial_gold_helmet",
+                () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> IMPERIAL_GOLD_CHESTPLATE = ITEMS.register("imperial_gold_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> IMPERIAL_GOLD_LEGGINGS = ITEMS.register("imperial_gold_leggings",
+            () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> IMPERIAL_GOLD_BOOTS = ITEMS.register("imperial_gold_boots",
+            () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+        //CELESTIAL BRONZE
+    public static final RegistryObject<Item> CELESTIAL_BRONZE_HELMET = ITEMS.register("celestial_bronze_helmet",
+                () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> CELESTIAL_BRONZE_CHESTPLATE = ITEMS.register("celestial_bronze_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> CELESTIAL_BRONZE_LEGGINGS = ITEMS.register("celestial_bronze_leggings",
+            () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> CELESTIAL_BRONZE_BOOTS = ITEMS.register("celestial_bronze_boots",
+            () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+        //BRONZE
+    public static final RegistryObject<Item> BRONZE_HELMET = ITEMS.register("bronze_helmet",
+                () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> BRONZE_CHESTPLATE = ITEMS.register("bronze_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> BRONZE_LEGGINGS = ITEMS.register("bronze_leggings",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> BRONZE_BOOTS = ITEMS.register("bronze_boots",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
