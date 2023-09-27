@@ -49,54 +49,54 @@ public class ModItems {
     //TOOLS
         //STYGIAN IRON
     public static final RegistryObject<Item> STYGIAN_IRON_SWORD = ITEMS.register("stygian_iron_sword",
-            () -> new SwordItem(ModToolTiers.STYGIAN_IRON, 2, 3, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.STYGIAN_IRON, 2, -2.4f,new Item.Properties()));
     public static final RegistryObject<Item> STYGIAN_IRON_PICKAXE = ITEMS.register("stygian_iron_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.STYGIAN_IRON, 1, 1, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.STYGIAN_IRON, 0, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> STYGIAN_IRON_SHOVEL = ITEMS.register("stygian_iron_shovel",
-            () -> new ShovelItem(ModToolTiers.STYGIAN_IRON, 1, 1, new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.STYGIAN_IRON, 0.5f, -3, new Item.Properties()));
     public static final RegistryObject<Item> STYGIAN_IRON_AXE = ITEMS.register("stygian_iron_axe",
-            () -> new AxeItem(ModToolTiers.STYGIAN_IRON, 1, 2, new Item.Properties()));
+            () -> new AxeItem(ModToolTiers.STYGIAN_IRON, 4, -3, new Item.Properties()));
 
         //ADAMANTINE
     public static final RegistryObject<Item> ADAMANTINE_SWORD = ITEMS.register("adamantine_sword",
-            () -> new SwordItem(ModToolTiers.ADAMANTINE, 2, 3, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.ADAMANTINE, 4, -2.4f, new Item.Properties()));
     public static final RegistryObject<Item> ADAMANTINE_PICKAXE = ITEMS.register("adamantine_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.ADAMANTINE, 1, 1, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.ADAMANTINE, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> ADAMANTINE_SHOVEL = ITEMS.register("adamantine_shovel",
-            () -> new ShovelItem(ModToolTiers.ADAMANTINE, 1, 1, new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.ADAMANTINE, 1.5f, -3, new Item.Properties()));
     public static final RegistryObject<Item> ADAMANTINE_AXE = ITEMS.register("adamantine_axe",
-            () -> new AxeItem(ModToolTiers.ADAMANTINE, 1, 2, new Item.Properties()));
+            () -> new AxeItem(ModToolTiers.ADAMANTINE, 5, -3, new Item.Properties()));
 
         //IMPERIAL GOLD
     public static final RegistryObject<Item> IMPERIAL_GOLD_SWORD = ITEMS.register("imperial_gold_sword",
-                () -> new SwordItem(ModToolTiers.IMPERIAL_GOLD, 2, 3, new Item.Properties()));
+                () -> new SwordItem(ModToolTiers.IMPERIAL_GOLD, 2, -2.4f, new Item.Properties()));
     public static final RegistryObject<Item> IMPERIAL_GOLD_PICKAXE = ITEMS.register("imperial_gold_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.IMPERIAL_GOLD, 1, 1, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.IMPERIAL_GOLD, 0, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> IMPERIAL_GOLD_SHOVEL = ITEMS.register("imperial_gold_shovel",
-            () -> new ShovelItem(ModToolTiers.IMPERIAL_GOLD, 1, 1, new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.IMPERIAL_GOLD, 0.5f, -3, new Item.Properties()));
     public static final RegistryObject<Item> IMPERIAL_GOLD_AXE = ITEMS.register("imperial_gold_axe",
-            () -> new AxeItem(ModToolTiers.IMPERIAL_GOLD, 1, 2, new Item.Properties()));
+            () -> new AxeItem(ModToolTiers.IMPERIAL_GOLD, 4, -3, new Item.Properties()));
 
 
         //CELESTIAL BRONZE
     public static final RegistryObject<Item> CELESTIAL_BRONZE_SWORD = ITEMS.register("celestial_bronze_sword",
-                () -> new SwordItem(ModToolTiers.CELESTIAL_BRONZE, 2, 3, new Item.Properties()));
+                () -> new SwordItem(ModToolTiers.CELESTIAL_BRONZE, 2, -2.4f, new Item.Properties()));
     public static final RegistryObject<Item> CELESTIAL_BRONZE_PICKAXE = ITEMS.register("celestial_bronze_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.CELESTIAL_BRONZE, 1, 1, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.CELESTIAL_BRONZE, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> CELESTIAL_BRONZE_SHOVEL = ITEMS.register("celestial_bronze_shovel",
-            () -> new ShovelItem(ModToolTiers.CELESTIAL_BRONZE, 1, 1, new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.CELESTIAL_BRONZE, 0f, -3, new Item.Properties()));
     public static final RegistryObject<Item> CELESTIAL_BRONZE_AXE = ITEMS.register("celestial_bronze_axe",
-            () -> new AxeItem(ModToolTiers.CELESTIAL_BRONZE, 1, 2, new Item.Properties()));
+            () -> new AxeItem(ModToolTiers.CELESTIAL_BRONZE, 5, -3, new Item.Properties()));
 
         //BRONZE
     public static final RegistryObject<Item> BRONZE_SWORD = ITEMS.register("bronze_sword",
-                () -> new SwordItem(ModToolTiers.BRONZE, 2, 3, new Item.Properties()));
+                () -> new SwordItem(ModToolTiers.BRONZE, 2, -2.4f, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_PICKAXE = ITEMS.register("bronze_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.BRONZE, 1, 1, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.BRONZE, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_SHOVEL = ITEMS.register("bronze_shovel",
-            () -> new ShovelItem(ModToolTiers.BRONZE, 1, 1, new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.BRONZE, 1.5f, -3, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_AXE = ITEMS.register("bronze_axe",
-            () -> new AxeItem(ModToolTiers.BRONZE, 1, 2, new Item.Properties()));
+            () -> new AxeItem(ModToolTiers.BRONZE, 5f, -3, new Item.Properties()));
 
 
 
