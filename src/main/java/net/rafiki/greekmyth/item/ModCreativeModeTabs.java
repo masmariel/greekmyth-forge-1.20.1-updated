@@ -58,8 +58,9 @@ public class ModCreativeModeTabs {
                         //FUEL
                         output.accept(ModItems.FORGE_COAL.get());
 
-                        //OTHER ITEMS
+                        //CUSTOM
                         output.accept(ModItems.LYRE_OF_APOLLO.get());
+                        output.accept(ModItems.SWORD_OF_ARES.get());
 
                         //TOOLS
                         output.accept(ModItems.STYGIAN_IRON_SWORD.get());

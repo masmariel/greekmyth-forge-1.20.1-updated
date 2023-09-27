@@ -41,6 +41,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //CUSTOM ITEMS
         simpleItem(ModItems.LYRE_OF_APOLLO);
+        handheldItem(ModItems.SWORD_OF_ARES);
 
         //SPECIAL
         buttonItem(ModBlocks.ADAMANTINE_BUTTON, ModBlocks.ADAMANTINE_BLOCK);
@@ -69,6 +70,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BRONZE_PICKAXE);
         handheldItem(ModItems.BRONZE_SHOVEL);
         handheldItem(ModItems.BRONZE_AXE);
+
 
     }
 

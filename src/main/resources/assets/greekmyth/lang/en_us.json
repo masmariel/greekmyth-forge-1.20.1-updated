@@ -39,6 +39,7 @@
   "item.greekmyth.ambrosia": "Ambrosia",
 
   "item.greekmyth.lyre_of_apollo": "Lyre of Apollo",
+  "item.greekmyth.sword_of_ares": "Sword Of Ares",
 
   "block.greekmyth.bronze_block": "Block of Bronze",
   "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
@@ -70,6 +71,7 @@
 
   "tooltip.greekmyth.lyre_of_apollo_shift": "Right Click to play the Lyre!",
   "tooltip.greekmyth.lyre_of_apollo": "Hold §eSHIFT§r for more Information",
-  "tooltip.greekmyth.sound_block": "Plays nice sounds when walked on or clicked!"
-
+  "tooltip.greekmyth.sound_block": "Plays nice sounds when walked on or clicked!",
+  "tooltip.greekmyth.sword_of_ares_shift": "The large sword feels heavy, as if only godly strength can wield it. It strikes fear and weakness into the enemies eyes.",
+  "tooltip.greekmyth.sword_of_ares": "Hold §eSHIFT§r for more Information"
 }

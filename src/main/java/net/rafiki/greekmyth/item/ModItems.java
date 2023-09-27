@@ -9,6 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.rafiki.greekmyth.GreekMyth;
 import net.rafiki.greekmyth.item.custom.FuelItem;
 import net.rafiki.greekmyth.item.custom.LyreOfApolloItem;
+import net.rafiki.greekmyth.item.custom.SwordOfAresItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -37,6 +38,8 @@ public class ModItems {
     //CUSTOM
     public static final RegistryObject<Item> LYRE_OF_APOLLO = ITEMS.register("lyre_of_apollo",
             () -> new LyreOfApolloItem(new Item.Properties()));
+    public static final RegistryObject<Item> SWORD_OF_ARES = ITEMS.register("sword_of_ares",
+            () -> new SwordOfAresItem(ModToolTiers.ADAMANTINE, 3, -3.2f,new Item.Properties().durability(600)));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",
