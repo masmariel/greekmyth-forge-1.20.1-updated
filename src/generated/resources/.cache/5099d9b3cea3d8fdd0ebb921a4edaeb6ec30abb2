@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-27T14:25:14.7523193	Item Models: greekmyth
+// 1.20.1	2023-09-27T15:07:04.5587799	Item Models: greekmyth
 9f2e9e6c619d320103f31e3d5dcd489318179481 assets/greekmyth/models/item/adamantine.json
 e9581c2fc533cd57806f5f5766c31838348e1635 assets/greekmyth/models/item/adamantine_axe.json
 e41f318d9d2dba5b52b4baa329d0a8c0c8719fbc assets/greekmyth/models/item/adamantine_boots.json
@@ -55,3 +55,4 @@ dc97e927364fa88c0e4672d9ecf7f17be081c5c2 assets/greekmyth/models/item/stygian_ir
 4b4806d11e4c1765975724a15bbdf2efd2b02b8b assets/greekmyth/models/item/stygian_iron_shovel.json
 6674fa398b0b943041f76967f3dde7bca94e62cd assets/greekmyth/models/item/stygian_iron_sword.json
 94062bdc51f8c974eded8726402829d1c876a379 assets/greekmyth/models/item/sword_of_ares.json
+372758af7bbf3962fc55a41939e9d8342d981b76 assets/greekmyth/models/item/winged_sandals_of_hermes.json

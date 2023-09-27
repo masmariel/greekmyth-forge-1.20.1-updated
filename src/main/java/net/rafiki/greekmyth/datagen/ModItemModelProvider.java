@@ -42,6 +42,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //CUSTOM ITEMS
         simpleItem(ModItems.LYRE_OF_APOLLO);
         handheldItem(ModItems.SWORD_OF_ARES);
+        simpleItem(ModItems.WINGED_SANDALS_OF_HERMES);
 
         //SPECIAL
         buttonItem(ModBlocks.ADAMANTINE_BUTTON, ModBlocks.ADAMANTINE_BLOCK);

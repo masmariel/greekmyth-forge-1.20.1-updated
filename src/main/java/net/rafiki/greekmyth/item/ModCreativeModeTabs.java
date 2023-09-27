@@ -61,6 +61,7 @@ public class ModCreativeModeTabs {
                         //CUSTOM
                         output.accept(ModItems.LYRE_OF_APOLLO.get());
                         output.accept(ModItems.SWORD_OF_ARES.get());
+                        output.accept(ModItems.WINGED_SANDALS_OF_HERMES.get());
 
                         //TOOLS
                         output.accept(ModItems.STYGIAN_IRON_SWORD.get());
