@@ -22,7 +22,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266656_.put(ArmorItem.Type.LEGGINGS, 5);
         p_266656_.put(ArmorItem.Type.CHESTPLATE, 6);
         p_266656_.put(ArmorItem.Type.HELMET, 2);
-    }), 9, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.1F, () -> Ingredient.of()),
+    }), 9, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.1F, () -> Ingredient.of(ModItems.WINGED_SANDALS_OF_HERMES.get())),
 
     STYGIAN_IRON("stygian_iron", 40, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266655_) -> {
         p_266655_.put(ArmorItem.Type.BOOTS, 5);

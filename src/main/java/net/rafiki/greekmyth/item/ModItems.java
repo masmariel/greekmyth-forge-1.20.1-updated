@@ -1,6 +1,5 @@
 package net.rafiki.greekmyth.item;
 
-import net.minecraft.commands.arguments.item.ItemParser;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -39,7 +38,7 @@ public class ModItems {
     public static final RegistryObject<Item> SWORD_OF_ARES = ITEMS.register("sword_of_ares",
             () -> new SwordOfAresItem(ModToolTiers.ADAMANTINE, 3, -3.2f,new Item.Properties().durability(600)));
     public static final RegistryObject<Item> WINGED_SANDALS_OF_HERMES = ITEMS.register("winged_sandals_of_hermes",
-            () -> new WingedSandalsOfHermes(ModArmorMaterials.HERMES, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new WingedSandalsOfHermesItem(ModArmorMaterials.HERMES, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",
@@ -114,13 +113,13 @@ public class ModItems {
 
         //ADAMANTINE
     public static final RegistryObject<Item> ADAMANTINE_HELMET = ITEMS.register("adamantine_helmet",
-                () -> new ArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.HELMET, new Item.Properties()));
+                () -> new ModArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> ADAMANTINE_CHESTPLATE = ITEMS.register("adamantine_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> ADAMANTINE_LEGGINGS = ITEMS.register("adamantine_leggings",
-            () -> new ArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> ADAMANTINE_BOOTS = ITEMS.register("adamantine_boots",
-            () -> new ArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
         //IMPERIAL_GOLD
     public static final RegistryObject<Item> IMPERIAL_GOLD_HELMET = ITEMS.register("imperial_gold_helmet",
