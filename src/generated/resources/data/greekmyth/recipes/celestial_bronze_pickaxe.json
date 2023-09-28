@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "item": "greekmyth:celestial_bronze_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "HHH",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "greekmyth:celestial_bronze_pickaxe"
+  },
+  "show_notification": true
+}

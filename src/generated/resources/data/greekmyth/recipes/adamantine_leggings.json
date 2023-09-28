@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "item": "greekmyth:adamantine"
+    }
+  },
+  "pattern": [
+    "HHH",
+    "H H",
+    "H H"
+  ],
+  "result": {
+    "item": "greekmyth:adamantine_leggings"
+  },
+  "show_notification": true
+}

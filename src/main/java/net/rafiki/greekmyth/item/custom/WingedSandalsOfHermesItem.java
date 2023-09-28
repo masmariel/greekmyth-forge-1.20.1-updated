@@ -111,7 +111,7 @@ public final class WingedSandalsOfHermesItem extends ArmorItem implements GeoIte
 
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.HERMES, new MobEffectInstance(MobEffects.MOVEMENT_SPEED,
+                    .put(ModArmorMaterials.WINGED_SANDALS_OF_HERMES, new MobEffectInstance(MobEffects.MOVEMENT_SPEED,
                             200, 1, false, true, true)).build();
 
     @Override

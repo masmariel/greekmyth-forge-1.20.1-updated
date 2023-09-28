@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "item": "greekmyth:bronze_ingot"
+    }
+  },
+  "pattern": [
+    "H H",
+    "HHH",
+    "HHH"
+  ],
+  "result": {
+    "item": "greekmyth:bronze_chestplate"
+  },
+  "show_notification": true
+}

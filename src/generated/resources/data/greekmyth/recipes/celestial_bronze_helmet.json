@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "item": "greekmyth:celestial_bronze_ingot"
+    }
+  },
+  "pattern": [
+    "HHH",
+    "H H",
+    "   "
+  ],
+  "result": {
+    "item": "greekmyth:celestial_bronze_helmet"
+  },
+  "show_notification": true
+}

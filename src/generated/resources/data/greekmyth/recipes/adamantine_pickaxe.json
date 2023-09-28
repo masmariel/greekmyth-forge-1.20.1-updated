@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "item": "greekmyth:adamantine"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "HHH",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "greekmyth:adamantine_pickaxe"
+  },
+  "show_notification": true
+}

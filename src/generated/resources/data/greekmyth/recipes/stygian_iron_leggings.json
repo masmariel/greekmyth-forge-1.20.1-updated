@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "item": "greekmyth:stygian_iron_ingot"
+    }
+  },
+  "pattern": [
+    "HHH",
+    "H H",
+    "H H"
+  ],
+  "result": {
+    "item": "greekmyth:stygian_iron_leggings"
+  },
+  "show_notification": true
+}
