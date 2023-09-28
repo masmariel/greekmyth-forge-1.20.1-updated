@@ -15,33 +15,32 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Arrays;
 import java.util.List;
 
-public class WingedSandalsOfHermesItem extends ArmorItem {
-    private static final List<MobEffectInstance> WINGED_SANDALS_OF_HERMES_EFFECTS = Arrays.asList(
-            new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, 1, false, false, true),
-            new MobEffectInstance(MobEffects.JUMP, 20, 4, false, false, true),
-            new MobEffectInstance(MobEffects.SLOW_FALLING, 20, 0, false, false, true)
+public class HelmOfDarknessItem extends ArmorItem {
+    private static final List<MobEffectInstance> HELM_OF_DARKNESS_EFFECTS = Arrays.asList(
+            new MobEffectInstance(MobEffects.INVISIBILITY, 20, 0, false, false, true),
+            new MobEffectInstance(MobEffects.BAD_OMEN, 20, 0, false, false, true)
     );
 
-    public WingedSandalsOfHermesItem(ArmorMaterial material, Type type, Properties properties) {
+    public HelmOfDarknessItem(ArmorMaterial material, Type type, Properties properties) {
         super(material, type, properties);
     }
 
     @Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
         if (!level.isClientSide()) {
-            if (hasBootsOn(player)) {
+            if (hasHelmetOn(player)) {
                 evaluateArmorEffects(player);
             }
         }
     }
 
-    private boolean hasBootsOn(Player player) {
-        ItemStack boots = player.getInventory().getArmor(0);
-        return !boots.isEmpty();
+    private boolean hasHelmetOn(Player player) {
+        ItemStack helmet = player.getInventory().getArmor(3);
+        return !helmet.isEmpty();
     }
 
     private void evaluateArmorEffects(Player player) {
-        for (MobEffectInstance effect : WINGED_SANDALS_OF_HERMES_EFFECTS) {
+        for (MobEffectInstance effect : HELM_OF_DARKNESS_EFFECTS) {
             addEffectToPlayer(player, effect);
         }
     }
@@ -56,9 +55,9 @@ public class WingedSandalsOfHermesItem extends ArmorItem {
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.winged_sandals_of_hermes_shift"));
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.helm_of_darkness_shift"));
         } else {
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.winged_sandals_of_hermes_ares"));
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.helm_of_darkness"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

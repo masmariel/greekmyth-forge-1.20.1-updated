@@ -61,6 +61,7 @@
   "item.greekmyth.lyre_of_apollo": "Lyre of Apollo",
   "item.greekmyth.sword_of_ares": "Sword Of Ares",
   "item.greekmyth.winged_sandals_of_hermes": "Winged Sandals of Hermes",
+  "item.greekmyth.helm_of_darkness": "Helm of Darkness",
 
   "block.greekmyth.bronze_block": "Block of Bronze",
   "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
@@ -90,9 +91,13 @@
   "sounds.greekmyth.mason": "Mason",
   "sounds.greekmyth.ben": "Ben",
 
-  "tooltip.greekmyth.lyre_of_apollo_shift": "Right Click to play the Lyre!",
+  "tooltip.greekmyth.lyre_of_apollo_shift": "A beautiful melody can be played with the lyre.",
   "tooltip.greekmyth.lyre_of_apollo": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.sound_block": "Plays nice sounds when walked on or clicked!",
   "tooltip.greekmyth.sword_of_ares_shift": "The large sword feels heavy, as if only godly strength can wield it. It strikes fear and weakness into the enemies eyes.",
-  "tooltip.greekmyth.sword_of_ares": "Hold §eSHIFT§r for more Information"
+  "tooltip.greekmyth.sword_of_ares": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.winged_sandals_of_apollo_shift": "You can feel the wings propelling you forward, through the air, and slowing your decent.",
+  "tooltip.greekmyth.winged_sandals_of_apollo": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.helm_of_darkness_shift": "A dark presence can be felt coming from the helm. It grants a unique power, but the user's mind descends into madness.",
+  "tooltip.greekmyth.helm_of_darkness": "Hold §eSHIFT§r for more Information"
 }
