@@ -4,6 +4,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -19,13 +20,18 @@ public class TridentOfPoseidonItem extends TridentItem {
     }
 
     @Override
-    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex) {
-        super.onInventoryTick(stack, level, player, slotIndex, selectedIndex);
+    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
+        super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
 
-        if (player.getMainHandItem() == stack) {
-            player.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 200, 1, false, false, true));
+        if (pEntity instanceof Player) {
+            Player player = (Player) pEntity;
+            boolean hasMainHand = player.getMainHandItem() == pStack;
+            boolean hasOffhand = player.getOffhandItem() == pStack;
+
+            if (hasMainHand || hasOffhand) {
+                player.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 200, 1, false, false, false));
+            }
         }
-
     }
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {

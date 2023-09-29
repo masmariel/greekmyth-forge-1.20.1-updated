@@ -4,6 +4,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
@@ -26,32 +27,22 @@ public class HelmOfDarknessItem extends ArmorItem {
     }
 
     @Override
-    public void onArmorTick(ItemStack stack, Level level, Player player) {
-        if (!level.isClientSide()) {
-            if (hasHelmetOn(player)) {
-                evaluateArmorEffects(player);
+    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
+        if (!pLevel.isClientSide && pSlotId == 3 && pEntity instanceof Player) {
+            Player player = (Player) pEntity;
+
+            for (MobEffectInstance effect : HELM_OF_DARKNESS_EFFECTS) {
+                MobEffectInstance currentEffect = player.getEffect(effect.getEffect());
+
+                if (currentEffect == null || currentEffect.getDuration() <= 100) {
+                    player.addEffect(new MobEffectInstance(effect.getEffect(), 200, 0, false, false, false));
+                }
             }
         }
+
+        super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
     }
 
-    private boolean hasHelmetOn(Player player) {
-        ItemStack helmet = player.getInventory().getArmor(3);
-        return !helmet.isEmpty();
-    }
-
-    private void evaluateArmorEffects(Player player) {
-        for (MobEffectInstance effect : HELM_OF_DARKNESS_EFFECTS) {
-            addEffectToPlayer(player, effect);
-        }
-    }
-
-    private void addEffectToPlayer(Player player, MobEffectInstance effect) {
-        boolean hasPlayerEffect = player.hasEffect(effect.getEffect());
-
-        if (!hasPlayerEffect) {
-            player.addEffect(new MobEffectInstance(effect));
-        }
-    }
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {

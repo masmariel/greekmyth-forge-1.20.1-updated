@@ -114,32 +114,20 @@ public final class WingedSandalsOfHermesItem extends ArmorItem implements GeoIte
     );
 
     @Override
-    public void onArmorTick(ItemStack stack, Level level, Player player) {
-        if (!level.isClientSide()) {
-            if (hasBootsOn(player)) {
-                evaluateArmorEffects(player);
+    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
+        if (!pLevel.isClientSide && pSlotId == 0 && pEntity instanceof Player) {
+            Player player = (Player) pEntity;
+
+            for (MobEffectInstance effect : WINGED_SANDALS_OF_HERMES_EFFECTS) {
+                MobEffectInstance currentEffect = player.getEffect(effect.getEffect());
+
+                if (currentEffect == null || currentEffect.getDuration() <= 100) {
+                    player.addEffect(new MobEffectInstance(effect.getEffect(), 200, 0, false, false, false));
+                }
             }
         }
-    }
 
-    private boolean hasBootsOn(Player player) {
-        ItemStack boots = player.getInventory().getArmor(0);
-
-        return !boots.isEmpty();
-    }
-
-    private void evaluateArmorEffects(Player player) {
-        for (MobEffectInstance effect : WINGED_SANDALS_OF_HERMES_EFFECTS) {
-            addEffectToPlayer(player, effect);
-        }
-    }
-
-    private void addEffectToPlayer(Player player, MobEffectInstance effect) {
-        boolean hasPlayerEffect = player.hasEffect(effect.getEffect());
-
-        if (!hasPlayerEffect) {
-            player.addEffect(new MobEffectInstance(effect));
-        }
+        super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
     }
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
