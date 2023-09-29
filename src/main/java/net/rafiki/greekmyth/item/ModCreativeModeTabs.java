@@ -63,6 +63,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SWORD_OF_ARES.get());
                         output.accept(ModItems.WINGED_SANDALS_OF_HERMES.get());
                         output.accept(ModItems.HELM_OF_DARKNESS.get());
+                        output.accept(ModItems.TRIDENT_OF_POSEIDON.get());
 
                         //TOOLS
                         output.accept(ModItems.STYGIAN_IRON_SWORD.get());

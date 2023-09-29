@@ -41,6 +41,8 @@ public class ModItems {
             () -> new WingedSandalsOfHermesItem(ModArmorMaterials.WINGED_SANDALS_OF_HERMES, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> HELM_OF_DARKNESS = ITEMS.register("helm_of_darkness",
             () -> new HelmOfDarknessItem(ModArmorMaterials.HELM_OF_DARKNESS, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> TRIDENT_OF_POSEIDON = ITEMS.register("trident_of_poseidon",
+            () -> new TridentOfPoseidonItem(new Item.Properties()));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",

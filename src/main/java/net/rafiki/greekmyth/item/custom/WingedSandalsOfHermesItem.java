@@ -1,9 +1,10 @@
 package net.rafiki.greekmyth.item.custom;
 
-import com.google.common.collect.ImmutableMap;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -11,16 +12,12 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.decoration.ArmorStand;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.rafiki.greekmyth.client.WingedSandalsOfHermesRenderer;
-import net.rafiki.greekmyth.item.ModArmorMaterials;
 import org.jetbrains.annotations.NotNull;
-import software.bernie.example.client.renderer.armor.GeckoArmorRenderer;
+import org.jetbrains.annotations.Nullable;
 import software.bernie.example.registry.ItemRegistry;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.constant.DataTickets;
@@ -30,10 +27,10 @@ import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInst
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.renderer.GeoArmorRenderer;
-import software.bernie.geckolib.util.GeckoLibUtil;
 
-import java.util.Map;
+
+import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
 
@@ -109,10 +106,12 @@ public final class WingedSandalsOfHermesItem extends ArmorItem implements GeoIte
         return cache;
     }
 
-    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.WINGED_SANDALS_OF_HERMES, new MobEffectInstance(MobEffects.MOVEMENT_SPEED,
-                            200, 1, false, true, true)).build();
+    private static final List<MobEffectInstance> WINGED_SANDALS_OF_HERMES_EFFECTS = Arrays.asList(
+            new MobEffectInstance(MobEffects.JUMP, 200, 4, false, false, false),
+            new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false, false),
+            new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1, false, false, false)
+
+    );
 
     @Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
@@ -130,19 +129,27 @@ public final class WingedSandalsOfHermesItem extends ArmorItem implements GeoIte
     }
 
     private void evaluateArmorEffects(Player player) {
-        for(Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
-            ArmorMaterial mapArmorMaterial = entry.getKey();
-            MobEffectInstance mapEffect = entry.getValue();
-            addEffectToPlayer(player, mapArmorMaterial, mapEffect);
+        for (MobEffectInstance effect : WINGED_SANDALS_OF_HERMES_EFFECTS) {
+            addEffectToPlayer(player, effect);
         }
     }
 
-    private void addEffectToPlayer(Player player, ArmorMaterial mapArmorMaterial, MobEffectInstance mapEffect) {
-        boolean hasPlayerEffect = player.hasEffect(mapEffect.getEffect());
+    private void addEffectToPlayer(Player player, MobEffectInstance effect) {
+        boolean hasPlayerEffect = player.hasEffect(effect.getEffect());
 
-        if(!hasPlayerEffect) {
-            player.addEffect(new MobEffectInstance(mapEffect));
+        if (!hasPlayerEffect) {
+            player.addEffect(new MobEffectInstance(effect));
         }
+    }
+
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        if (Screen.hasShiftDown()) {
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.winged_sandals_of_hermes_shift"));
+        } else {
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.winged_sandals_of_hermes"));
+        }
+
+        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 
 }

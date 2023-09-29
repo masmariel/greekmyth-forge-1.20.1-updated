@@ -17,8 +17,8 @@ import java.util.List;
 
 public class HelmOfDarknessItem extends ArmorItem {
     private static final List<MobEffectInstance> HELM_OF_DARKNESS_EFFECTS = Arrays.asList(
-            new MobEffectInstance(MobEffects.INVISIBILITY, 20, 0, false, false, true),
-            new MobEffectInstance(MobEffects.BAD_OMEN, 20, 0, false, false, true)
+            new MobEffectInstance(MobEffects.INVISIBILITY, 200, 0, false, false, false),
+            new MobEffectInstance(MobEffects.BAD_OMEN, 200, 0, false, false, false)
     );
 
     public HelmOfDarknessItem(ArmorMaterial material, Type type, Properties properties) {

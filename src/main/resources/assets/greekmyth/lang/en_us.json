@@ -62,6 +62,7 @@
   "item.greekmyth.sword_of_ares": "Sword Of Ares",
   "item.greekmyth.winged_sandals_of_hermes": "Winged Sandals of Hermes",
   "item.greekmyth.helm_of_darkness": "Helm of Darkness",
+  "item.greekmyth.trident_of_poseidon": "Trident of Poseidon",
 
   "block.greekmyth.bronze_block": "Block of Bronze",
   "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
@@ -99,5 +100,7 @@
   "tooltip.greekmyth.winged_sandals_of_hermes_shift": "You can feel the wings propelling you forward, through the air, and slowing your decent.",
   "tooltip.greekmyth.winged_sandals_of_hermes": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.helm_of_darkness_shift": "A dark presence can be felt coming from the helm. It grants a unique power, but the user's mind descends into madness.",
-  "tooltip.greekmyth.helm_of_darkness": "Hold §eSHIFT§r for more Information"
+  "tooltip.greekmyth.helm_of_darkness": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.trident_of_poseidon_shift": "The power of the sea emanates from the trident. Holding the item flows the power through your body.",
+  "tooltip.greekmyth.trident_of_poseidon": "Hold §eSHIFT§r for more Information"
 }
