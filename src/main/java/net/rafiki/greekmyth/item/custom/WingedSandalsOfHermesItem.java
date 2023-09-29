@@ -16,6 +16,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.rafiki.greekmyth.client.WingedSandalsOfHermesRenderer;
+import net.rafiki.greekmyth.item.ModItems;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.example.registry.ItemRegistry;
@@ -91,10 +92,7 @@ public final class WingedSandalsOfHermesItem extends ArmorItem implements GeoIte
 
             // Check each of the pieces match our set
             boolean isFullSet = wornArmor.containsAll(ObjectArrayList.of(
-                    ItemRegistry.GECKO_ARMOR_BOOTS.get(),
-                    ItemRegistry.GECKO_ARMOR_LEGGINGS.get(),
-                    ItemRegistry.GECKO_ARMOR_CHESTPLATE.get(),
-                    ItemRegistry.GECKO_ARMOR_HELMET.get()));
+                    ModItems.WINGED_SANDALS_OF_HERMES.get()));
 
             // Play the animation if the full set is being worn, otherwise stop
             return isFullSet ? PlayState.CONTINUE : PlayState.STOP;
