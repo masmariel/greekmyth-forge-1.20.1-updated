@@ -103,5 +103,7 @@
   "tooltip.greekmyth.helm_of_darkness_shift": "A dark presence can be felt coming from the helm. It grants a unique power, but the user's mind descends into madness.",
   "tooltip.greekmyth.helm_of_darkness": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.trident_of_poseidon_shift": "The power of the sea emanates from the trident. Holding the item flows the power through your body.",
-  "tooltip.greekmyth.trident_of_poseidon": "Hold §eSHIFT§r for more Information"
+  "tooltip.greekmyth.trident_of_poseidon": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.bident_of_hades_shift": "A dark force calls to you from the weapon. It withers those it cuts, but hungers for the soul, even that of the users.",
+  "tooltip.greekmyth.bident_of_hades": "Hold §eSHIFT§r for more Information"
 }

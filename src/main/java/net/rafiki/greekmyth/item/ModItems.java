@@ -36,15 +36,15 @@ public class ModItems {
     public static final RegistryObject<Item> LYRE_OF_APOLLO = ITEMS.register("lyre_of_apollo",
             () -> new LyreOfApolloItem(new Item.Properties()));
     public static final RegistryObject<Item> SWORD_OF_ARES = ITEMS.register("sword_of_ares",
-            () -> new SwordOfAresItem(ModToolTiers.ADAMANTINE, 3, -3.2f,new Item.Properties().durability(600)));
+            () -> new SwordOfAresItem(ModToolTiers.ADAMANTINE, 3, -3.2f,new Item.Properties().durability(450)));
     public static final RegistryObject<Item> WINGED_SANDALS_OF_HERMES = ITEMS.register("winged_sandals_of_hermes",
             () -> new WingedSandalsOfHermesItem(ModArmorMaterials.WINGED_SANDALS_OF_HERMES, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> HELM_OF_DARKNESS = ITEMS.register("helm_of_darkness",
             () -> new HelmOfDarknessItem(ModArmorMaterials.HELM_OF_DARKNESS, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> TRIDENT_OF_POSEIDON = ITEMS.register("trident_of_poseidon",
-            () -> new TridentOfPoseidonItem(new Item.Properties()));
+            () -> new TridentOfPoseidonItem(new Item.Properties().durability(400)));
     public static final RegistryObject<Item> BIDENT_OF_HADES = ITEMS.register("bident_of_hades",
-            () -> new BidentOfHadesItem(new Item.Properties()));
+            () -> new BidentOfHadesItem(new Item.Properties().durability(400)));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",

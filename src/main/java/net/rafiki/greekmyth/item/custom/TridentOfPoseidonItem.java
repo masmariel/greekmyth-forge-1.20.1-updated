@@ -16,6 +16,7 @@ import java.util.List;
 
 public class TridentOfPoseidonItem extends TridentItem {
     public TridentOfPoseidonItem(Properties pProperties) {
+
         super(pProperties);
     }
 
