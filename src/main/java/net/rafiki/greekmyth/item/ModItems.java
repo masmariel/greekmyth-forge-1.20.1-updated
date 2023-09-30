@@ -36,7 +36,7 @@ public class ModItems {
     public static final RegistryObject<Item> LYRE_OF_APOLLO = ITEMS.register("lyre_of_apollo",
             () -> new LyreOfApolloItem(new Item.Properties().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> SWORD_OF_ARES = ITEMS.register("sword_of_ares",
-            () -> new SwordOfAresItem(ModToolTiers.ADAMANTINE, 3, -3.2f,new Item.Properties().durability(450).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new SwordOfAresItem(ModToolTiers.ADAMANTINE, 3, -3.3f,new Item.Properties().durability(450).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> WINGED_SANDALS_OF_HERMES = ITEMS.register("winged_sandals_of_hermes",
             () -> new WingedSandalsOfHermesItem(ModArmorMaterials.WINGED_SANDALS_OF_HERMES, ArmorItem.Type.BOOTS, new Item.Properties().defaultDurability(100).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> HELM_OF_DARKNESS = ITEMS.register("helm_of_darkness",
@@ -45,6 +45,9 @@ public class ModItems {
             () -> new TridentOfPoseidonItem(new Item.Properties().defaultDurability(400).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> BIDENT_OF_HADES = ITEMS.register("bident_of_hades",
             () -> new BidentOfHadesItem(new Item.Properties().defaultDurability(400).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> HIDE_OF_THE_NEMEAN_LION = ITEMS.register("hide_of_the_nemean_lion",
+            () -> new HideOfTheNemeanLionItem(ModArmorMaterials.HIDE_OF_THE_NEMEAN_LION, ArmorItem.Type.CHESTPLATE, new Item.Properties().defaultDurability(650).rarity(Rarity.EPIC).setNoRepair()));
+
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",

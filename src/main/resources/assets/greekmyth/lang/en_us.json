@@ -64,6 +64,7 @@
   "item.greekmyth.helm_of_darkness": "Helm of Darkness",
   "item.greekmyth.trident_of_poseidon": "Trident of Poseidon",
   "item.greekmyth.bident_of_hades": "Bident of Hades",
+  "item.greekmyth.hide_of_the_nemean_lion": "Hide of the Nemean Lion",
 
   "block.greekmyth.bronze_block": "Block of Bronze",
   "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
@@ -105,5 +106,7 @@
   "tooltip.greekmyth.trident_of_poseidon_shift": "The power of the sea emanates from the trident. Holding the item flows the power through your body.",
   "tooltip.greekmyth.trident_of_poseidon": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.bident_of_hades_shift": "A dark force calls to you from the weapon. It withers those it cuts, but hungers for souls, even that of the users.",
-  "tooltip.greekmyth.bident_of_hades": "Hold §eSHIFT§r for more Information"
+  "tooltip.greekmyth.bident_of_hades": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.hide_of_the_nemean_lion_shift": "Nothing can cut nor pierce the hide of the great lion. But the heavy hide bares its toll on the wearer.",
+  "tooltip.greekmyth.hide_of_the_nemean_lion": "Hold §eSHIFT§r for more Information"
 }

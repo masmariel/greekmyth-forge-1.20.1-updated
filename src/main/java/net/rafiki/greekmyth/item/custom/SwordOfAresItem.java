@@ -30,6 +30,8 @@ public class SwordOfAresItem extends SwordItem {
         return super.onLeftClickEntity(stack, player, entity);
     }
 
+
+
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_ares_shift"));

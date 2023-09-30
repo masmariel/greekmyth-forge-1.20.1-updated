@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "greekmyth:item/hide_of_the_nemean_lion"
+  }
+}
