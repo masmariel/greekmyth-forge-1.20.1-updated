@@ -9,7 +9,7 @@ public class ModFoodProperties {
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 2), 1)
             .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 200, 1), 1)
             .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 300), 1)
-            .effect(() -> new MobEffectInstance(MobEffects.POISON, 400, 2), 1)
-            .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 300, 2), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.POISON, 300, 0), 1)
+            .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 100, 1), 1)
             .build();
 }

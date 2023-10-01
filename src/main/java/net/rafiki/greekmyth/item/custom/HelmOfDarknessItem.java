@@ -17,10 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class HelmOfDarknessItem extends ArmorItem {
-    private static final List<MobEffectInstance> HELM_OF_DARKNESS_EFFECTS = Arrays.asList(
-            new MobEffectInstance(MobEffects.INVISIBILITY, 200, 0, false, false, false),
-            new MobEffectInstance(MobEffects.BAD_OMEN, 200, 0, false, false, false)
-    );
+
 
     public HelmOfDarknessItem(ArmorMaterial material, Type type, Properties properties) {
         super(material, type, properties);
@@ -30,18 +27,13 @@ public class HelmOfDarknessItem extends ArmorItem {
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
         if (!pLevel.isClientSide && pSlotId == 3 && pEntity instanceof Player) {
             Player player = (Player) pEntity;
-
-            for (MobEffectInstance effect : HELM_OF_DARKNESS_EFFECTS) {
-                MobEffectInstance currentEffect = player.getEffect(effect.getEffect());
-
-                if (currentEffect == null || currentEffect.getDuration() <= 100) {
-                    player.addEffect(new MobEffectInstance(effect.getEffect(), 200, 0, false, false, false));
-                }
-            }
+                player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 0, false, false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 200, 0, false, false, false));
         }
 
         super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
     }
+
 
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {

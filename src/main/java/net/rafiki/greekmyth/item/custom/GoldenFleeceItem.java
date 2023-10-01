@@ -36,22 +36,28 @@ public class GoldenFleeceItem extends Item {
             Player player = pContext.getPlayer();
 
             if (player != null) {
-                long currentTime = level.getGameTime();
+                // Check if the item has enough durability
+                if (getDurability(pContext.getItemInHand()) >= 1) {
+                    long currentTime = level.getGameTime();
 
-                // Check if enough time has passed since the last usage
-                if (player.getCooldowns().isOnCooldown(this)) {
-                    // If still on cooldown, do nothing
-                    return InteractionResult.PASS;
-                }
+                    // Check if enough time has passed since the last usage
+                    if (player.getCooldowns().isOnCooldown(this)) {
+                        // If still on cooldown, do nothing
+                        return InteractionResult.PASS;
+                    }
 
-                for (MobEffectInstance effect : GOLDEN_FLEECE_EFFECTS) {
-                    MobEffectInstance currentEffect = player.getEffect(effect.getEffect());
+                    for (MobEffectInstance effect : GOLDEN_FLEECE_EFFECTS) {
+                        MobEffectInstance currentEffect = player.getEffect(effect.getEffect());
 
-                    if (currentEffect == null || currentEffect.getDuration() <= 100) {
-                        player.addEffect(new MobEffectInstance(effect.getEffect(), 200, 1, false, false, false));
+                        if (currentEffect == null || currentEffect.getDuration() <= 100) {
+                            player.addEffect(new MobEffectInstance(effect.getEffect(), 200, 1, false, false, false));
 
-                        // Set the cooldown for this item
-                        player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
+                            // Set the cooldown for this item
+                            player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
+
+                            // Decrease the item's durability
+                            decreaseDurability(pContext.getItemInHand(), 1);
+                        }
                     }
                 }
             }
@@ -68,5 +74,15 @@ public class GoldenFleeceItem extends Item {
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+    }
+
+    // Custom method to get the item's durability
+    private int getDurability(ItemStack stack) {
+        return stack.getMaxDamage() - stack.getDamageValue();
+    }
+
+    // Custom method to decrease the item's durability
+    private void decreaseDurability(ItemStack stack, int amount) {
+        stack.setDamageValue(stack.getDamageValue() + amount);
     }
 }

@@ -104,25 +104,14 @@ public final class WingedSandalsOfHermesItem extends ArmorItem implements GeoIte
         return cache;
     }
 
-    private static final List<MobEffectInstance> WINGED_SANDALS_OF_HERMES_EFFECTS = Arrays.asList(
-            new MobEffectInstance(MobEffects.JUMP, 200, 4, false, false, false),
-            new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false, false),
-            new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1, false, false, false)
-
-    );
-
     @Override
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
         if (!pLevel.isClientSide && pSlotId == 0 && pEntity instanceof Player) {
             Player player = (Player) pEntity;
 
-            for (MobEffectInstance effect : WINGED_SANDALS_OF_HERMES_EFFECTS) {
-                MobEffectInstance currentEffect = player.getEffect(effect.getEffect());
-
-                if (currentEffect == null || currentEffect.getDuration() <= 100) {
-                    player.addEffect(new MobEffectInstance(effect.getEffect(), 200, 0, false, false, false));
-                }
-            }
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1, false, false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.JUMP, 200, 4, false, false, false));
         }
 
         super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);

@@ -18,10 +18,6 @@ import java.util.List;
 
 public class HideOfTheNemeanLionItem extends ArmorItem {
 
-    private static final List<MobEffectInstance> HIDE_OF_THE_NEMEAN_LION_EFFECTS = Arrays.asList(
-            new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 0, false, false, false)
-    );
-
     public HideOfTheNemeanLionItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
@@ -29,14 +25,7 @@ public class HideOfTheNemeanLionItem extends ArmorItem {
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
         if (!pLevel.isClientSide && pSlotId == 2 && pEntity instanceof Player) {
             Player player = (Player) pEntity;
-
-            for (MobEffectInstance effect : HIDE_OF_THE_NEMEAN_LION_EFFECTS) {
-                MobEffectInstance currentEffect = player.getEffect(effect.getEffect());
-
-                if (currentEffect == null || currentEffect.getDuration() <= 100) {
-                    player.addEffect(new MobEffectInstance(effect.getEffect(), 200, 0, false, false, false));
-                }
-            }
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 0, false, false, false));
         }
 
         super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
