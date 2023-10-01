@@ -65,6 +65,7 @@
   "item.greekmyth.trident_of_poseidon": "Trident of Poseidon",
   "item.greekmyth.bident_of_hades": "Bident of Hades",
   "item.greekmyth.hide_of_the_nemean_lion": "Hide of the Nemean Lion",
+  "item.greekmyth.golden_fleece": "Golden Fleece",
 
   "block.greekmyth.bronze_block": "Block of Bronze",
   "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
@@ -108,5 +109,7 @@
   "tooltip.greekmyth.bident_of_hades_shift": "A dark force calls to you from the weapon. It withers those it cuts, but hungers for souls, even that of the users.",
   "tooltip.greekmyth.bident_of_hades": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.hide_of_the_nemean_lion_shift": "Nothing can cut nor pierce the hide of the great lion. But the heavy hide bares its toll on the wearer.",
-  "tooltip.greekmyth.hide_of_the_nemean_lion": "Hold §eSHIFT§r for more Information"
+  "tooltip.greekmyth.hide_of_the_nemean_lion": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.golden_fleece_shift": "The fleece shines in the sun. A feeling of warmth and healing arise when you touch it.",
+  "tooltip.greekmyth.golden_fleece": "Hold §eSHIFT§r for more Information"
 }

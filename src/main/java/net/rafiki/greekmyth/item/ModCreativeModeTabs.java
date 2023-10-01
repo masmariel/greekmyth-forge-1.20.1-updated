@@ -66,6 +66,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TRIDENT_OF_POSEIDON.get());
                         output.accept(ModItems.BIDENT_OF_HADES.get());
                         output.accept(ModItems.HIDE_OF_THE_NEMEAN_LION.get());
+                        output.accept(ModItems.GOLDEN_FLEECE.get());
 
                         //TOOLS
                         output.accept(ModItems.STYGIAN_IRON_SWORD.get());

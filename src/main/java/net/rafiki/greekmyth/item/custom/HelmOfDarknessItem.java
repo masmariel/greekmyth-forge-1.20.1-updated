@@ -54,3 +54,6 @@ public class HelmOfDarknessItem extends ArmorItem {
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 }
+
+
+

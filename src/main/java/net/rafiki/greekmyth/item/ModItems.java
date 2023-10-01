@@ -47,6 +47,8 @@ public class ModItems {
             () -> new BidentOfHadesItem(new Item.Properties().defaultDurability(400).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> HIDE_OF_THE_NEMEAN_LION = ITEMS.register("hide_of_the_nemean_lion",
             () -> new HideOfTheNemeanLionItem(ModArmorMaterials.HIDE_OF_THE_NEMEAN_LION, ArmorItem.Type.CHESTPLATE, new Item.Properties().defaultDurability(650).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> GOLDEN_FLEECE = ITEMS.register("golden_fleece",
+            () -> new GoldenFleeceItem(new Item.Properties().defaultDurability(220).rarity(Rarity.EPIC).setNoRepair()));
 
 
     //FUEL

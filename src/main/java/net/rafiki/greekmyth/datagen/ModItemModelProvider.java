@@ -47,6 +47,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.WINGED_SANDALS_OF_HERMES);
         simpleItem(ModItems.HELM_OF_DARKNESS);
         simpleItem(ModItems.HIDE_OF_THE_NEMEAN_LION);
+        simpleItem(ModItems.GOLDEN_FLEECE);
 
         //SPECIAL
         buttonItem(ModBlocks.ADAMANTINE_BUTTON, ModBlocks.ADAMANTINE_BLOCK);
