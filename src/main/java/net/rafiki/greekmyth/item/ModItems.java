@@ -1,5 +1,7 @@
 package net.rafiki.greekmyth.item;
 
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -121,6 +123,8 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> STYGIAN_IRON_BOOTS = ITEMS.register("stygian_iron_boots",
             () -> new ArmorItem(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> STYGIAN_IRON_HORSE_ARMOR = ITEMS.register("stygian_iron_horse_armor",
+            () -> new HorseArmorItem(15, new ResourceLocation(GreekMyth.MOD_ID, "textures/entity/horse/armor/horse_armor_stygian_iron.png"), new Item.Properties().stacksTo(1)));
 
         //ADAMANTINE
     public static final RegistryObject<Item> ADAMANTINE_HELMET = ITEMS.register("adamantine_helmet",
@@ -131,6 +135,8 @@ public class ModItems {
             () -> new ModArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> ADAMANTINE_BOOTS = ITEMS.register("adamantine_boots",
             () -> new ModArmorItem(ModArmorMaterials.ADAMANTINE, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> ADAMANTINE_HORSE_ARMOR = ITEMS.register("adamantine_horse_armor",
+            () -> new HorseArmorItem(13, new ResourceLocation(GreekMyth.MOD_ID, "textures/entity/horse/armor/horse_armor_adamantine.png"), new Item.Properties().stacksTo(1)));
 
         //IMPERIAL_GOLD
     public static final RegistryObject<Item> IMPERIAL_GOLD_HELMET = ITEMS.register("imperial_gold_helmet",
@@ -141,6 +147,9 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> IMPERIAL_GOLD_BOOTS = ITEMS.register("imperial_gold_boots",
             () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> IMPERIAL_GOLD_HORSE_ARMOR = ITEMS.register("imperial_gold_horse_armor",
+            () -> new HorseArmorItem(9, new ResourceLocation(GreekMyth.MOD_ID, "textures/entity/horse/armor/horse_armor_imperial_gold.png"), new Item.Properties().stacksTo(1)));
+
 
         //CELESTIAL BRONZE
     public static final RegistryObject<Item> CELESTIAL_BRONZE_HELMET = ITEMS.register("celestial_bronze_helmet",
@@ -151,6 +160,8 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> CELESTIAL_BRONZE_BOOTS = ITEMS.register("celestial_bronze_boots",
             () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> CELESTIAL_BRONZE_HORSE_ARMOR = ITEMS.register("celestial_bronze_horse_armor",
+            () -> new HorseArmorItem(7, new ResourceLocation(GreekMyth.MOD_ID, "textures/entity/horse/armor/horse_armor_celestial_bronze.png"), new Item.Properties().stacksTo(1)));
 
         //BRONZE
     public static final RegistryObject<Item> BRONZE_HELMET = ITEMS.register("bronze_helmet",
@@ -161,6 +172,8 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_BOOTS = ITEMS.register("bronze_boots",
             () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> BRONZE_HORSE_ARMOR = ITEMS.register("bronze_horse_armor",
+            () -> new HorseArmorItem(6, new ResourceLocation(GreekMyth.MOD_ID, "textures/entity/horse/armor/horse_armor_bronze.png"), new Item.Properties().stacksTo(1)));
 
 
     public static void register(IEventBus eventBus) {

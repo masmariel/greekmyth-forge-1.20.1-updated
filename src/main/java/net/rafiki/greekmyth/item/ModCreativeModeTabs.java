@@ -112,6 +112,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BRONZE_LEGGINGS.get());
                         output.accept(ModItems.BRONZE_BOOTS.get());
 
+                        //HORSE ARMOR
+                        output.accept(ModItems.STYGIAN_IRON_HORSE_ARMOR.get());
+                        output.accept(ModItems.ADAMANTINE_HORSE_ARMOR.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_HORSE_ARMOR.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_HORSE_ARMOR.get());
+                        output.accept(ModItems.BRONZE_HORSE_ARMOR.get());
+
                     }).build());
 
 

@@ -99,6 +99,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.BRONZE_LEGGINGS);
         simpleItem(ModItems.BRONZE_BOOTS);
 
+        //HORSE ARMOR
+        simpleItem(ModItems.STYGIAN_IRON_HORSE_ARMOR);
+        simpleItem(ModItems.ADAMANTINE_HORSE_ARMOR);
+        simpleItem(ModItems.IMPERIAL_GOLD_HORSE_ARMOR);
+        simpleItem(ModItems.CELESTIAL_BRONZE_HORSE_ARMOR);
+        simpleItem(ModItems.BRONZE_HORSE_ARMOR);
+
     }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
