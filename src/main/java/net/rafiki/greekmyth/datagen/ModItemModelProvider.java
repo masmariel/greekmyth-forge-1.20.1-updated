@@ -82,10 +82,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.STYGIAN_IRON_CHESTPLATE);
         simpleItem(ModItems.STYGIAN_IRON_LEGGINGS);
         simpleItem(ModItems.STYGIAN_IRON_BOOTS);
-        simpleItem(ModItems.ADAMANTINE_HELMET);
-        simpleItem(ModItems.ADAMANTINE_CHESTPLATE);
-        simpleItem(ModItems.ADAMANTINE_LEGGINGS);
-        simpleItem(ModItems.ADAMANTINE_BOOTS);
         simpleItem(ModItems.IMPERIAL_GOLD_HELMET);
         simpleItem(ModItems.IMPERIAL_GOLD_CHESTPLATE);
         simpleItem(ModItems.IMPERIAL_GOLD_LEGGINGS);

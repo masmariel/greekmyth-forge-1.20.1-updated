@@ -1,14 +1,10 @@
-// 1.20.1	2023-10-01T12:10:57.4502423	Item Models: greekmyth
+// 1.20.1	2023-10-02T13:48:37.8691855	Item Models: greekmyth
 9f2e9e6c619d320103f31e3d5dcd489318179481 assets/greekmyth/models/item/adamantine.json
 e9581c2fc533cd57806f5f5766c31838348e1635 assets/greekmyth/models/item/adamantine_axe.json
-e41f318d9d2dba5b52b4baa329d0a8c0c8719fbc assets/greekmyth/models/item/adamantine_boots.json
 3bb97b0bef3d30e840aacf11f121a7e19f6970a7 assets/greekmyth/models/item/adamantine_button.json
-5bbf285bac75fa8bdae88aa0a13880fbfd069b01 assets/greekmyth/models/item/adamantine_chestplate.json
 7807bbb4462677884939de77384ec6fb85be68e3 assets/greekmyth/models/item/adamantine_door.json
 2ee54041aba8502e70aab872c9007f8274fd62bc assets/greekmyth/models/item/adamantine_fence.json
-9fd579938e84755e1eb6c9717a7768f8162b5f2a assets/greekmyth/models/item/adamantine_helmet.json
 cae72e210b6d0d6f3f02c45288cead8cbbfb1305 assets/greekmyth/models/item/adamantine_horse_armor.json
-b2329ccf3a3d61265f051ab0509da3d7466bcf45 assets/greekmyth/models/item/adamantine_leggings.json
 b8f91dad1e7d12751bb56da03ecd707be4ac4a57 assets/greekmyth/models/item/adamantine_pickaxe.json
 6d7e5dd163ee398b524442cc4e79cbed48aba9ea assets/greekmyth/models/item/adamantine_shovel.json
 c0542c1fd6e5533e27aa1b26d38d483dcf3b6aa7 assets/greekmyth/models/item/adamantine_sword.json
