@@ -23,12 +23,10 @@ public class HideOfTheNemeanLionItem extends ArmorItem {
     }
 
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
-        if (!pLevel.isClientSide && pSlotId == 2 && pEntity instanceof Player) {
-            Player player = (Player) pEntity;
+        Player player = (Player) pEntity;
+        if (!pLevel.isClientSide && player.getInventory().armor.get(2) == pStack && pEntity instanceof Player) {
                 player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 0, false, false, false));
         }
-
-        super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
     }
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {

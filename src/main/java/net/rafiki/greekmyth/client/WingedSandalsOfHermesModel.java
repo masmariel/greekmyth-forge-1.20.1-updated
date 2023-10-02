@@ -8,17 +8,16 @@ import software.bernie.geckolib.model.GeoModel;
 public class WingedSandalsOfHermesModel extends GeoModel {
     @Override
     public ResourceLocation getModelResource(GeoAnimatable animatable) {
-        return new ResourceLocation(GreekMyth.MOD_ID, "geo/wingedsandalsofhermesmodel.geo.json");
+        return new ResourceLocation(GreekMyth.MOD_ID, "geo/winged_sandals_of_hermes.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GeoAnimatable animatable) {
-        return new ResourceLocation(GreekMyth.MOD_ID, "textures/models/armor/wingedsandalsofhermestexture.png");
+        return new ResourceLocation(GreekMyth.MOD_ID, "textures/models/armor/winged_sandals_of_hermes.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(GeoAnimatable animatable) {
-        //return new ResourceLocation(GreekMyth.MOD_ID, "animations/wingedsandalsofhermes.animation.json");
-        return new ResourceLocation(GreekMyth.MOD_ID, "animations/wingedsandalsofhermesidle.animation.json");
+        return new ResourceLocation(GreekMyth.MOD_ID, "animations/winged_sandals_of_hermes.animation.json");
     }
 }
