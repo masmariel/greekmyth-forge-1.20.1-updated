@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rafiki.greekmyth.block.ModBlocks;
+import net.rafiki.greekmyth.enchantment.ModEnchantments;
 import net.rafiki.greekmyth.item.ModCreativeModeTabs;
 import net.rafiki.greekmyth.item.ModItems;
 import net.rafiki.greekmyth.sound.ModSounds;
@@ -39,6 +40,9 @@ public class GreekMyth
 
         //Register mod blocks in ModBlocks class
         ModBlocks.register(modEventBus);
+
+        //Register mod enchantments in ModEnchantments class
+        ModEnchantments.register(modEventBus);
 
         //Register sounds in ModSounds class
         ModSounds.register(modEventBus);
