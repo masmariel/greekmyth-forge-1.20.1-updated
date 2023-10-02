@@ -18,7 +18,7 @@ public class WingedSandalsOfHermesModel extends GeoModel {
 
     @Override
     public ResourceLocation getAnimationResource(GeoAnimatable animatable) {
-        //return new ResourceLocation(GreekMyth.MOD_ID, "animations/wingedsandalsofhermesflapping.animation.json");
+        //return new ResourceLocation(GreekMyth.MOD_ID, "animations/wingedsandalsofhermes.animation.json");
         return new ResourceLocation(GreekMyth.MOD_ID, "animations/wingedsandalsofhermesidle.animation.json");
     }
 }
