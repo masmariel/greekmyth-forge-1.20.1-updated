@@ -36,7 +36,7 @@ public class ModItems {
 
     //CUSTOM
     public static final RegistryObject<Item> LYRE_OF_APOLLO = ITEMS.register("lyre_of_apollo",
-            () -> new LyreOfApolloItem(new Item.Properties().rarity(Rarity.RARE)));
+            () -> new LyreOfApolloItem(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
     public static final RegistryObject<Item> SWORD_OF_ARES = ITEMS.register("sword_of_ares",
             () -> new SwordOfAresItem(ModToolTiers.ADAMANTINE, 5, -3.4f,new Item.Properties().durability(325).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> WINGED_SANDALS_OF_HERMES = ITEMS.register("winged_sandals_of_hermes",
