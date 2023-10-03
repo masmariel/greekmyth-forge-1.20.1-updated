@@ -55,12 +55,23 @@ public class ModItems {
     public static final RegistryObject<Item> SCYTHE_OF_KRONUS = ITEMS.register("scythe_of_kronus",
             () -> new ScytheOfKronusItem(ModToolTiers.BASE_SWORD, 9, -3f,new Item.Properties().durability(350).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> HARPE_OF_PERSEUS = ITEMS.register("harpe_of_perseus",
-            () -> new HarpeOfPerseusItem(ModToolTiers.BASE_SWORD, 7, -2.2f,new Item.Properties().durability(450).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new HarpeOfPerseusItem(ModToolTiers.BASE_SWORD, 7, -2.2f,new Item.Properties().durability(450).rarity(Rarity.RARE).setNoRepair()));
     public static final RegistryObject<Item> LABRYS = ITEMS.register("labrys",
             () -> new LabrysItem(ModToolTiers.BASE_SWORD, 11, -3.6f,new Item.Properties().durability(400).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> THRYSUS = ITEMS.register("thrysus",
             () -> new ThrysusItem(new Item.Properties().defaultDurability(150).rarity(Rarity.EPIC).setNoRepair()));
-
+    public static final RegistryObject<Item> SPEAR_OF_ATHENA = ITEMS.register("spear_of_athena",
+            () -> new SpearOfAthenaItem(new Item.Properties().defaultDurability(375).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> SPEAR_OF_ACHILLES = ITEMS.register("spear_of_achilles",
+            () -> new SpearOfAchillesItem(new Item.Properties().defaultDurability(300).rarity(Rarity.RARE).setNoRepair()));
+    public static final RegistryObject<Item> TRIDENT_OF_OCEANUS = ITEMS.register("trident_of_oceanus",
+            () -> new TridentOfOceanusItem(new Item.Properties().defaultDurability(400).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> CESTUS_OF_APHRODITE = ITEMS.register("cestus_of_aphrodite",
+            () -> new CestusOfAphroditeItem(ModArmorMaterials.CESTUS_OF_APHRODITE, ArmorItem.Type.LEGGINGS, new Item.Properties().defaultDurability(200).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> GIRDLE_OF_HIPPOLYTA = ITEMS.register("girdle_of_hippolyta",
+            () -> new GirdleOfHippolytaItem(ModArmorMaterials.GIRDLE_OF_HIPPOLYTA, ArmorItem.Type.LEGGINGS, new Item.Properties().defaultDurability(200).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> SWORD_OF_ATALANTA = ITEMS.register("sword_of_atalanta",
+            () -> new SwordOfAtalantaItem(ModToolTiers.HALF_BASE_SWORD, 6, -1.8f,new Item.Properties().durability(400).rarity(Rarity.RARE).setNoRepair()));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",

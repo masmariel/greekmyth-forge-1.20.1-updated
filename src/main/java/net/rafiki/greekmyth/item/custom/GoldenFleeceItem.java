@@ -20,8 +20,6 @@ public class GoldenFleeceItem extends Item {
     private static final List<MobEffectInstance> GOLDEN_FLEECE_EFFECTS = Arrays.asList(
             new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, false, false)
     );
-
-    // Cooldown in ticks (20 ticks per second)
     private static final int COOLDOWN_TICKS = 40 * 20;
 
     public GoldenFleeceItem(Properties pProperties) {
@@ -47,7 +45,7 @@ public class GoldenFleeceItem extends Item {
                         MobEffectInstance currentEffect = player.getEffect(effect.getEffect());
 
                         if (currentEffect == null || currentEffect.getDuration() <= 100) {
-                            player.addEffect(new MobEffectInstance(effect.getEffect(), 200, 1, false, false, false));
+                            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, false, false));
 
                             player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
 

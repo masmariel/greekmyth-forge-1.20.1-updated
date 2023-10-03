@@ -22,54 +22,27 @@ import java.util.List;
 
 public class CaduceusItem extends Item {
     private static final int COOLDOWN_TICKS = 50 * 20;
-    private static final int MAX_DURABILITY = 150;
 
     public CaduceusItem(Properties pProperties) {
         super(pProperties);
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext context) {
-        Player player = context.getPlayer();
-        Level world = context.getLevel();
-        BlockPos targetPos = context.getClickedPos();
-
-        if (player != null && context.getHand() == InteractionHand.MAIN_HAND) {
-            ItemStack caduceusStack = player.getItemInHand(context.getHand());
-            int durability = getDurability(caduceusStack);
-
-            if (durability > 0) {
-                List<Entity> entities = world.getEntities(null, new net.minecraft.world.phys.AABB(targetPos));
-
-                for (Entity entity : entities) {
-                    if (entity instanceof LivingEntity) {
-                        LivingEntity targetEntity = (LivingEntity) entity;
-
-                        if (!player.getCooldowns().isOnCooldown(this)) {
-                            targetEntity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0));
-                            targetEntity.addEffect(new MobEffectInstance(MobEffects.HEAL, 1, 1));
-
-                            player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
-
-                            decreaseDurability(caduceusStack, 1);
-
-                            return InteractionResult.SUCCESS;
-                        }
-                    }
-                }
+    public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
+        if (entity instanceof LivingEntity livingEntity){
+            if (!player.getCooldowns().isOnCooldown(this)) {
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1), player);
+                livingEntity.heal(6.0F);
+                stack.hurtAndBreak(1, player, (player1) -> {
+                    player1.broadcastBreakEvent(player.getUsedItemHand());
+                });
+                player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
+                return true;
             }
         }
-
-        return super.useOn(context);
+        return false;
     }
 
-    private int getDurability(ItemStack stack) {
-        return MAX_DURABILITY - stack.getDamageValue();
-    }
-
-    private void decreaseDurability(ItemStack stack, int amount) {
-        stack.setDamageValue(stack.getDamageValue() + amount);
-    }
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {

@@ -76,6 +76,12 @@
   "item.greekmyth.harpe_of_perseus": "Harpe of Perseus",
   "item.greekmyth.labrys": "Labrys",
   "item.greekmyth.thrysus": "Thrysus",
+  "item.greekmyth.spear_of_athena": "Spear of Athena",
+  "item.greekmyth.spear_of_achilles": "Spear of Achilles",
+  "item.greekmyth.trident_of_oceanus": "Trident of Oceanus",
+  "item.greekmyth.girdle_of_hippolyta": "Girdle of Hippolyta",
+  "item.greekmyth.cestus_of_aphrodite": "Cestus of Aphrodite",
+  "item.greekmyth.sword_of_atalanta": "Sword of Atalanta",
 
   "block.greekmyth.bronze_block": "Block of Bronze",
   "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
@@ -133,5 +139,17 @@
   "tooltip.greekmyth.labrys_shift": "A heavy, yet powerful double sided axe. Once wielded by the mighty Minotaur.",
   "tooltip.greekmyth.labrys": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.thrysus_shift": "The staff of Dionysus. Brings beer, parties, and intoxication!",
-  "tooltip.greekmyth.thrysus": "Hold §eSHIFT§r for more Information"
+  "tooltip.greekmyth.thrysus": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.spear_of_achilles_shift": "Rusty, crumbling, and old, the spear was last seen during the Trojan War.",
+  "tooltip.greekmyth.spear_of_achilles": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.spear_of_athena_shift": "The spear has guided Athena with wisdom and strength to ensure victory above all else.",
+  "tooltip.greekmyth.spear_of_athena": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.girdle_of_hippolyta_shift": "The girdle of the Amazonian queen emanates with power. Maybe it's the gem in the middle?",
+  "tooltip.greekmyth.girdle_of_hippolyta": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.cestus_of_aphrodite_shift": "It's beauty captivates all, providing good health and fertility.",
+  "tooltip.greekmyth.cestus_of_aphrodite": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.trident_of_oceanus_shift": "The titan's weapon, though not as strong as Poseidon's, it is still powerful.",
+  "tooltip.greekmyth.trident_of_oceanus": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.sword_of_atalanta_shift": "Legendary sword of the warrior Atalanta.",
+  "tooltip.greekmyth.sword_of_atalanta": "Hold §eSHIFT§r for more Information"
 }

@@ -53,6 +53,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.HARPE_OF_PERSEUS);
         handheldItem(ModItems.LABRYS);
         handheldItem(ModItems.THRYSUS);
+        handheldItem(ModItems.SPEAR_OF_ATHENA);
+        handheldItem(ModItems.SPEAR_OF_ACHILLES);
+        handheldItem(ModItems.TRIDENT_OF_OCEANUS);
+        simpleItem(ModItems.CESTUS_OF_APHRODITE);
+        simpleItem(ModItems.GIRDLE_OF_HIPPOLYTA);
+        handheldItem(ModItems.SWORD_OF_ATALANTA);
+
 
         //SPECIAL
         buttonItem(ModBlocks.ADAMANTINE_BUTTON, ModBlocks.ADAMANTINE_BLOCK);

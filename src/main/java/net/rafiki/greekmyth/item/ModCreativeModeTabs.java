@@ -72,6 +72,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.HARPE_OF_PERSEUS.get());
                         output.accept(ModItems.LABRYS.get());
                         output.accept(ModItems.THRYSUS.get());
+                        output.accept(ModItems.SPEAR_OF_ACHILLES.get());
+                        output.accept(ModItems.SPEAR_OF_ATHENA.get());
+                        output.accept(ModItems.CESTUS_OF_APHRODITE.get());
+                        output.accept(ModItems.GIRDLE_OF_HIPPOLYTA.get());
+                        output.accept(ModItems.TRIDENT_OF_OCEANUS.get());
+                        output.accept(ModItems.SWORD_OF_ATALANTA.get());
+
 
                         //TOOLS
                         output.accept(ModItems.STYGIAN_IRON_SWORD.get());

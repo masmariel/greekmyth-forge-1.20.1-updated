@@ -24,6 +24,20 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266656_.put(ArmorItem.Type.HELMET, 2);
     }), 2, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.1F, () -> Ingredient.of(ModItems.WINGED_SANDALS_OF_HERMES.get())),
 
+    CESTUS_OF_APHRODITE("cestus_of_aphrodite", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
+        p_266656_.put(ArmorItem.Type.BOOTS, 2);
+        p_266656_.put(ArmorItem.Type.LEGGINGS, 2);
+        p_266656_.put(ArmorItem.Type.CHESTPLATE, 6);
+        p_266656_.put(ArmorItem.Type.HELMET, 2);
+    }), 2, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.of(ModItems.CESTUS_OF_APHRODITE.get())),
+
+    GIRDLE_OF_HIPPOLYTA("girdle_of_hippolyta", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
+        p_266656_.put(ArmorItem.Type.BOOTS, 2);
+        p_266656_.put(ArmorItem.Type.LEGGINGS, 3);
+        p_266656_.put(ArmorItem.Type.CHESTPLATE, 6);
+        p_266656_.put(ArmorItem.Type.HELMET, 2);
+    }), 2, SoundEvents.ARMOR_EQUIP_LEATHER, 0.5F, 0.1F, () -> Ingredient.of(ModItems.GIRDLE_OF_HIPPOLYTA.get())),
+
     HIDE_OF_THE_NEMEAN_LION("hide_of_the_nemean_lion", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
         p_266656_.put(ArmorItem.Type.BOOTS, 2);
         p_266656_.put(ArmorItem.Type.LEGGINGS, 5);
