@@ -71,6 +71,11 @@
   "item.greekmyth.bident_of_hades": "Bident of Hades",
   "item.greekmyth.hide_of_the_nemean_lion": "Hide of the Nemean Lion",
   "item.greekmyth.golden_fleece": "Golden Fleece",
+  "item.greekmyth.caduceus": "Caduceus",
+  "item.greekmyth.scythe_of_kronus": "Scythe of Kronus",
+  "item.greekmyth.harpe_of_perseus": "Harpe of Perseus",
+  "item.greekmyth.labrys": "Labrys",
+  "item.greekmyth.thrysus": "Thrysus",
 
   "block.greekmyth.bronze_block": "Block of Bronze",
   "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
@@ -118,5 +123,15 @@
   "tooltip.greekmyth.hide_of_the_nemean_lion_shift": "Nothing can cut nor pierce the hide of the great lion. But the heavy hide bares its toll on the wearer.",
   "tooltip.greekmyth.hide_of_the_nemean_lion": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.golden_fleece_shift": "The fleece shines in the sun. A feeling of warmth and healing arise when you touch it.",
-  "tooltip.greekmyth.golden_fleece": "Hold §eSHIFT§r for more Information"
+  "tooltip.greekmyth.golden_fleece": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.caduceus_shift": "Rejuvenation and replenishment flow out the staff blessing all those it touches.",
+  "tooltip.greekmyth.caduceus": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.scythe_of_kronus_shift": "The Titans Curse. A powerful weapon of the father of the Olympians.",
+  "tooltip.greekmyth.scythe_of_kronus": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.harpe_of_perseus_shift": "The legendary blade used to decapitate Medusa. It's lightweight and sharp.",
+  "tooltip.greekmyth.harpe_of_perseus": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.labrys_shift": "A heavy, yet powerful double sided axe. Once wielded by the mighty Minotaur.",
+  "tooltip.greekmyth.labrys": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.thrysus_shift": "The staff of Dionysus. Brings beer, parties, and intoxication!",
+  "tooltip.greekmyth.thrysus": "Hold §eSHIFT§r for more Information"
 }

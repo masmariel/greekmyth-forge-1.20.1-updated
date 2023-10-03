@@ -12,6 +12,14 @@ import net.rafiki.greekmyth.util.ModTags;
 import java.util.List;
 
     public class ModToolTiers {
+        public static final Tier HALF_BASE_SWORD = TierSortingRegistry.registerTier(
+                new ForgeTier(1, 300, 9f, 0.5f, 17,
+                        ModTags.Blocks.NEEDS_STYGIAN_IRON_TOOL, () -> Ingredient.of()),
+                new ResourceLocation(GreekMyth.MOD_ID, "half_base_sword"), List.of(Tiers.NETHERITE), List.of());
+        public static final Tier BASE_SWORD = TierSortingRegistry.registerTier(
+                new ForgeTier(1, 300, 9f, 0f, 17,
+                        ModTags.Blocks.NEEDS_STYGIAN_IRON_TOOL, () -> Ingredient.of()),
+                new ResourceLocation(GreekMyth.MOD_ID, "base_sword"), List.of(Tiers.NETHERITE), List.of());
         public static final Tier STYGIAN_IRON = TierSortingRegistry.registerTier(
                 new ForgeTier(5, 2100, 9f, 6f, 17,
                         ModTags.Blocks.NEEDS_STYGIAN_IRON_TOOL, () -> Ingredient.of(ModItems.STYGIAN_IRON_INGOT.get())),

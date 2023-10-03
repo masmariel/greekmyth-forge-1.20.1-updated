@@ -1,6 +1,5 @@
 package net.rafiki.greekmyth.item;
 
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -38,7 +37,7 @@ public class ModItems {
     public static final RegistryObject<Item> LYRE_OF_APOLLO = ITEMS.register("lyre_of_apollo",
             () -> new LyreOfApolloItem(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
     public static final RegistryObject<Item> SWORD_OF_ARES = ITEMS.register("sword_of_ares",
-            () -> new SwordOfAresItem(ModToolTiers.ADAMANTINE, 5, -3.4f,new Item.Properties().durability(325).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new SwordOfAresItem(ModToolTiers.HALF_BASE_SWORD, 7, -3.4f,new Item.Properties().durability(325).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> WINGED_SANDALS_OF_HERMES = ITEMS.register("winged_sandals_of_hermes",
             () -> new WingedSandalsOfHermesItem(ModArmorMaterials.WINGED_SANDALS_OF_HERMES, ArmorItem.Type.BOOTS, new Item.Properties().defaultDurability(100).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> HELM_OF_DARKNESS = ITEMS.register("helm_of_darkness",
@@ -51,6 +50,16 @@ public class ModItems {
             () -> new HideOfTheNemeanLionItem(ModArmorMaterials.HIDE_OF_THE_NEMEAN_LION, ArmorItem.Type.CHESTPLATE, new Item.Properties().defaultDurability(650).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> GOLDEN_FLEECE = ITEMS.register("golden_fleece",
             () -> new GoldenFleeceItem(new Item.Properties().defaultDurability(220).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> CADUCEUS = ITEMS.register("caduceus",
+            () -> new CaduceusItem(new Item.Properties().defaultDurability(150).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> SCYTHE_OF_KRONUS = ITEMS.register("scythe_of_kronus",
+            () -> new ScytheOfKronusItem(ModToolTiers.BASE_SWORD, 9, -3f,new Item.Properties().durability(350).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> HARPE_OF_PERSEUS = ITEMS.register("harpe_of_perseus",
+            () -> new HarpeOfPerseusItem(ModToolTiers.BASE_SWORD, 7, -2.2f,new Item.Properties().durability(450).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> LABRYS = ITEMS.register("labrys",
+            () -> new LabrysItem(ModToolTiers.BASE_SWORD, 11, -3.6f,new Item.Properties().durability(400).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> THRYSUS = ITEMS.register("thrysus",
+            () -> new ThrysusItem(new Item.Properties().defaultDurability(150).rarity(Rarity.EPIC).setNoRepair()));
 
 
     //FUEL
