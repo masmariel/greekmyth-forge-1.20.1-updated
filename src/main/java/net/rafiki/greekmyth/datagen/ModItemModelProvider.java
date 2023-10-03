@@ -77,24 +77,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BRONZE_SHOVEL);
         handheldItem(ModItems.BRONZE_AXE);
 
-        //ARMOR
-        simpleItem(ModItems.STYGIAN_IRON_HELMET);
-        simpleItem(ModItems.STYGIAN_IRON_CHESTPLATE);
-        simpleItem(ModItems.STYGIAN_IRON_LEGGINGS);
-        simpleItem(ModItems.STYGIAN_IRON_BOOTS);
-        simpleItem(ModItems.IMPERIAL_GOLD_HELMET);
-        simpleItem(ModItems.IMPERIAL_GOLD_CHESTPLATE);
-        simpleItem(ModItems.IMPERIAL_GOLD_LEGGINGS);
-        simpleItem(ModItems.IMPERIAL_GOLD_BOOTS);
-        simpleItem(ModItems.CELESTIAL_BRONZE_HELMET);
-        simpleItem(ModItems.CELESTIAL_BRONZE_CHESTPLATE);
-        simpleItem(ModItems.CELESTIAL_BRONZE_LEGGINGS);
-        simpleItem(ModItems.CELESTIAL_BRONZE_BOOTS);
-        simpleItem(ModItems.BRONZE_HELMET);
-        simpleItem(ModItems.BRONZE_CHESTPLATE);
-        simpleItem(ModItems.BRONZE_LEGGINGS);
-        simpleItem(ModItems.BRONZE_BOOTS);
-
         //HORSE ARMOR
         simpleItem(ModItems.STYGIAN_IRON_HORSE_ARMOR);
         simpleItem(ModItems.ADAMANTINE_HORSE_ARMOR);
