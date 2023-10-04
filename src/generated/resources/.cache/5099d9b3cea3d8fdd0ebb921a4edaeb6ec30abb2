@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-03T16:39:25.8959402	Item Models: greekmyth
+// 1.20.1	2023-10-03T23:37:34.4416489	Item Models: greekmyth
 9f2e9e6c619d320103f31e3d5dcd489318179481 assets/greekmyth/models/item/adamantine.json
 e9581c2fc533cd57806f5f5766c31838348e1635 assets/greekmyth/models/item/adamantine_axe.json
 3bb97b0bef3d30e840aacf11f121a7e19f6970a7 assets/greekmyth/models/item/adamantine_button.json
@@ -10,6 +10,7 @@ b8f91dad1e7d12751bb56da03ecd707be4ac4a57 assets/greekmyth/models/item/adamantine
 c0542c1fd6e5533e27aa1b26d38d483dcf3b6aa7 assets/greekmyth/models/item/adamantine_sword.json
 4645302cc9366b506d63d148294aae3134ef047b assets/greekmyth/models/item/adamantine_wall.json
 61cf831ecdd468f9639eed1e430a49e24902cf1e assets/greekmyth/models/item/ambrosia.json
+9acc03d33c1fc7f555d4ceae19f690b280c25baf assets/greekmyth/models/item/amulet_of_hecate.json
 01b9d17846cd1770b057f999e94c71196447a421 assets/greekmyth/models/item/bident_of_hades.json
 4910816c22f45e6f6989cafa42d3b3726730803c assets/greekmyth/models/item/bronze_axe.json
 c75fb58d20a0a3ee493a4801dc5be275a036e323 assets/greekmyth/models/item/bronze_horse_armor.json
@@ -25,6 +26,8 @@ a7b978a7795a3d761b99b744d6054bc2a339bcae assets/greekmyth/models/item/caduceus.j
 65b51218d099e66ddd92f6fd520ff5cd786553f3 assets/greekmyth/models/item/celestial_bronze_shovel.json
 195ec2c97d6119e2c510aede6d35267e7269bff1 assets/greekmyth/models/item/celestial_bronze_sword.json
 c4f38b1c0161a23b33d65d1ebeaf08ea1136716e assets/greekmyth/models/item/cestus_of_aphrodite.json
+c70bad2b63ac0692ad9f2b51b24d400f4511886e assets/greekmyth/models/item/claw_of_the_nemean_lion.json
+beed5ae31f06d0198130b8885eba0f7a12041740 assets/greekmyth/models/item/crown_of_dionysus.json
 144d0c6a585711fa5049c7086aea87f498ace0c2 assets/greekmyth/models/item/essence_of_tartarus.json
 7f9c72a1f5032ce9095b701a7cc4d93d73260e78 assets/greekmyth/models/item/forge_coal.json
 98f115fed89c0e9b6f5f46162e69d8302c528dfe assets/greekmyth/models/item/girdle_of_hippolyta.json
@@ -41,10 +44,12 @@ cb26a11b887daf666946b0da1b6e46a9fc275f4e assets/greekmyth/models/item/imperial_g
 de090f393adef7cb2e62c99f3ecfe75cc6859640 assets/greekmyth/models/item/imperial_gold_sword.json
 d6e8726d0986827dee151e358f26d240626ff708 assets/greekmyth/models/item/labrys.json
 5252fa375bf62a086fbf0f22450dddcaa2f10e62 assets/greekmyth/models/item/lyre_of_apollo.json
+060322737d0489ce5373d22c88ab4b90807bd214 assets/greekmyth/models/item/necklace_of_harmonia.json
 261edfa30aa9472902cf6014b0dfee421bc4a9db assets/greekmyth/models/item/raw_adamantine.json
 9dd54f3e0dbd04313072321dd88f2df22aded311 assets/greekmyth/models/item/scythe_of_kronus.json
 513069a9f11646b3f27da94fe3efeb1c6b06ea98 assets/greekmyth/models/item/spear_of_achilles.json
 3ddebb18c38a3fe39241ae66c83a53592072dc50 assets/greekmyth/models/item/spear_of_athena.json
+4d8fb77de7786eb155f8e92a80e157560d3ed8b2 assets/greekmyth/models/item/spear_of_diomedes.json
 f784b720c1bfd0a58d4f897a5479f2a57aa1a9df assets/greekmyth/models/item/stygian_iron_axe.json
 c276c881e01fd08375c652a433116f30aa1c0e5a assets/greekmyth/models/item/stygian_iron_horse_armor.json
 27c75ed06d39819a61a8c5e1b91d0f4efe706c17 assets/greekmyth/models/item/stygian_iron_ingot.json
@@ -53,7 +58,11 @@ dc97e927364fa88c0e4672d9ecf7f17be081c5c2 assets/greekmyth/models/item/stygian_ir
 6674fa398b0b943041f76967f3dde7bca94e62cd assets/greekmyth/models/item/stygian_iron_sword.json
 94062bdc51f8c974eded8726402829d1c876a379 assets/greekmyth/models/item/sword_of_ares.json
 f5232a062feeec5c49f4424d75da5281334c6f02 assets/greekmyth/models/item/sword_of_atalanta.json
+7f10a2c5a701e0909782a1d14161b294e972d547 assets/greekmyth/models/item/sword_of_damasen.json
 5e5ca0ad47d618a091fa9c5be62c71beda25f26b assets/greekmyth/models/item/thrysus.json
 418a01691184aff6551a6bca40fd83f860dd07e4 assets/greekmyth/models/item/trident_of_oceanus.json
 eb07ce0afde7daf2f8f6a21c864a5f8f079e669b assets/greekmyth/models/item/trident_of_poseidon.json
+dfdb44e36de2c84958a9aefa71a8e0a72846e0d7 assets/greekmyth/models/item/trident_of_triton.json
+c262aa4c1ea6f78eefc5716df394f772c239f687 assets/greekmyth/models/item/tusk_of_the_calydonian_boar.json
+09c81151208b60bb0e6b95ca2c810e917b581cd0 assets/greekmyth/models/item/tusk_of_the_erymanthian_boar.json
 372758af7bbf3962fc55a41939e9d8342d981b76 assets/greekmyth/models/item/winged_sandals_of_hermes.json

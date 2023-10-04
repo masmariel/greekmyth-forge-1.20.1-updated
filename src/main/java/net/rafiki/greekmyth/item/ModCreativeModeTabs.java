@@ -58,28 +58,6 @@ public class ModCreativeModeTabs {
                         //FUEL
                         output.accept(ModItems.FORGE_COAL.get());
 
-                        //CUSTOM
-                        output.accept(ModItems.LYRE_OF_APOLLO.get());
-                        output.accept(ModItems.SWORD_OF_ARES.get());
-                        output.accept(ModItems.WINGED_SANDALS_OF_HERMES.get());
-                        output.accept(ModItems.HELM_OF_DARKNESS.get());
-                        output.accept(ModItems.TRIDENT_OF_POSEIDON.get());
-                        output.accept(ModItems.BIDENT_OF_HADES.get());
-                        output.accept(ModItems.HIDE_OF_THE_NEMEAN_LION.get());
-                        output.accept(ModItems.GOLDEN_FLEECE.get());
-                        output.accept(ModItems.CADUCEUS.get());
-                        output.accept(ModItems.SCYTHE_OF_KRONUS.get());
-                        output.accept(ModItems.HARPE_OF_PERSEUS.get());
-                        output.accept(ModItems.LABRYS.get());
-                        output.accept(ModItems.THRYSUS.get());
-                        output.accept(ModItems.SPEAR_OF_ACHILLES.get());
-                        output.accept(ModItems.SPEAR_OF_ATHENA.get());
-                        output.accept(ModItems.CESTUS_OF_APHRODITE.get());
-                        output.accept(ModItems.GIRDLE_OF_HIPPOLYTA.get());
-                        output.accept(ModItems.TRIDENT_OF_OCEANUS.get());
-                        output.accept(ModItems.SWORD_OF_ATALANTA.get());
-
-
                         //TOOLS
                         output.accept(ModItems.STYGIAN_IRON_SWORD.get());
                         output.accept(ModItems.STYGIAN_IRON_PICKAXE.get());
@@ -131,8 +109,37 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CELESTIAL_BRONZE_HORSE_ARMOR.get());
                         output.accept(ModItems.BRONZE_HORSE_ARMOR.get());
 
-                    }).build());
+                        //CUSTOM
+                        output.accept(ModItems.LYRE_OF_APOLLO.get());
+                        output.accept(ModItems.SWORD_OF_ARES.get());
+                        output.accept(ModItems.WINGED_SANDALS_OF_HERMES.get());
+                        output.accept(ModItems.HELM_OF_DARKNESS.get());
+                        output.accept(ModItems.TRIDENT_OF_POSEIDON.get());
+                        output.accept(ModItems.BIDENT_OF_HADES.get());
+                        output.accept(ModItems.HIDE_OF_THE_NEMEAN_LION.get());
+                        output.accept(ModItems.GOLDEN_FLEECE.get());
+                        output.accept(ModItems.CADUCEUS.get());
+                        output.accept(ModItems.SCYTHE_OF_KRONUS.get());
+                        output.accept(ModItems.HARPE_OF_PERSEUS.get());
+                        output.accept(ModItems.LABRYS.get());
+                        output.accept(ModItems.THRYSUS.get());
+                        output.accept(ModItems.SPEAR_OF_ACHILLES.get());
+                        output.accept(ModItems.SPEAR_OF_ATHENA.get());
+                        output.accept(ModItems.CESTUS_OF_APHRODITE.get());
+                        output.accept(ModItems.GIRDLE_OF_HIPPOLYTA.get());
+                        output.accept(ModItems.TRIDENT_OF_OCEANUS.get());
+                        output.accept(ModItems.SWORD_OF_ATALANTA.get());
+                        output.accept(ModItems.CLAW_OF_THE_NEMEAN_LION.get());
+                        output.accept(ModItems.TUSK_OF_THE_ERYMANTHIAN_BOAR.get());
+                        output.accept(ModItems.AMULET_OF_HECATE.get());
+                        output.accept(ModItems.NECKLACE_OF_HARMONIA.get());
+                        output.accept(ModItems.CROWN_OF_DIONYSUS.get());
+                        output.accept(ModItems.SPEAR_OF_DIOMEDES.get());
+                        output.accept(ModItems.SWORD_OF_DAMASEN.get());
+                        output.accept(ModItems.TUSK_OF_THE_CALYDONIAN_BOAR.get());
+                        output.accept(ModItems.TRIDENT_OF_TRITON.get());
 
+                    }).build());
 
     public static void register(IEventBus eventBus){
         CREATIVE_MODE_TABS.register(eventBus);

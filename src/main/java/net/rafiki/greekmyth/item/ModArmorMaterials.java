@@ -31,6 +31,13 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266656_.put(ArmorItem.Type.HELMET, 2);
     }), 2, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.of(ModItems.CESTUS_OF_APHRODITE.get())),
 
+    CROWN_OF_DIONYSUS("crown_of_dionysus", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
+        p_266656_.put(ArmorItem.Type.BOOTS, 2);
+        p_266656_.put(ArmorItem.Type.LEGGINGS, 2);
+        p_266656_.put(ArmorItem.Type.CHESTPLATE, 6);
+        p_266656_.put(ArmorItem.Type.HELMET, 1);
+    }), 2, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(ModItems.CROWN_OF_DIONYSUS.get())),
+
     GIRDLE_OF_HIPPOLYTA("girdle_of_hippolyta", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
         p_266656_.put(ArmorItem.Type.BOOTS, 2);
         p_266656_.put(ArmorItem.Type.LEGGINGS, 3);

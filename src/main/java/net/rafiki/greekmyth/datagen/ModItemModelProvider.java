@@ -59,6 +59,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CESTUS_OF_APHRODITE);
         simpleItem(ModItems.GIRDLE_OF_HIPPOLYTA);
         handheldItem(ModItems.SWORD_OF_ATALANTA);
+        handheldItem(ModItems.CLAW_OF_THE_NEMEAN_LION);
+        handheldItem(ModItems.TUSK_OF_THE_ERYMANTHIAN_BOAR);
+        simpleItem(ModItems.CROWN_OF_DIONYSUS);
+        simpleItem(ModItems.AMULET_OF_HECATE);
+        simpleItem(ModItems.NECKLACE_OF_HARMONIA);
+        handheldItem(ModItems.SPEAR_OF_DIOMEDES);
+        handheldItem(ModItems.SWORD_OF_DAMASEN);
+        handheldItem(ModItems.TRIDENT_OF_TRITON);
+        handheldItem(ModItems.TUSK_OF_THE_CALYDONIAN_BOAR);
 
 
         //SPECIAL
