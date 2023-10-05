@@ -24,5 +24,4 @@ public class SpearOfDiomedesItem extends TridentItem {
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

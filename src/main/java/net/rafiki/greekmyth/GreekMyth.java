@@ -55,6 +55,9 @@ public class GreekMyth
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+
+        //Register EventHandlers
+        MinecraftForge.EVENT_BUS.register(new EventHandlerClass());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
