@@ -1,8 +1,6 @@
 package net.rafiki.greekmyth;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -55,9 +53,6 @@ public class GreekMyth
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
-
-        //Register EventHandlers
-        MinecraftForge.EVENT_BUS.register(new EventHandlerClass());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

@@ -43,9 +43,9 @@ public class ModItems {
     public static final RegistryObject<Item> HELM_OF_DARKNESS = ITEMS.register("helm_of_darkness",
             () -> new HelmOfDarknessItem(ModArmorMaterials.HELM_OF_DARKNESS, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(300).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> TRIDENT_OF_POSEIDON = ITEMS.register("trident_of_poseidon",
-            () -> new TridentOfPoseidonItem(new Item.Properties().defaultDurability(400).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new TridentOfPoseidonItem(new Item.Properties().defaultDurability(400).rarity(Rarity.EPIC).setNoRepair(),10.5));
     public static final RegistryObject<Item> BIDENT_OF_HADES = ITEMS.register("bident_of_hades",
-            () -> new BidentOfHadesItem(new Item.Properties().defaultDurability(400).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new BidentOfHadesItem(new Item.Properties().defaultDurability(400).rarity(Rarity.EPIC).setNoRepair(), 10));
     public static final RegistryObject<Item> HIDE_OF_THE_NEMEAN_LION = ITEMS.register("hide_of_the_nemean_lion",
             () -> new HideOfTheNemeanLionItem(ModArmorMaterials.HIDE_OF_THE_NEMEAN_LION, ArmorItem.Type.CHESTPLATE, new Item.Properties().defaultDurability(650).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> GOLDEN_FLEECE = ITEMS.register("golden_fleece",
@@ -63,9 +63,9 @@ public class ModItems {
     public static final RegistryObject<Item> SPEAR_OF_ATHENA = ITEMS.register("spear_of_athena",
             () -> new SpearOfAthenaItem(new Item.Properties().defaultDurability(375).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> SPEAR_OF_ACHILLES = ITEMS.register("spear_of_achilles",
-            () -> new SpearOfAchillesItem(new Item.Properties().defaultDurability(300).rarity(Rarity.RARE).setNoRepair()));
+            () -> new SpearOfAchillesItem(new Item.Properties().defaultDurability(300).rarity(Rarity.RARE).setNoRepair(),8.5));
     public static final RegistryObject<Item> TRIDENT_OF_OCEANUS = ITEMS.register("trident_of_oceanus",
-            () -> new TridentOfOceanusItem(new Item.Properties().defaultDurability(400).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new TridentOfOceanusItem(new Item.Properties().defaultDurability(400).rarity(Rarity.EPIC).setNoRepair(),9.5));
     public static final RegistryObject<Item> CESTUS_OF_APHRODITE = ITEMS.register("cestus_of_aphrodite",
             () -> new CestusOfAphroditeItem(ModArmorMaterials.CESTUS_OF_APHRODITE, ArmorItem.Type.LEGGINGS, new Item.Properties().defaultDurability(200).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> GIRDLE_OF_HIPPOLYTA = ITEMS.register("girdle_of_hippolyta",
@@ -73,7 +73,7 @@ public class ModItems {
     public static final RegistryObject<Item> SWORD_OF_ATALANTA = ITEMS.register("sword_of_atalanta",
             () -> new SwordOfAtalantaItem(ModToolTiers.HALF_BASE_SWORD, 6, -1.8f,new Item.Properties().durability(400).rarity(Rarity.RARE).setNoRepair()));
     public static final RegistryObject<Item> SPEAR_OF_DIOMEDES = ITEMS.register("spear_of_diomedes",
-            () -> new SpearOfDiomedesItem(new Item.Properties().defaultDurability(300).rarity(Rarity.RARE).setNoRepair()));
+            () -> new SpearOfDiomedesItem(new Item.Properties().defaultDurability(300).rarity(Rarity.RARE).setNoRepair(), 8));
     public static final RegistryObject<Item> CLAW_OF_THE_NEMEAN_LION = ITEMS.register("claw_of_the_nemean_lion",
             () -> new ClawOfTheNemeanLionItem(ModToolTiers.BASE_SWORD, 2, 0f, new Item.Properties().defaultDurability(400).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> TUSK_OF_THE_ERYMANTHIAN_BOAR = ITEMS.register("tusk_of_the_erymanthian_boar",
@@ -85,7 +85,7 @@ public class ModItems {
     public static final RegistryObject<Item> CROWN_OF_DIONYSUS = ITEMS.register("crown_of_dionysus",
             () -> new CrownOfDionysusItem(ModArmorMaterials.CROWN_OF_DIONYSUS, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(250).rarity(Rarity.RARE).setNoRepair()));
     public static final RegistryObject<Item> TRIDENT_OF_TRITON = ITEMS.register("trident_of_triton",
-            () -> new TridentOfTritonItem(new Item.Properties().defaultDurability(350).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new TridentOfTritonItem(new Item.Properties().defaultDurability(350).rarity(Rarity.EPIC).setNoRepair(),9.5));
     public static final RegistryObject<Item> SWORD_OF_DAMASEN = ITEMS.register("sword_of_damasen",
             () -> new SwordOfDamasenItem(ModToolTiers.BASE_SWORD, 7, -2.4f, new Item.Properties().defaultDurability(350).rarity(Rarity.RARE).setNoRepair()));
     public static final RegistryObject<Item> TUSK_OF_THE_CALYDONIAN_BOAR = ITEMS.register("tusk_of_the_calydonian_boar",

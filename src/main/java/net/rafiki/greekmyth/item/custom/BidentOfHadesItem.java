@@ -1,11 +1,17 @@
 package net.rafiki.greekmyth.item.custom;
 
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -15,15 +21,25 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 public class BidentOfHadesItem extends TridentItem {
+    private static final UUID ATTACK_DAMAGE_MODIFIER_UUID = UUID.fromString("CB3F55D3-645C-4F38-A497-9C13A33DB5CF");
+    private final double attackDamage;
+    public BidentOfHadesItem(Properties properties, double attackDamage) {
+        super(properties);
+        this.attackDamage = attackDamage;
+    }
 
-    private static final List<MobEffectInstance> BIDENT_OF_HADES_EFFECTS = Arrays.asList(
-            new MobEffectInstance(MobEffects.HUNGER, 200, 1, false, false, false)
-    );
-
-    public BidentOfHadesItem(Properties pProperties) {
-        super(pProperties);
+    @Override
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot equipmentSlot, ItemStack stack) {
+        Multimap<Attribute, AttributeModifier> attributeModifiers = HashMultimap.create();
+        if (equipmentSlot == EquipmentSlot.MAINHAND) {
+            attributeModifiers.putAll(super.getAttributeModifiers(equipmentSlot, stack));
+            attributeModifiers.removeAll(Attributes.ATTACK_DAMAGE);
+            attributeModifiers.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(ATTACK_DAMAGE_MODIFIER_UUID, "Weapon modifier", this.attackDamage, AttributeModifier.Operation.ADDITION));
+        }
+        return attributeModifiers;
     }
 
     @Override
