@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-04T17:57:23.2835606	Item Models: greekmyth
+// 1.20.1	2023-10-05T11:19:20.6928544	Item Models: greekmyth
 9f2e9e6c619d320103f31e3d5dcd489318179481 assets/greekmyth/models/item/adamantine.json
 e9581c2fc533cd57806f5f5766c31838348e1635 assets/greekmyth/models/item/adamantine_axe.json
 3bb97b0bef3d30e840aacf11f121a7e19f6970a7 assets/greekmyth/models/item/adamantine_button.json
@@ -64,6 +64,7 @@ dc97e927364fa88c0e4672d9ecf7f17be081c5c2 assets/greekmyth/models/item/stygian_ir
 94062bdc51f8c974eded8726402829d1c876a379 assets/greekmyth/models/item/sword_of_ares.json
 f5232a062feeec5c49f4424d75da5281334c6f02 assets/greekmyth/models/item/sword_of_atalanta.json
 7f10a2c5a701e0909782a1d14161b294e972d547 assets/greekmyth/models/item/sword_of_damasen.json
+144e7ab4577b1eee200098cc759f84a65f539341 assets/greekmyth/models/item/the_master_bolt.json
 5e5ca0ad47d618a091fa9c5be62c71beda25f26b assets/greekmyth/models/item/thrysus.json
 418a01691184aff6551a6bca40fd83f860dd07e4 assets/greekmyth/models/item/trident_of_oceanus.json
 eb07ce0afde7daf2f8f6a21c864a5f8f079e669b assets/greekmyth/models/item/trident_of_poseidon.json

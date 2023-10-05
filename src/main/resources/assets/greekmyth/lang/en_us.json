@@ -96,6 +96,7 @@
   "item.greekmyth.hammer_of_hephaestus": "Hammer of Hephaestus",
   "item.greekmyth.lotus_staff_of_persephone": "Lotus Staff of Persephone",
   "item.greekmyth.medallion_of_perseus": "Medallion of Perseus",
+  "item.greekmyth.the_master_bolt": "The Master Bolt",
 
   "block.greekmyth.bronze_block": "Block of Bronze",
   "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
@@ -119,6 +120,7 @@
   "block.greekmyth.sound_block": "Sound Block",
 
   "creativetab.course_tab": "Greek Mythology",
+  "creativetab.course_tab_2": "Greek Mythology Artifacts",
 
   "sounds.greekmyth.lyre_of_apollo_melody": "Lyre of Apollo Melody",
   "sounds.greekmyth.ginger": "Ginger",
@@ -194,5 +196,7 @@
   "tooltip.greekmyth.lotus_staff_of_persephone_shift": "The scent of the lotus brings peace and good health.",
   "tooltip.greekmyth.lotus_staff_of_persephone": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.medallion_of_perseus_shift": "The gift to Perseus after slaying the gorgons. No poison can harm the holder of the medallion.",
-  "tooltip.greekmyth.medallion_of_perseus": "Hold §eSHIFT§r for more Information"
+  "tooltip.greekmyth.medallion_of_perseus": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.the_master_bolt_shift": "The most powerful weapon ever crafted by the Cyclopes. The Master Bolt holds the power of the heavens. Any foe the bolt strikes, the Wrath of Zeus rains upon them.",
+  "tooltip.greekmyth.the_master_bolt": "Hold §eSHIFT§r for more Information"
 }

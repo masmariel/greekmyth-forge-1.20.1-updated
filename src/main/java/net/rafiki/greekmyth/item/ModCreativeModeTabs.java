@@ -109,7 +109,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CELESTIAL_BRONZE_HORSE_ARMOR.get());
                         output.accept(ModItems.BRONZE_HORSE_ARMOR.get());
 
-                        //CUSTOM
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> COURSE_TAB_2 = CREATIVE_MODE_TABS.register("course_tab_2",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TRIDENT_OF_POSEIDON.get()))
+                    .title(Component.translatable("creativetab.course_tab_2"))
+                    .displayItems((displayParameters, output) -> {
+
                         output.accept(ModItems.LYRE_OF_APOLLO.get());
                         output.accept(ModItems.SWORD_OF_ARES.get());
                         output.accept(ModItems.WINGED_SANDALS_OF_HERMES.get());
@@ -143,6 +149,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.LOTUS_STAFF_OF_PERSOPHONE.get());
                         output.accept(ModItems.MEDALLION_OF_PERSEUS.get());
                         output.accept(ModItems.FLUTE_OF_PAN.get());
+                        output.accept(ModItems.THE_MASTER_BOLT.get());
 
                     }).build());
 

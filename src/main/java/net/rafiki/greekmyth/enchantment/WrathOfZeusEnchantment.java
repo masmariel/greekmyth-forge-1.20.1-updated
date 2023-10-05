@@ -14,34 +14,26 @@ public class WrathOfZeusEnchantment extends Enchantment {
 
     @Override
     public void doPostAttack(LivingEntity pAttacker, Entity pTarget, int pLevel) {
+        spawnLightning(pAttacker, pTarget, pLevel);
+        super.doPostAttack(pAttacker, pTarget, pLevel);
+    }
 
-        if (!pAttacker.level().isClientSide) {
+    @Override
+    public void doPostHurt(LivingEntity user, Entity attacker, int level) {
+        spawnLightning(user, attacker, level);
+        super.doPostHurt(user, attacker, level);
+    }
 
-            ServerLevel level = ((ServerLevel) pAttacker.level());
-            BlockPos position = pTarget.blockPosition();
+    private void spawnLightning(LivingEntity user, Entity target, int enchantmentLevel) {
+        if (!user.level().isClientSide) {
 
-            if (pLevel == 1) {
-                EntityType.LIGHTNING_BOLT.spawn(level, (ItemStack) null, null, position,
+            ServerLevel serverLevel = ((ServerLevel) user.level());
+            BlockPos position = target.blockPosition();
+
+            for (int i = 0; i < enchantmentLevel; i++) {
+                EntityType.LIGHTNING_BOLT.spawn(serverLevel, (ItemStack) null, null, position,
                         MobSpawnType.TRIGGERED, true, true);
             }
-
-            if (pLevel == 2) {
-                EntityType.LIGHTNING_BOLT.spawn(level, (ItemStack) null, null, position,
-                        MobSpawnType.TRIGGERED, true, true);
-                EntityType.LIGHTNING_BOLT.spawn(level, (ItemStack) null, null, position,
-                        MobSpawnType.TRIGGERED, true, true);
-            }
-
-            if (pLevel == 3) {
-                EntityType.LIGHTNING_BOLT.spawn(level, (ItemStack) null, null, position,
-                        MobSpawnType.TRIGGERED, true, true);
-                EntityType.LIGHTNING_BOLT.spawn(level, (ItemStack) null, null, position,
-                        MobSpawnType.TRIGGERED, true, true);
-                EntityType.LIGHTNING_BOLT.spawn(level, (ItemStack) null, null, position,
-                        MobSpawnType.TRIGGERED, true, true);
-            }
-
-            super.doPostAttack(pAttacker, pTarget, pLevel);
         }
     }
 
