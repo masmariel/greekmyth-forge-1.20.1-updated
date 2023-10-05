@@ -1,32 +1,32 @@
-[03Oct2023 23:37:29.214] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\mcesp\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, greekmyth, --all, --output, C:\Users\mcesp\Desktop\Modding\greekmyth-forge-1.20.1-updated\src\generated\resources, --existing, C:\Users\mcesp\Desktop\Modding\greekmyth-forge-1.20.1-updated\src\main\resources]
-[03Oct2023 23:37:29.217] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.7 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[03Oct2023 23:37:29.294] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[03Oct2023 23:37:29.324] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/mcesp/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[03Oct2023 23:37:29.538] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\mcesp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.0\7f9181f85acc66547685a72020713fc8cbde98\javafmllanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[03Oct2023 23:37:29.540] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\mcesp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.0\7872f5205685fdd26fae39b1be79b0e60ca5b7bd\lowcodelanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[03Oct2023 23:37:29.541] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\mcesp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.0\d501d161cabed08b3c139a2c6217b02a39f3c3e9\mclanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[03Oct2023 23:37:29.543] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\mcesp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.0\ffd3c6debac0a388c9e33ac43c9f5eafb91cb466\fmlcore-1.20.1-47.2.0.jar is missing mods.toml file
-[03Oct2023 23:37:29.599] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[03Oct2023 23:37:30.570] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[03Oct2023 23:37:30.571] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\mcesp\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, greekmyth, --all, --output, C:\Users\mcesp\Desktop\Modding\greekmyth-forge-1.20.1-updated\src\generated\resources, --existing, C:\Users\mcesp\Desktop\Modding\greekmyth-forge-1.20.1-updated\src\main\resources]
-[03Oct2023 23:37:30.830] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using C:\Users\mcesp\Desktop\Modding\greekmyth-forge-1.20.1-updated\build\createSrgToMcp\output.srg
-[03Oct2023 23:37:31.051] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [greekmyth]
-[03Oct2023 23:37:33.779] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.0, for MC 1.20.1 with MCP 20230612.114412
-[03Oct2023 23:37:33.781] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.0 Initialized
-[03Oct2023 23:37:33.819] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
-[03Oct2023 23:37:34.108] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/mcesp/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_1.20.1-2023.06.26-1.20.1/forge-1.20.1-47.2.0_mapped_parchment_1.20.1-2023.06.26-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[03Oct2023 23:37:34.109] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/mcesp/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_1.20.1-2023.06.26-1.20.1/forge-1.20.1-47.2.0_mapped_parchment_1.20.1-2023.06.26-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[03Oct2023 23:37:34.217] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[03Oct2023 23:37:34.247] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 29 ms
-[03Oct2023 23:37:34.247] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[03Oct2023 23:37:34.277] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 29 ms
-[03Oct2023 23:37:34.277] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block Tags
-[03Oct2023 23:37:34.322] [main/INFO] [net.minecraft.data.DataGenerator/]: Block Tags finished after 44 ms
-[03Oct2023 23:37:34.322] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Tags
-[03Oct2023 23:37:34.323] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Tags finished after 0 ms
-[03Oct2023 23:37:34.323] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: greekmyth
-[03Oct2023 23:37:34.343] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: greekmyth finished after 20 ms
-[03Oct2023 23:37:34.343] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: greekmyth
-[03Oct2023 23:37:34.441] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: greekmyth finished after 97 ms
-[03Oct2023 23:37:34.441] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 224 ms
-[03Oct2023 23:37:34.455] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 290, old count: 287, new count: 291, removed stale: 0, written: 3
+[04Oct2023 17:57:10.106] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\mcesp\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, greekmyth, --all, --output, C:\Users\mcesp\Desktop\greekmyth-forge-1.20.1-updated\src\generated\resources, --existing, C:\Users\mcesp\Desktop\greekmyth-forge-1.20.1-updated\src\main\resources]
+[04Oct2023 17:57:10.111] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[04Oct2023 17:57:10.319] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[04Oct2023 17:57:10.408] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/mcesp/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[04Oct2023 17:57:10.931] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\mcesp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.0\7f9181f85acc66547685a72020713fc8cbde98\javafmllanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[04Oct2023 17:57:10.936] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\mcesp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.0\7872f5205685fdd26fae39b1be79b0e60ca5b7bd\lowcodelanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[04Oct2023 17:57:10.942] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\mcesp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.0\d501d161cabed08b3c139a2c6217b02a39f3c3e9\mclanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[04Oct2023 17:57:10.948] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\mcesp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.0\ffd3c6debac0a388c9e33ac43c9f5eafb91cb466\fmlcore-1.20.1-47.2.0.jar is missing mods.toml file
+[04Oct2023 17:57:11.084] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[04Oct2023 17:57:13.484] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[04Oct2023 17:57:13.487] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\mcesp\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, greekmyth, --all, --output, C:\Users\mcesp\Desktop\greekmyth-forge-1.20.1-updated\src\generated\resources, --existing, C:\Users\mcesp\Desktop\greekmyth-forge-1.20.1-updated\src\main\resources]
+[04Oct2023 17:57:14.064] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using C:\Users\mcesp\Desktop\greekmyth-forge-1.20.1-updated\build\createSrgToMcp\output.srg
+[04Oct2023 17:57:14.596] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [greekmyth]
+[04Oct2023 17:57:21.061] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.0, for MC 1.20.1 with MCP 20230612.114412
+[04Oct2023 17:57:21.065] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.0 Initialized
+[04Oct2023 17:57:21.146] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
+[04Oct2023 17:57:22.022] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/mcesp/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_1.20.1-2023.06.26-1.20.1/forge-1.20.1-47.2.0_mapped_parchment_1.20.1-2023.06.26-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[04Oct2023 17:57:22.023] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/mcesp/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_1.20.1-2023.06.26-1.20.1/forge-1.20.1-47.2.0_mapped_parchment_1.20.1-2023.06.26-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[04Oct2023 17:57:22.279] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[04Oct2023 17:57:22.361] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 81 ms
+[04Oct2023 17:57:22.380] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[04Oct2023 17:57:22.501] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 120 ms
+[04Oct2023 17:57:22.501] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block Tags
+[04Oct2023 17:57:22.977] [main/INFO] [net.minecraft.data.DataGenerator/]: Block Tags finished after 475 ms
+[04Oct2023 17:57:22.977] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Tags
+[04Oct2023 17:57:22.979] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Tags finished after 1 ms
+[04Oct2023 17:57:22.979] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: greekmyth
+[04Oct2023 17:57:23.046] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: greekmyth finished after 66 ms
+[04Oct2023 17:57:23.046] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: greekmyth
+[04Oct2023 17:57:23.281] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: greekmyth finished after 234 ms
+[04Oct2023 17:57:23.282] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 1003 ms
+[04Oct2023 17:57:23.325] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 295, old count: 290, new count: 296, removed stale: 0, written: 5

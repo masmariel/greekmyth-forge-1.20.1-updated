@@ -68,6 +68,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.SWORD_OF_DAMASEN);
         handheldItem(ModItems.TRIDENT_OF_TRITON);
         handheldItem(ModItems.TUSK_OF_THE_CALYDONIAN_BOAR);
+        simpleItem(ModItems.FLUTE_OF_PAN);
+        simpleItem(ModItems.CHALICE_OF_NYX);
+        simpleItem(ModItems.MEDALLION_OF_PERSEUS);
+        handheldItem(ModItems.HAMMER_OF_HEPHAESTUS);
+        handheldItem(ModItems.LOTUS_STAFF_OF_PERSOPHONE);
 
 
         //SPECIAL

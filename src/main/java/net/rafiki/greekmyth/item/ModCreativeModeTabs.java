@@ -138,6 +138,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SWORD_OF_DAMASEN.get());
                         output.accept(ModItems.TUSK_OF_THE_CALYDONIAN_BOAR.get());
                         output.accept(ModItems.TRIDENT_OF_TRITON.get());
+                        output.accept(ModItems.CHALICE_OF_NYX.get());
+                        output.accept(ModItems.HAMMER_OF_HEPHAESTUS.get());
+                        output.accept(ModItems.LOTUS_STAFF_OF_PERSOPHONE.get());
+                        output.accept(ModItems.MEDALLION_OF_PERSEUS.get());
+                        output.accept(ModItems.FLUTE_OF_PAN.get());
 
                     }).build());
 

@@ -6,21 +6,27 @@
     ]
   },
   "mason": {
-    "subtitle": "sound.greekmyth.mason",
+    "subtitle": "sounds.greekmyth.mason",
     "sounds": [
       "greekmyth:mason"
     ]
   },
   "ginger": {
-    "subtitle": "sound.greekmyth.ginger",
+    "subtitle": "sounds.greekmyth.ginger",
     "sounds": [
       "greekmyth:ginger"
     ]
   },
   "ben": {
-    "subtitle": "sound.greekmyth.ben",
+    "subtitle": "sounds.greekmyth.ben",
     "sounds": [
       "greekmyth:ben"
+    ]
+  },
+  "flute_of_pan": {
+    "subtitle": "sounds.greekmyth.flute_of_pan",
+    "sounds": [
+      "greekmyth:flute_of_pan"
     ]
   }
 }

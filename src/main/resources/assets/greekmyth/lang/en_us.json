@@ -91,6 +91,11 @@
   "item.greekmyth.sword_of_damasen": "Sword of Damasen",
   "item.greekmyth.trident_of_triton": "Trident of Triton",
   "item.greekmyth.tusk_of_the_calydonian_boar": "Tusk of the Calydonian Boar",
+  "item.greekmyth.chalice_of_nyx": "Chalice of Nyx",
+  "item.greekmyth.flute_of_pan": "Flute of Pan",
+  "item.greekmyth.hammer_of_hephaestus": "Hammer of Hephaestus",
+  "item.greekmyth.lotus_staff_of_persephone": "Lotus Staff of Persephone",
+  "item.greekmyth.medallion_of_perseus": "Medallion of Perseus",
 
   "block.greekmyth.bronze_block": "Block of Bronze",
   "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
@@ -119,6 +124,7 @@
   "sounds.greekmyth.ginger": "Ginger",
   "sounds.greekmyth.mason": "Mason",
   "sounds.greekmyth.ben": "Ben",
+  "sounds.greekmyth.flute_of_pan": "Flute of Pan",
 
   "enchantment.greekmyth.wrath_of_zeus": "Wrath of Zeus",
 
@@ -178,5 +184,15 @@
   "tooltip.greekmyth.sword_of_damasen_shift": "Sword of the giant, made from the bone of drakons",
   "tooltip.greekmyth.sword_of_damasen": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.trident_of_triton_shift": "Triton, the son of Poseidon, no not Percy Jackson.",
-  "tooltip.greekmyth.trident_of_triton": "Hold §eSHIFT§r for more Information"
+  "tooltip.greekmyth.trident_of_triton": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.chalice_of_nyx_shift": "An unknown liquid splashes inside the chalice. Maybe take a sip?",
+  "tooltip.greekmyth.chalice_of_nyx": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.flute_of_pan_shift": "A quick tune plays for good luck and fortune.",
+  "tooltip.greekmyth.flute_of_pan": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.hammer_of_hephaestus_shift": "The tool that forged the strongest weapons of the gods.",
+  "tooltip.greekmyth.hammer_of_hephaestus": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.lotus_staff_of_persephone_shift": "The scent of the lotus brings peace and good health.",
+  "tooltip.greekmyth.lotus_staff_of_persephone": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.medallion_of_perseus_shift": "The gift to Perseus after slaying the gorgons. No poison can harm the holder of the medallion.",
+  "tooltip.greekmyth.medallion_of_perseus": "Hold §eSHIFT§r for more Information"
 }

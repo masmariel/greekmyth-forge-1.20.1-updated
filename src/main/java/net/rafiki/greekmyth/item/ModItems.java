@@ -84,13 +84,22 @@ public class ModItems {
             () -> new AmuletOfHecateItem(new Item.Properties().rarity(Rarity.RARE).setNoRepair().stacksTo(1)));
     public static final RegistryObject<Item> CROWN_OF_DIONYSUS = ITEMS.register("crown_of_dionysus",
             () -> new CrownOfDionysusItem(ModArmorMaterials.CROWN_OF_DIONYSUS, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(250).rarity(Rarity.RARE).setNoRepair()));
- public static final RegistryObject<Item> TRIDENT_OF_TRITON = ITEMS.register("trident_of_triton",
-         () -> new TridentOfTritonItem(new Item.Properties().defaultDurability(350).rarity(Rarity.EPIC).setNoRepair()));
- public static final RegistryObject<Item> SWORD_OF_DAMASEN = ITEMS.register("sword_of_damasen",
-         () -> new SwordOfDamasenItem(ModToolTiers.BASE_SWORD, 7, -2.4f, new Item.Properties().defaultDurability(350).rarity(Rarity.RARE).setNoRepair()));
- public static final RegistryObject<Item> TUSK_OF_THE_CALYDONIAN_BOAR = ITEMS.register("tusk_of_the_calydonian_boar",
-         () -> new TuskOfTheCalydonianBoarItem(ModToolTiers.BASE_SWORD, 3, -2.8f, new Item.Properties().defaultDurability(350).rarity(Rarity.EPIC).setNoRepair()));
-
+    public static final RegistryObject<Item> TRIDENT_OF_TRITON = ITEMS.register("trident_of_triton",
+            () -> new TridentOfTritonItem(new Item.Properties().defaultDurability(350).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> SWORD_OF_DAMASEN = ITEMS.register("sword_of_damasen",
+            () -> new SwordOfDamasenItem(ModToolTiers.BASE_SWORD, 7, -2.4f, new Item.Properties().defaultDurability(350).rarity(Rarity.RARE).setNoRepair()));
+    public static final RegistryObject<Item> TUSK_OF_THE_CALYDONIAN_BOAR = ITEMS.register("tusk_of_the_calydonian_boar",
+            () -> new TuskOfTheCalydonianBoarItem(ModToolTiers.BASE_SWORD, 3, -2.8f, new Item.Properties().defaultDurability(350).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> MEDALLION_OF_PERSEUS = ITEMS.register("medallion_of_perseus",
+            () -> new MedallionOfPerseusItem(new Item.Properties().rarity(Rarity.RARE).setNoRepair().stacksTo(1)));
+    public static final RegistryObject<Item> HAMMER_OF_HEPHAESTUS = ITEMS.register("hammer_of_hephaestus",
+            () -> new HammerOfHephaestusItem(ModToolTiers.BASE_SWORD, 9, -3.6f, new Item.Properties().defaultDurability(1200).rarity(Rarity.RARE).setNoRepair()));
+    public static final RegistryObject<Item> LOTUS_STAFF_OF_PERSOPHONE = ITEMS.register("lotus_staff_of_persephone",
+            () -> new LotusStaffOfPersephoneItem(new Item.Properties().defaultDurability(150).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> FLUTE_OF_PAN = ITEMS.register("flute_of_pan",
+            () -> new FluteOfPanItem(new Item.Properties().defaultDurability(200).rarity(Rarity.RARE).setNoRepair()));
+    public static final RegistryObject<Item> CHALICE_OF_NYX = ITEMS.register("chalice_of_nyx",
+            () -> new ChalaceOfNyxItem(new Item.Properties().defaultDurability(175).rarity(Rarity.RARE).setNoRepair()));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",

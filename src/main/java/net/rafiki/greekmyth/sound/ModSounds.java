@@ -16,9 +16,10 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> MASON = registerSoundEvents("mason");
     public static final RegistryObject<SoundEvent> GINGER = registerSoundEvents("ginger");
     public static final RegistryObject<SoundEvent> BEN = registerSoundEvents("ben");
+    public static final RegistryObject<SoundEvent> FLUTE_OF_PAN = registerSoundEvents("flute_of_pan");
 
 
-    private static final RegistryObject<SoundEvent> registerSoundEvents(String name){
+    private static RegistryObject<SoundEvent> registerSoundEvents(String name){
         ResourceLocation id = new ResourceLocation(GreekMyth.MOD_ID, name);
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(id));
     }
