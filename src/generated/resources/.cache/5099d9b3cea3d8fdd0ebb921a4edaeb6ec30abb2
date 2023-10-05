@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-05T11:19:20.6928544	Item Models: greekmyth
+// 1.20.1	2023-10-05T15:29:24.6756943	Item Models: greekmyth
 9f2e9e6c619d320103f31e3d5dcd489318179481 assets/greekmyth/models/item/adamantine.json
 e9581c2fc533cd57806f5f5766c31838348e1635 assets/greekmyth/models/item/adamantine_axe.json
 3bb97b0bef3d30e840aacf11f121a7e19f6970a7 assets/greekmyth/models/item/adamantine_button.json
@@ -28,6 +28,7 @@ a7b978a7795a3d761b99b744d6054bc2a339bcae assets/greekmyth/models/item/caduceus.j
 c4f38b1c0161a23b33d65d1ebeaf08ea1136716e assets/greekmyth/models/item/cestus_of_aphrodite.json
 1a72a7a39a1f2a0ab955f0cc55ac1e7344e9ec9d assets/greekmyth/models/item/chalice_of_nyx.json
 c70bad2b63ac0692ad9f2b51b24d400f4511886e assets/greekmyth/models/item/claw_of_the_nemean_lion.json
+a8e386354679e81c4ef7188a91a59e358faefbea assets/greekmyth/models/item/cornucopia.json
 beed5ae31f06d0198130b8885eba0f7a12041740 assets/greekmyth/models/item/crown_of_dionysus.json
 144d0c6a585711fa5049c7086aea87f498ace0c2 assets/greekmyth/models/item/essence_of_tartarus.json
 7967f865910ae16b2f24e12665b3634693a056d4 assets/greekmyth/models/item/flute_of_pan.json

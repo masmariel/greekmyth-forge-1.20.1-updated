@@ -97,6 +97,7 @@
   "item.greekmyth.lotus_staff_of_persephone": "Lotus Staff of Persephone",
   "item.greekmyth.medallion_of_perseus": "Medallion of Perseus",
   "item.greekmyth.the_master_bolt": "The Master Bolt",
+  "item.greekmyth.cornucopia": "Cornucopia",
 
   "block.greekmyth.bronze_block": "Block of Bronze",
   "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
@@ -198,5 +199,7 @@
   "tooltip.greekmyth.medallion_of_perseus_shift": "The gift to Perseus after slaying the gorgons. No poison can harm the holder of the medallion.",
   "tooltip.greekmyth.medallion_of_perseus": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.the_master_bolt_shift": "The most powerful weapon ever crafted by the Cyclopes. The Master Bolt holds the power of the heavens. Any foe the bolt strikes, the Wrath of Zeus rains upon them.",
-  "tooltip.greekmyth.the_master_bolt": "Hold §eSHIFT§r for more Information"
+  "tooltip.greekmyth.the_master_bolt": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.cornucopia_shift": "Food, food, and more food!",
+  "tooltip.greekmyth.cornucopia": "Hold §eSHIFT§r for more Information"
 }

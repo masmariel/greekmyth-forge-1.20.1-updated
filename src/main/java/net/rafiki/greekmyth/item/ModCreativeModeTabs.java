@@ -150,6 +150,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MEDALLION_OF_PERSEUS.get());
                         output.accept(ModItems.FLUTE_OF_PAN.get());
                         output.accept(ModItems.THE_MASTER_BOLT.get());
+                        output.accept(ModItems.CORNUCOPIA.get());
 
                     }).build());
 

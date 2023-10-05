@@ -74,6 +74,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.HAMMER_OF_HEPHAESTUS);
         handheldItem(ModItems.LOTUS_STAFF_OF_PERSOPHONE);
         handheldItem(ModItems.THE_MASTER_BOLT);
+        simpleItem(ModItems.CORNUCOPIA);
 
 
         //SPECIAL

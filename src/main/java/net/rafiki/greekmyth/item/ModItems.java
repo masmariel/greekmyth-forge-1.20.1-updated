@@ -102,6 +102,8 @@ public class ModItems {
             () -> new ChalaceOfNyxItem(new Item.Properties().defaultDurability(175).rarity(Rarity.RARE).setNoRepair()));
     public static final RegistryObject<Item> THE_MASTER_BOLT = ITEMS.register("the_master_bolt",
             () -> new TheMasterBoltItem(new Item.Properties().defaultDurability(500).rarity(Rarity.EPIC).setNoRepair(),0));
+ public static final RegistryObject<Item> CORNUCOPIA = ITEMS.register("cornucopia",
+         () -> new CornucopiaItem(new Item.Properties().defaultDurability(300).rarity(Rarity.EPIC).setNoRepair()));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",
