@@ -2,7 +2,9 @@ package net.rafiki.greekmyth.item.custom;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
@@ -20,43 +22,34 @@ public class GoldenFleeceItem extends Item {
     private static final List<MobEffectInstance> GOLDEN_FLEECE_EFFECTS = Arrays.asList(
             new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, false, false)
     );
-    private static final int COOLDOWN_TICKS = 40 * 20;
+    private static final int COOLDOWN_TICKS = 60 * 20;
     public GoldenFleeceItem(Properties pProperties) {
         super(pProperties);
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext pContext) {
-        Level level = pContext.getLevel();
-
-        if (!level.isClientSide) {
-            Player player = pContext.getPlayer();
-
-            if (player != null) {
-                if (getDurability(pContext.getItemInHand()) >= 1) {
-                    long currentTime = level.getGameTime();
-
-                    if (player.getCooldowns().isOnCooldown(this)) {
-                        return InteractionResult.PASS;
-                    }
-
-                    for (MobEffectInstance effect : GOLDEN_FLEECE_EFFECTS) {
-                        MobEffectInstance currentEffect = player.getEffect(effect.getEffect());
-
-                        if (currentEffect == null || currentEffect.getDuration() <= 100) {
-                            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, false, false));
-
-                            player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
-
-                            decreaseDurability(pContext.getItemInHand(), 1);
-                        }
+    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
+        ItemStack itemstack = player.getItemInHand(hand);
+        if (!world.isClientSide()) {
+            if (getDurability(itemstack) >= 1) {
+                long currentTime = world.getGameTime();
+                if (player.getCooldowns().isOnCooldown(this)) {
+                    return InteractionResultHolder.pass(itemstack);
+                }
+                for (MobEffectInstance effect : GOLDEN_FLEECE_EFFECTS) {
+                    MobEffectInstance currentEffect = player.getEffect(effect.getEffect());
+                    if (currentEffect == null || currentEffect.getDuration() <= 100) {
+                        player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, false, false));
+                        player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
+                        decreaseDurability(itemstack, 1);
                     }
                 }
+                return InteractionResultHolder.success(itemstack);
             }
         }
-
-        return InteractionResult.SUCCESS;
+        return InteractionResultHolder.pass(itemstack);
     }
+
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {

@@ -2,6 +2,7 @@ package net.rafiki.greekmyth.item.custom;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -21,28 +22,26 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class CaduceusItem extends Item {
-    private static final int COOLDOWN_TICKS = 50 * 20;
+    private static final int COOLDOWN_TICKS = 70 * 20;
 
     public CaduceusItem(Properties pProperties) {
         super(pProperties);
     }
 
     @Override
-    public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
-        if (entity instanceof LivingEntity livingEntity){
-            if (!player.getCooldowns().isOnCooldown(this)) {
-                livingEntity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1), player);
-                livingEntity.heal(6.0F);
-                stack.hurtAndBreak(1, player, (player1) -> {
-                    player1.broadcastBreakEvent(player.getUsedItemHand());
-                });
-                player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
-                return true;
-            }
+    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+        ItemStack stack = pPlayer.getItemInHand(pUsedHand);
+        if (!pPlayer.getCooldowns().isOnCooldown(this)) {
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, false, false));
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.HEAL,100, 1, false, false, false));
+            stack.hurtAndBreak(1, pPlayer, (player1) -> {
+                player1.broadcastBreakEvent(pUsedHand);
+            });
+            pPlayer.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
+            return InteractionResultHolder.success(stack);
         }
-        return false;
+        return InteractionResultHolder.pass(stack);
     }
-
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {

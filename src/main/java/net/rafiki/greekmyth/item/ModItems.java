@@ -35,7 +35,7 @@ public class ModItems {
 
     //CUSTOM
     public static final RegistryObject<Item> LYRE_OF_APOLLO = ITEMS.register("lyre_of_apollo",
-            () -> new LyreOfApolloItem(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+            () -> new LyreOfApolloItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(200)));
     public static final RegistryObject<Item> SWORD_OF_ARES = ITEMS.register("sword_of_ares",
             () -> new SwordOfAresItem(ModToolTiers.HALF_BASE_SWORD, 7, -3.4f,new Item.Properties().durability(325).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> WINGED_SANDALS_OF_HERMES = ITEMS.register("winged_sandals_of_hermes",
@@ -102,8 +102,8 @@ public class ModItems {
             () -> new ChalaceOfNyxItem(new Item.Properties().defaultDurability(175).rarity(Rarity.RARE).setNoRepair()));
     public static final RegistryObject<Item> THE_MASTER_BOLT = ITEMS.register("the_master_bolt",
             () -> new TheMasterBoltItem(new Item.Properties().defaultDurability(500).rarity(Rarity.EPIC).setNoRepair(),0));
- public static final RegistryObject<Item> CORNUCOPIA = ITEMS.register("cornucopia",
-         () -> new CornucopiaItem(new Item.Properties().defaultDurability(300).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> CORNUCOPIA = ITEMS.register("cornucopia",
+            () -> new CornucopiaItem(new Item.Properties().defaultDurability(300).rarity(Rarity.EPIC).setNoRepair()));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",

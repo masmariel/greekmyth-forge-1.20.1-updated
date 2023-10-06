@@ -3,13 +3,20 @@ package net.rafiki.greekmyth.item.custom;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
 import net.rafiki.greekmyth.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
@@ -17,21 +24,45 @@ import java.util.List;
 
 public class LyreOfApolloItem extends Item {
     private boolean isPlaying = false;
-
+    private int COOLDOWN_TICKS = 90 * 20;
     public LyreOfApolloItem(Properties pProperties) {
         super(pProperties);
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext context) {
-        Level world = context.getLevel();
+    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
+        ItemStack itemstack = player.getItemInHand(hand);
         if (!world.isClientSide()) {
-            if (!isMusicPlaying()) {
-                toggleMusic(world, context.getPlayer());
+            if (!isMusicPlaying() && !player.getCooldowns().isOnCooldown(this)) {
+                toggleMusic(world, player);
+                player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
+
+                double radius = 10.0D;
+
+                List<Player> players = world.getEntitiesOfClass(Player.class, new AABB(
+                        player.getX() - radius, player.getY() - radius, player.getZ() - radius,
+                        player.getX() + radius, player.getY() + radius, player.getZ() + radius));
+
+                for (Player nearbyPlayer : players) {
+                    nearbyPlayer.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0, false, false, false));
+                }
+
+                return InteractionResultHolder.success(itemstack);
             }
         }
-        return InteractionResult.SUCCESS;
+        return InteractionResultHolder.pass(itemstack);
     }
+
+    @Override
+    public void inventoryTick(ItemStack stack, Level world, Entity entity, int itemSlot, boolean isSelected) {
+        if (!world.isClientSide()) {
+            if (isPlaying && !((Player) entity).getCooldowns().isOnCooldown(this)) {
+                isPlaying = false;
+            }
+        }
+        super.inventoryTick(stack, world, entity, itemSlot, isSelected);
+    }
+
 
     private void toggleMusic(Level world, @Nullable LivingEntity entity) {
         if (isPlaying) {
@@ -56,8 +87,6 @@ public class LyreOfApolloItem extends Item {
     private boolean isMusicPlaying() {
         return isPlaying;
     }
-
-
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
