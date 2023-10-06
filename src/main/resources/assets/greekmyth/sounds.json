@@ -28,5 +28,17 @@
     "sounds": [
       "greekmyth:flute_of_pan"
     ]
+  },
+  "lyre_of_orpheus_melody": {
+    "subtitle": "sounds.greekmyth.lyre_of_orpheus_melody",
+    "sounds": [
+      "greekmyth:lyre_of_orpheus_melody"
+    ]
+  },
+  "drum_of_cybele": {
+    "subtitle": "sounds.greekmyth.drum_of_cybele",
+    "sounds": [
+      "greekmyth:drum_of_cybele"
+    ]
   }
 }

@@ -17,6 +17,8 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> GINGER = registerSoundEvents("ginger");
     public static final RegistryObject<SoundEvent> BEN = registerSoundEvents("ben");
     public static final RegistryObject<SoundEvent> FLUTE_OF_PAN = registerSoundEvents("flute_of_pan");
+    public static final RegistryObject<SoundEvent> LYRE_OF_ORPHEUS_MELODY = registerSoundEvents("lyre_of_orpheus_melody");
+    public static final RegistryObject<SoundEvent> DRUM_OF_CYBELE = registerSoundEvents("drum_of_cybele");
 
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name){

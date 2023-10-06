@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.rafiki.greekmyth.effect.ModEffects;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -29,9 +30,7 @@ public class MedallionOfPerseusItem extends Item {
             boolean hasOffhand = player.getOffhandItem() == pStack;
 
             if (hasMainHand || hasOffhand) {
-                if (player.hasEffect(MobEffects.POISON)) {
-                    player.removeEffect(MobEffects.POISON);
-                }
+                player.addEffect(new MobEffectInstance(ModEffects.POISON_RESISTANCE.get(), 200, 0, true, true, true));
             }
         }
     }

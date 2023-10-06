@@ -62,8 +62,10 @@
   "item.greekmyth.forge_coal": "Forge Coal",
 
   "item.greekmyth.ambrosia": "Ambrosia",
+  "item.greekmyth.gorgons_blood": "Gorgon's Blood",
 
   "item.greekmyth.lyre_of_apollo": "Lyre of Apollo",
+  "item.greekmyth.lyre_of_orpheus": "Lyre of Orpheus",
   "item.greekmyth.sword_of_ares": "Sword Of Ares",
   "item.greekmyth.winged_sandals_of_hermes": "Winged Sandals of Hermes",
   "item.greekmyth.helm_of_darkness": "Helm of Darkness",
@@ -98,6 +100,7 @@
   "item.greekmyth.medallion_of_perseus": "Medallion of Perseus",
   "item.greekmyth.the_master_bolt": "The Master Bolt",
   "item.greekmyth.cornucopia": "Cornucopia",
+  "item.greekmyth.drum_of_cybele": "Drum Of Cybele",
 
   "block.greekmyth.bronze_block": "Block of Bronze",
   "block.greekmyth.celestial_bronze_block": "Block of Celestial Bronze",
@@ -128,11 +131,20 @@
   "sounds.greekmyth.mason": "Mason",
   "sounds.greekmyth.ben": "Ben",
   "sounds.greekmyth.flute_of_pan": "Flute of Pan",
+  "sounds.greekmyth.lyre_of_orpheus_melody": "Lyre of Orpheus Melody",
+  "sounds.greekmyth.drum_of_cybele": "Drum of Cybele",
 
   "enchantment.greekmyth.wrath_of_zeus": "Wrath of Zeus",
 
+  "effect.greekmyth.poison_resistance": "Poison Resistance",
+  "effect.greekmyth.bleeding": "Bleeding",
+
   "tooltip.greekmyth.lyre_of_apollo_shift": "A beautiful melody can be played with the lyre.",
   "tooltip.greekmyth.lyre_of_apollo": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.lyre_of_orpheus_shift": "A fiery melody can be played with the lyre.",
+  "tooltip.greekmyth.lyre_of_orpheus": "Hold §eSHIFT§r for more Information",
+  "tooltip.greekmyth.drum_of_cybele_shift": "The rhythmic thumping invigorates the fighting spirit of those around.",
+  "tooltip.greekmyth.drum_of_cybele": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.sound_block": "Plays nice sounds when walked on or clicked!",
   "tooltip.greekmyth.sword_of_ares_shift": "The large sword feels heavy, as if only godly strength can wield it. It strikes fear and weakness into the enemies eyes.",
   "tooltip.greekmyth.sword_of_ares": "Hold §eSHIFT§r for more Information",
@@ -198,7 +210,7 @@
   "tooltip.greekmyth.lotus_staff_of_persephone": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.medallion_of_perseus_shift": "The gift to Perseus after slaying the gorgons. No poison can harm the holder of the medallion.",
   "tooltip.greekmyth.medallion_of_perseus": "Hold §eSHIFT§r for more Information",
-  "tooltip.greekmyth.the_master_bolt_shift": "The most powerful weapon ever crafted by the Cyclopes. The Master Bolt holds the power of the heavens. Any foe the bolt strikes, the Wrath of Zeus rains upon them.",
+  "tooltip.greekmyth.the_master_bolt_shift": "The most powerful weapon ever crafted by the Cyclopes. The Master Bolt holds the power of the heavens. Any foe the bolt strikes, the Wrath of Zeus rains upon them. Careful, wielding the bolt does not protect you from it's power.",
   "tooltip.greekmyth.the_master_bolt": "Hold §eSHIFT§r for more Information",
   "tooltip.greekmyth.cornucopia_shift": "Food, food, and more food!",
   "tooltip.greekmyth.cornucopia": "Hold §eSHIFT§r for more Information"

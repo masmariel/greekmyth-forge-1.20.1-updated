@@ -54,6 +54,7 @@ public class ModCreativeModeTabs {
 
                         //FOODS
                         output.accept(ModItems.AMBROSIA.get());
+                        output.accept(ModItems.GORGONS_BLOOD.get());
 
                         //FUEL
                         output.accept(ModItems.FORGE_COAL.get());
@@ -151,6 +152,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FLUTE_OF_PAN.get());
                         output.accept(ModItems.THE_MASTER_BOLT.get());
                         output.accept(ModItems.CORNUCOPIA.get());
+                        output.accept(ModItems.LYRE_OF_ORPHEUS.get());
+                        output.accept(ModItems.DRUM_OF_CYBELE.get());
 
                     }).build());
 
