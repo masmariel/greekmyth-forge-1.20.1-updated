@@ -32,9 +32,10 @@ public class CrownOfDeucalionItem extends ModArmorItem{
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.crown_of_deucalion_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.crown_of_deucalion"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.crown_of_deucalion_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

@@ -54,6 +54,8 @@ public class CornucopiaItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.cornucopia_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.cornucopia"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.cornucopia_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

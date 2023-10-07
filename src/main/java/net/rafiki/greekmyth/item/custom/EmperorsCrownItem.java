@@ -33,9 +33,11 @@ public class EmperorsCrownItem extends ModArmorItem{
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.emperors_crown_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.emperors_crown"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.emperors_crown_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }
+

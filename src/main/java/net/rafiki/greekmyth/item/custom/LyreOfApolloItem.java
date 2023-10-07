@@ -127,9 +127,12 @@ public class LyreOfApolloItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_apollo_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_apollo"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_apollo_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 }
+
 

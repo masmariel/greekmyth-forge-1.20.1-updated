@@ -40,9 +40,10 @@ public class NecklaceOfHarmoniaItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.necklace_of_harmonia_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.necklace_of_harmonia"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.necklace_of_harmonia_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

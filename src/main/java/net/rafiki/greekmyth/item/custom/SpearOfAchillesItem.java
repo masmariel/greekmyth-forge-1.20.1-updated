@@ -41,9 +41,10 @@ public class SpearOfAchillesItem extends TridentItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.spear_of_achilles_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.spear_of_achilles"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.spear_of_achilles_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

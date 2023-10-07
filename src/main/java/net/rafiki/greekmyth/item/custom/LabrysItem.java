@@ -21,9 +21,10 @@ public class LabrysItem extends AxeItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.labrys_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.labrys"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.labrys_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

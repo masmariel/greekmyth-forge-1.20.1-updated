@@ -33,9 +33,10 @@ public class CestusOfAphroditeItem extends ArmorItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.cestus_of_aphrodite_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.cestus_of_aphrodite"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.cestus_of_aphrodite_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

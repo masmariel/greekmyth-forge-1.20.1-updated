@@ -130,6 +130,8 @@ public class LyreOfAmphionItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_amphion_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_amphion"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_amphion_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

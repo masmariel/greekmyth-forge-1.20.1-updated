@@ -169,6 +169,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DRAKON_BONE_WINGS.get());
                         output.accept(ModItems.AOLUS.get());
                         output.accept(ModItems.LYRE_OF_AMPHION.get());
+                        output.accept(ModItems.RING_OF_GYGES.get());
+                        output.accept(ModItems.TRUMPET_OF_PHEME.get());
+                        output.accept(ModItems.CONCH_OF_TRITON.get());
 
                     }).build());
 

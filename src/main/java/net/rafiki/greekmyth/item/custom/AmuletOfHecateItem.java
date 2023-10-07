@@ -39,9 +39,10 @@ public class AmuletOfHecateItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.amulet_of_hecate_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.amulet_of_hecate"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.amulet_of_hecate_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

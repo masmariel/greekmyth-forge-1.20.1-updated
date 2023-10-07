@@ -59,9 +59,10 @@ public class TridentOfTritonItem extends TridentItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.trident_of_triton_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.trident_of_triton"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.trident_of_triton_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

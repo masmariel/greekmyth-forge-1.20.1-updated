@@ -42,8 +42,11 @@ public class SpearOfDiomedesItem extends TridentItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.spear_of_diomedes_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.spear_of_diomedes"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.spear_of_diomedes_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 }
+

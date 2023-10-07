@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-06T19:15:58.9097779	Item Models: greekmyth
+// 1.20.1	2023-10-07T01:02:20.7506646	Item Models: greekmyth
 9f2e9e6c619d320103f31e3d5dcd489318179481 assets/greekmyth/models/item/adamantine.json
 e9581c2fc533cd57806f5f5766c31838348e1635 assets/greekmyth/models/item/adamantine_axe.json
 3bb97b0bef3d30e840aacf11f121a7e19f6970a7 assets/greekmyth/models/item/adamantine_button.json
@@ -31,6 +31,7 @@ a7b978a7795a3d761b99b744d6054bc2a339bcae assets/greekmyth/models/item/caduceus.j
 c4f38b1c0161a23b33d65d1ebeaf08ea1136716e assets/greekmyth/models/item/cestus_of_aphrodite.json
 1a72a7a39a1f2a0ab955f0cc55ac1e7344e9ec9d assets/greekmyth/models/item/chalice_of_nyx.json
 c70bad2b63ac0692ad9f2b51b24d400f4511886e assets/greekmyth/models/item/claw_of_the_nemean_lion.json
+445a8a2bb8405e6d3b647412cda4eb5d63bd722f assets/greekmyth/models/item/conch_of_triton.json
 a8e386354679e81c4ef7188a91a59e358faefbea assets/greekmyth/models/item/cornucopia.json
 6cfb637e3b546437ba1346b0a6abba78cb26e5e6 assets/greekmyth/models/item/crown_of_deucalion.json
 beed5ae31f06d0198130b8885eba0f7a12041740 assets/greekmyth/models/item/crown_of_dionysus.json
@@ -64,6 +65,7 @@ e58b80d0bdbc3bdaed8a180c9fb49a9d828f78d7 assets/greekmyth/models/item/medallion_
 ce4ca7be66659be1300c5886f9bbb63b21aa4f0b assets/greekmyth/models/item/pouch_of_aeolus.json
 c1f5d509c5953bfd5201150a58977fca81b5a75d assets/greekmyth/models/item/rattle_of_cybele.json
 261edfa30aa9472902cf6014b0dfee421bc4a9db assets/greekmyth/models/item/raw_adamantine.json
+0ee042e4f73f2b7aa0aae6923520c9f378a5b80c assets/greekmyth/models/item/ring_of_gyges.json
 9dd54f3e0dbd04313072321dd88f2df22aded311 assets/greekmyth/models/item/scythe_of_kronus.json
 169f9676123b751e810f2ea9a5dbe9cb514f1aff assets/greekmyth/models/item/sounds_of_the_angels.json
 513069a9f11646b3f27da94fe3efeb1c6b06ea98 assets/greekmyth/models/item/spear_of_achilles.json
@@ -83,6 +85,7 @@ f5232a062feeec5c49f4424d75da5281334c6f02 assets/greekmyth/models/item/sword_of_a
 418a01691184aff6551a6bca40fd83f860dd07e4 assets/greekmyth/models/item/trident_of_oceanus.json
 eb07ce0afde7daf2f8f6a21c864a5f8f079e669b assets/greekmyth/models/item/trident_of_poseidon.json
 dfdb44e36de2c84958a9aefa71a8e0a72846e0d7 assets/greekmyth/models/item/trident_of_triton.json
+0a5d915eee451c9c1289e4781a715bfb4c53ab46 assets/greekmyth/models/item/trumpet_of_pheme.json
 c262aa4c1ea6f78eefc5716df394f772c239f687 assets/greekmyth/models/item/tusk_of_the_calydonian_boar.json
 09c81151208b60bb0e6b95ca2c810e917b581cd0 assets/greekmyth/models/item/tusk_of_the_erymanthian_boar.json
 c06716293ac06d7afa1370d2c21feb3d4a3f43f6 assets/greekmyth/models/item/whistle_of_tantalus.json

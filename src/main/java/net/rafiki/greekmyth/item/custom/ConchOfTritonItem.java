@@ -6,7 +6,6 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.util.TaskChainer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -26,10 +25,11 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class WhistleOfTantalusItem extends Item {
+public class ConchOfTritonItem extends Item {
     private boolean isPlaying = false;
     private int COOLDOWN_TICKS = 120 * 20;
-    public WhistleOfTantalusItem(Properties pProperties) {
+
+    public ConchOfTritonItem(Properties pProperties) {
         super(pProperties);
     }
 
@@ -43,52 +43,50 @@ public class WhistleOfTantalusItem extends Item {
 
                 double radius = 10.0D;
 
-                List<LivingEntity> entities = world.getEntitiesOfClass(LivingEntity.class, new AABB(
+                List<Player> players = world.getEntitiesOfClass(Player.class, new AABB(
                         player.getX() - radius, player.getY() - radius, player.getZ() - radius,
                         player.getX() + radius, player.getY() + radius, player.getZ() + radius));
 
-                for (LivingEntity nearbyEntity : entities) {
-                    if (!nearbyEntity.equals(player)) {
-                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 1, false, true, false));
-                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0, false, true, false));
-                    }
+                for (Player nearbyPlayer : players) {
+                    nearbyPlayer.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 600, 0, false, true, false));
                 }
 
                 if (world instanceof ServerLevel) {
                     ServerLevel serverWorld = (ServerLevel) world;
-                    ParticleOptions particle = ParticleTypes.CRIT;
-
-                    new Thread(() -> {
-                        try {
-                            for (int i = 0; i < 60; i++) {
-                                Thread.sleep(50);
-
-                                for (double x = -radius; x <= radius; x += 1.0D) {
-                                    for (double z = -radius; z <= radius; z += 1.0D) {
-                                        if (x * x + z * z <= radius * radius) {
-                                            serverWorld.sendParticles(particle,
-                                                    player.getX() + x,
-                                                    player.getY(),
-                                                    player.getZ() + z,
-                                                    1,
-                                                    0.0D,
-                                                    0.0D,
-                                                    0.0D,
-                                                    0.0D);
-                                        }
-                                    }
-                                }
-                            }
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }).start();
+                    ParticleOptions particle = ParticleTypes.BUBBLE;
+                    spawnParticles(serverWorld, player, particle, radius);
                 }
-
-                return InteractionResultHolder.success(itemstack);
             }
         }
-        return InteractionResultHolder.pass(itemstack);
+        return InteractionResultHolder.success(itemstack);
+    }
+
+    private void spawnParticles(ServerLevel serverWorld, Player player, ParticleOptions particle, double radius) {
+        new Thread(() -> {
+            try {
+                for (int i = 0; i < 60; i++) {
+                    Thread.sleep(50);
+
+                    for (double x = -radius; x <= radius; x += 1.0D) {
+                        for (double z = -radius; z <= radius; z += 1.0D) {
+                            if (x * x + z * z <= radius * radius) {
+                                serverWorld.sendParticles(particle,
+                                        player.getX() + x,
+                                        player.getY(),
+                                        player.getZ() + z,
+                                        1,
+                                        0.0D,
+                                        0.0D,
+                                        0.0D,
+                                        0.0D);
+                            }
+                        }
+                    }
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
     }
 
 
@@ -105,7 +103,6 @@ public class WhistleOfTantalusItem extends Item {
 
     private void toggleMusic(Level world, @Nullable LivingEntity entity) {
         if (isPlaying) {
-            stopMusic(world);
         } else {
             playCustomSound(world, entity);
         }
@@ -114,14 +111,11 @@ public class WhistleOfTantalusItem extends Item {
 
     private void playCustomSound(Level world, @Nullable LivingEntity entity) {
         if (entity != null) {
-            SoundEvent customSound = ModSounds.WHISTLE_OF_TANTALUS.get();
+            SoundEvent customSound = ModSounds.CONCH_OF_TRITON.get();
             world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), customSound, entity.getSoundSource(), 1.0F, 1.0F);
         }
     }
 
-    private void stopMusic(Level world) {
-
-    }
 
     private boolean isMusicPlaying() {
         return isPlaying;
@@ -130,13 +124,15 @@ public class WhistleOfTantalusItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.whistle_of_tantalus_shift"));
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.conch_of_triton_shift"));
         } else {
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.whistle_of_tantalus"));
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.conch_of_triton"));
         }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.whistle_of_tantalus_ctrl"));
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.conch_of_triton_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 }
+
+

@@ -21,9 +21,10 @@ public class SwordOfDamasenItem extends SwordItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_damasen_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_damasen"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_damasen_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

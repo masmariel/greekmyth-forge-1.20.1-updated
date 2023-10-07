@@ -33,9 +33,10 @@ public class GirdleOfHippolytaItem extends ArmorItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.girdle_of_hippolyta_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.girdle_of_hippolyta"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.girdle_of_hippolyta_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

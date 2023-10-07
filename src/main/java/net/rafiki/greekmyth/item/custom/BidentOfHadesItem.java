@@ -71,9 +71,10 @@ public class BidentOfHadesItem extends TridentItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.bident_of_hades_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.bident_of_hades"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.bident_of_hades_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

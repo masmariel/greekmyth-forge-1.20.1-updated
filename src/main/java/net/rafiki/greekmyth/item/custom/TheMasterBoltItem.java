@@ -66,6 +66,8 @@ public class TheMasterBoltItem extends TridentItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.the_master_bolt_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.the_master_bolt"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.the_master_bolt_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

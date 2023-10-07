@@ -35,9 +35,10 @@ public class TuskOfTheErymanthianBoarItem extends SwordItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.tusk_of_the_erymanthian_boar_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.tusk_of_the_erymanthian_boar"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.tusk_of_the_erymanthian_boar_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

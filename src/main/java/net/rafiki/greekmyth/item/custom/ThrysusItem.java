@@ -17,7 +17,7 @@ import java.util.List;
 
 public class ThrysusItem extends Item {
 
-    private static final int COOLDOWN_TICKS = 30 * 20;
+    private static final int COOLDOWN_TICKS = 60 * 20;
 
     public ThrysusItem(Properties pProperties) {
         super(pProperties);
@@ -44,6 +44,8 @@ public class ThrysusItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.thrysus_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.thrysus"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.thrysus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
