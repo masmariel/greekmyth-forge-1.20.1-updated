@@ -2,7 +2,6 @@ package net.rafiki.greekmyth.effect;
 
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,7 +22,9 @@ public class ModEffects {
             () -> new BerserkEffect(MobEffectCategory.BENEFICIAL, 0xc30010)
                     .addAttributeModifier(Attributes.ATTACK_DAMAGE, "0fb52f0a-28de-41e0-8a6d-1433f9db10e9", 2f, AttributeModifier.Operation.ADDITION)
                     .addAttributeModifier(Attributes.ATTACK_SPEED, "b1d016ec-94f0-43dc-a5cb-925dfbc4f08b", 0.1f, AttributeModifier.Operation.MULTIPLY_TOTAL));
-
+    public static final RegistryObject<MobEffect> STONE_GAZE = MOB_EFFECTS.register("stone_gaze",
+            () -> new StoneGazeEffect(MobEffectCategory.HARMFUL, 0x767676)
+                    .addAttributeModifier(Attributes.MOVEMENT_SPEED, "73782702-2884-4834-9eb0-4d3fca714740", -10, AttributeModifier.Operation.ADDITION));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

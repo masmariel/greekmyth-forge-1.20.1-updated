@@ -140,6 +140,9 @@ public class ModItems {
             () -> new TrumpetOfPhemeItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(125)));
     public static final RegistryObject<Item> RING_OF_GYGES = ITEMS.register("ring_of_gyges",
             () -> new RingOfGygesItem(new Item.Properties().rarity(Rarity.RARE).setNoRepair().stacksTo(1)));
+    public static final RegistryObject<Item> HEAD_OF_MEDUSA = ITEMS.register("head_of_medusa",
+            () -> new HeadOfMedusaItem(new Item.Properties().rarity(Rarity.EPIC).defaultDurability(125)));
+
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",

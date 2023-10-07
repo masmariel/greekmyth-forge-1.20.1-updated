@@ -116,6 +116,7 @@
   "item.greekmyth.trumpet_of_pheme": "Trumpet of Pheme",
   "item.greekmyth.conch_of_triton": "Conch of Triton",
   "item.greekmyth.ring_of_gyges": "Ring of Gyges",
+  "item.greekmyth.head_of_medusa": "Head of Medusa",
 
   "item.greekmyth.sounds_of_the_angels": "Sounds of the Angels",
 
@@ -163,6 +164,7 @@
   "effect.greekmyth.poison_resistance": "Poison Resistance",
   "effect.greekmyth.bleeding": "Bleeding",
   "effect.greekmyth.berserk": "Berserk",
+  "effect.greekmyth.stone_gaze": "Medusa's Stone Gaze",
 
   "tooltip.greekmyth.sound_block": "Plays nice sounds when walked on or clicked!",
 
@@ -218,6 +220,7 @@
   "tooltip.greekmyth.trumpet_of_pheme_ctrl": "Health Boost I (AoE), (150s CD)",
   "tooltip.greekmyth.conch_of_triton_ctrl": "Conduit Power I (AoE), (120s CD)",
   "tooltip.greekmyth.ring_of_gyges_ctrl": "Invisibility I (P)",
+  "tooltip.greekmyth.head_of_medusa_ctrl": "Medusa's Stone Gaze I (AoE), (150s CD)",
 
 
   "tooltip.greekmyth.lyre_of_apollo_shift": "A beautiful melody can be played with the lyre.",
@@ -323,5 +326,7 @@
   "tooltip.greekmyth.ring_of_gyges_shift": "Ever wondered what inspired Lord of the Rings?",
   "tooltip.greekmyth.ring_of_gyges": "Hold §eSHIFT§r or §aCTRL§r for more Information",
   "tooltip.greekmyth.conch_of_triton_shift": "The sound of the sea can be heard from conch.",
-  "tooltip.greekmyth.conch_of_triton": "Hold §eSHIFT§r or §aCTRL§r for more Information"
+  "tooltip.greekmyth.conch_of_triton": "Hold §eSHIFT§r or §aCTRL§r for more Information",
+  "tooltip.greekmyth.head_of_medusa_shift": "Even decapitated, the gaze is still deadly.",
+  "tooltip.greekmyth.head_of_medusa": "Hold §eSHIFT§r or §aCTRL§r for more Information"
 }

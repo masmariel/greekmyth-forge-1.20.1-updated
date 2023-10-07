@@ -172,6 +172,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RING_OF_GYGES.get());
                         output.accept(ModItems.TRUMPET_OF_PHEME.get());
                         output.accept(ModItems.CONCH_OF_TRITON.get());
+                        output.accept(ModItems.HEAD_OF_MEDUSA.get());
 
                     }).build());
 
