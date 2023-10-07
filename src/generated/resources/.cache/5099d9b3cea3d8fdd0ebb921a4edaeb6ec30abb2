@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-07T01:02:20.7506646	Item Models: greekmyth
+// 1.20.1	2023-10-07T13:37:20.954503	Item Models: greekmyth
 9f2e9e6c619d320103f31e3d5dcd489318179481 assets/greekmyth/models/item/adamantine.json
 e9581c2fc533cd57806f5f5766c31838348e1635 assets/greekmyth/models/item/adamantine_axe.json
 3bb97b0bef3d30e840aacf11f121a7e19f6970a7 assets/greekmyth/models/item/adamantine_button.json
@@ -47,6 +47,7 @@ a0029c995e151390cb8bd650e2616fe3ce61e7ac assets/greekmyth/models/item/drum_of_cy
 b842aca9849f93f094a2d41c0c489f18eb7223d4 assets/greekmyth/models/item/gorgons_blood.json
 4e24e5093c1ee5b2a5d14ffa2e7b33946b456763 assets/greekmyth/models/item/hammer_of_hephaestus.json
 914553e82475b5972b2479b751ce27b4de5abf4f assets/greekmyth/models/item/harpe_of_perseus.json
+b140fab71c0767fe255db17b6e0dc2b511fca048 assets/greekmyth/models/item/head_of_medusa.json
 a1f45b6ebc4f6e337ed5edb95ce9aff56947c362 assets/greekmyth/models/item/helm_of_darkness.json
 11c85a452e9ad9c8b7b5d1cb2ec00af3c64a96fd assets/greekmyth/models/item/hide_of_the_nemean_lion.json
 697d295410d124cfe50a61f26e1aa5a2856b9b74 assets/greekmyth/models/item/imperial_gold_axe.json
@@ -55,6 +56,7 @@ a1f45b6ebc4f6e337ed5edb95ce9aff56947c362 assets/greekmyth/models/item/helm_of_da
 4f9556bee84dc76a3909ad2a657c3c817539c3bf assets/greekmyth/models/item/imperial_gold_pickaxe.json
 cb26a11b887daf666946b0da1b6e46a9fc275f4e assets/greekmyth/models/item/imperial_gold_shovel.json
 de090f393adef7cb2e62c99f3ecfe75cc6859640 assets/greekmyth/models/item/imperial_gold_sword.json
+2a5e7edbdc40dd1f3434612b445932d7007fc8f8 assets/greekmyth/models/item/jar_of_souls.json
 d6e8726d0986827dee151e358f26d240626ff708 assets/greekmyth/models/item/labrys.json
 9f091d962881f37c81bfdd3c0d2a07ab7dc33970 assets/greekmyth/models/item/lotus_staff_of_persephone.json
 353a34e67dff46de5a20f0e8c3e1a5cf646613f4 assets/greekmyth/models/item/lyre_of_amphion.json
@@ -62,6 +64,7 @@ d6e8726d0986827dee151e358f26d240626ff708 assets/greekmyth/models/item/labrys.jso
 ca602cefe2f8f25c63528f76e1928f794b0d4158 assets/greekmyth/models/item/lyre_of_orpheus.json
 e58b80d0bdbc3bdaed8a180c9fb49a9d828f78d7 assets/greekmyth/models/item/medallion_of_perseus.json
 060322737d0489ce5373d22c88ab4b90807bd214 assets/greekmyth/models/item/necklace_of_harmonia.json
+8a5458a44447dfcaee7b3e9c0647a75338e10735 assets/greekmyth/models/item/nectar.json
 ce4ca7be66659be1300c5886f9bbb63b21aa4f0b assets/greekmyth/models/item/pouch_of_aeolus.json
 c1f5d509c5953bfd5201150a58977fca81b5a75d assets/greekmyth/models/item/rattle_of_cybele.json
 261edfa30aa9472902cf6014b0dfee421bc4a9db assets/greekmyth/models/item/raw_adamantine.json

@@ -76,10 +76,10 @@ public final class WingedSandalsOfHermesItem extends ArmorItem implements GeoIte
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.winged_sandals_of_hermes_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.winged_sandals_of_hermes_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.winged_sandals_of_hermes"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.winged_sandals_of_hermes_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

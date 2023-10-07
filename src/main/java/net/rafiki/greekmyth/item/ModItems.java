@@ -140,6 +140,11 @@ public class ModItems {
             () -> new TrumpetOfPhemeItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(125)));
     public static final RegistryObject<Item> RING_OF_GYGES = ITEMS.register("ring_of_gyges",
             () -> new RingOfGygesItem(new Item.Properties().rarity(Rarity.RARE).setNoRepair().stacksTo(1)));
+    public static final RegistryObject<Item> HEAD_OF_MEDUSA = ITEMS.register("head_of_medusa",
+            () -> new HeadOfMedusaItem(new Item.Properties().rarity(Rarity.EPIC).defaultDurability(125)));
+    public static final RegistryObject<Item> JAR_OF_SOULS = ITEMS.register("jar_of_souls",
+            () -> new JarOfSoulsItem(new Item.Properties().rarity(Rarity.RARE).setNoRepair().stacksTo(1)));
+
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",
@@ -147,9 +152,11 @@ public class ModItems {
 
     //FOOD
     public static final RegistryObject<Item> AMBROSIA = ITEMS.register("ambrosia",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.AMBROSIA).stacksTo(8).rarity(Rarity.RARE)));
+            () -> new AmbrosiaItem(new Item.Properties().food(ModFoodProperties.AMBROSIA).stacksTo(8).rarity(Rarity.RARE)));
+ public static final RegistryObject<Item> NECTAR = ITEMS.register("nectar",
+         () -> new NectarItem(new Item.Properties().food(ModFoodProperties.NECTAR).stacksTo(32).rarity(Rarity.RARE)));
     public static final RegistryObject<Item> GORGONS_BLOOD = ITEMS.register("gorgons_blood",
-         () -> new Item(new Item.Properties().food(ModFoodProperties.GORGONS_BLOOD).stacksTo(16).rarity(Rarity.UNCOMMON)));
+         () -> new GorgonsBloodItem(new Item.Properties().food(ModFoodProperties.GORGONS_BLOOD).stacksTo(16).rarity(Rarity.UNCOMMON)));
 
     //TOOLS
         //STYGIAN IRON

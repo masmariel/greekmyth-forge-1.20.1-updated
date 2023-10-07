@@ -31,10 +31,10 @@ public class CestusOfAphroditeItem extends ArmorItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.cestus_of_aphrodite_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.cestus_of_aphrodite_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.cestus_of_aphrodite"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.cestus_of_aphrodite_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

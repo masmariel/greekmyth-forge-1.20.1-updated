@@ -1,6 +1,7 @@
 package net.rafiki.greekmyth.item.custom;
 
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -18,12 +19,13 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 public class HammerOfHephaestusItem extends SwordItem {
-    private static final int COOLDOWN_TICKS = 100 * 20;
+    private static final int COOLDOWN_TICKS = 110 * 20;
     public HammerOfHephaestusItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
@@ -38,14 +40,20 @@ public class HammerOfHephaestusItem extends SwordItem {
                     return InteractionResultHolder.pass(itemstack);
                 }
 
-                double radius = 15.0D;
+                double radius = 10.0D;
                 List<LivingEntity> entities = world.getEntitiesOfClass(LivingEntity.class, new AABB(
                         player.getX() - radius, player.getY() - radius, player.getZ() - radius,
                         player.getX() + radius, player.getY() + radius, player.getZ() + radius));
 
+                Vec3 lookVec = player.getLookAngle();
                 for (LivingEntity nearbyEntity : entities) {
                     if (!(nearbyEntity instanceof Player) && !nearbyEntity.equals(player)) {
-                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.HARM, 10, 0, false, true, false));
+                        Vec3 dirVec = nearbyEntity.position().subtract(player.position()).normalize();
+                        double dotProduct = lookVec.dot(dirVec);
+
+                        if (dotProduct > Math.cos(Math.toRadians(45))) {
+                            nearbyEntity.addEffect(new MobEffectInstance(MobEffects.HARM, 10, 1, false, true, false));
+                        }
                     }
                 }
 
@@ -56,7 +64,7 @@ public class HammerOfHephaestusItem extends SwordItem {
 
                 if (world instanceof ServerLevel) {
                     ServerLevel serverWorld = (ServerLevel) world;
-                    ParticleOptions particle = (ParticleOptions) ParticleTypes.BLOCK;
+                    ParticleOptions particle = ParticleTypes.SWEEP_ATTACK;
                     spawnParticles(serverWorld, player, particle, radius);
                 }
 
@@ -67,31 +75,27 @@ public class HammerOfHephaestusItem extends SwordItem {
     }
 
     private void spawnParticles(ServerLevel serverWorld, Player player, ParticleOptions particle, double radius) {
-        new Thread(() -> {
-            try {
-                for (int i = 0; i < 20; i++) {
-                    Thread.sleep(10);
+        Vec3 lookVec = player.getLookAngle();
+        for (double x = -radius; x <= radius; x += 1.0D) {
+            for (double z = -radius; z <= radius; z += 1.0D) {
+                if (x * x + z * z <= radius * radius) {
+                    Vec3 dirVec = new Vec3(x, 0, z).normalize();
+                    double dotProduct = lookVec.dot(dirVec);
 
-                    for (double x = -radius; x <= radius; x += 1.0D) {
-                        for (double z = -radius; z <= radius; z += 1.0D) {
-                            if (x * x + z * z <= radius * radius) {
-                                serverWorld.sendParticles(particle,
-                                        player.getX() + x,
-                                        player.getY(),
-                                        player.getZ() + z,
-                                        1,
-                                        0.0D,
-                                        0.0D,
-                                        0.0D,
-                                        0.0D);
-                            }
-                        }
+                    if (dotProduct > Math.cos(Math.toRadians(45))) {
+                        serverWorld.sendParticles(particle,
+                                player.getX() + x,
+                                player.getY(),
+                                player.getZ() + z,
+                                1,
+                                0.0D,
+                                0.0D,
+                                0.0D,
+                                0.0D);
                     }
                 }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
-        }).start();
+        }
     }
 
     @Override
@@ -99,17 +103,16 @@ public class HammerOfHephaestusItem extends SwordItem {
         if (entity instanceof LivingEntity livingEntity){
             livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1), player);
         }
-
         return super.onLeftClickEntity(stack, player, entity);
     }
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.hammer_of_hephaestus_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.hammer_of_hephaestus_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.hammer_of_hephaestus"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.hammer_of_hephaestus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

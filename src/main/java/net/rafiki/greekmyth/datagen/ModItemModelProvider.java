@@ -36,6 +36,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //FOOD
         simpleItem(ModItems.AMBROSIA);
         simpleItem(ModItems.GORGONS_BLOOD);
+        simpleItem(ModItems.NECTAR);
 
         //FUEL
         simpleItem(ModItems.FORGE_COAL);
@@ -93,6 +94,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RING_OF_GYGES);
         simpleItem(ModItems.CONCH_OF_TRITON);
         simpleItem(ModItems.TRUMPET_OF_PHEME);
+        simpleItem(ModItems.HEAD_OF_MEDUSA);
+        simpleItem(ModItems.JAR_OF_SOULS);
 
         //OTHER
         simpleItem(ModItems.SOUNDS_OF_THE_ANGELS);

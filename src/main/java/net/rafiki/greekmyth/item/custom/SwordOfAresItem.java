@@ -32,7 +32,7 @@ public class SwordOfAresItem extends SwordItem {
         ItemStack itemStack = player.getItemInHand(hand);
 
         if (!world.isClientSide) {
-            player.addEffect(new MobEffectInstance(ModEffects.BERSERK.get(), 300, 1, false, true, false));
+            player.addEffect(new MobEffectInstance(ModEffects.BERSERK.get(), 200, 1, false, true, false));
             itemStack.hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(hand));
             player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
             world.playSound(null, player.blockPosition(), ModSounds.BERSERK.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
@@ -55,10 +55,10 @@ public class SwordOfAresItem extends SwordItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_ares_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_ares_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_ares"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_ares_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

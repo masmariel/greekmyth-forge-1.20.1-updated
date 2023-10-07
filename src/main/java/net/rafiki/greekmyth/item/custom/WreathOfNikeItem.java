@@ -30,10 +30,10 @@ public class WreathOfNikeItem extends ModArmorItem{
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.wreath_of_nike_shift"));
-        } else{
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.wreath_of_nike"));
-        }if (Screen.hasControlDown()){
+        } else if (Screen.hasControlDown()){
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.wreath_of_nike_ctrl"));
+        } else {
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.wreath_of_nike"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

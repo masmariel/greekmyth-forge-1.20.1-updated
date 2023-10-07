@@ -32,10 +32,10 @@ public class HideOfTheNemeanLionItem extends ArmorItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.hide_of_the_nemean_lion_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.hide_of_the_nemean_lion_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.hide_of_the_nemean_lion"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.hide_of_the_nemean_lion_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

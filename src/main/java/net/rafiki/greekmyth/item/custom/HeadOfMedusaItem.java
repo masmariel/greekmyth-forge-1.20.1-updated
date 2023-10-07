@@ -10,6 +10,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -17,14 +18,16 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
+import net.rafiki.greekmyth.effect.ModEffects;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class CaduceusItem extends Item {
-    private static final int COOLDOWN_TICKS = 120 * 20;
-    public CaduceusItem(Properties pProperties) {
+public class HeadOfMedusaItem extends Item {
+    private static final int COOLDOWN_TICKS = 150 * 20;
+    public HeadOfMedusaItem(Properties pProperties) {
         super(pProperties);
     }
 
@@ -39,13 +42,20 @@ public class CaduceusItem extends Item {
                 }
 
                 double radius = 10.0D;
-                List<Player> players = world.getEntitiesOfClass(Player.class, new AABB(
+                List<LivingEntity> entities = world.getEntitiesOfClass(LivingEntity.class, new AABB(
                         player.getX() - radius, player.getY() - radius, player.getZ() - radius,
                         player.getX() + radius, player.getY() + radius, player.getZ() + radius));
 
-                for (Player nearbyPlayer : players) {
-                    nearbyPlayer.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 0, false, true, false));
-                    nearbyPlayer.addEffect(new MobEffectInstance(MobEffects.HEAL, 10, 0, false, true, false));
+                Vec3 lookVec = player.getLookAngle();
+                for (LivingEntity entity : entities) {
+                    if (entity.equals(player)) continue;
+
+                    Vec3 dirVec = entity.position().subtract(player.position()).normalize();
+                    double dotProduct = lookVec.dot(dirVec);
+
+                    if (dotProduct > Math.cos(Math.toRadians(45))) {
+                        entity.addEffect(new MobEffectInstance(ModEffects.STONE_GAZE.get(), 100, 0, false, true, false));
+                    }
                 }
 
                 player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
@@ -53,7 +63,7 @@ public class CaduceusItem extends Item {
 
                 if (world instanceof ServerLevel) {
                     ServerLevel serverWorld = (ServerLevel) world;
-                    ParticleOptions particle = ParticleTypes.WAX_ON;
+                    ParticleOptions particle = ParticleTypes.GLOW_SQUID_INK;
                     spawnParticles(serverWorld, player, particle, radius);
                 }
 
@@ -66,21 +76,27 @@ public class CaduceusItem extends Item {
     private void spawnParticles(ServerLevel serverWorld, Player player, ParticleOptions particle, double radius) {
         new Thread(() -> {
             try {
+                Vec3 lookVec = player.getLookAngle();
                 for (int i = 0; i < 50; i++) {
                     Thread.sleep(40);
 
                     for (double x = -radius; x <= radius; x += 1.0D) {
                         for (double z = -radius; z <= radius; z += 1.0D) {
                             if (x * x + z * z <= radius * radius) {
-                                serverWorld.sendParticles(particle,
-                                        player.getX() + x,
-                                        player.getY(),
-                                        player.getZ() + z,
-                                        1,
-                                        0.0D,
-                                        0.0D,
-                                        0.0D,
-                                        0.0D);
+                                Vec3 dirVec = new Vec3(x, 0, z).normalize();
+                                double dotProduct = lookVec.dot(dirVec);
+
+                                if (dotProduct > Math.cos(Math.toRadians(45))) {
+                                    serverWorld.sendParticles(particle,
+                                            player.getX() + x,
+                                            player.getY(),
+                                            player.getZ() + z,
+                                            1,
+                                            0.0D,
+                                            0.0D,
+                                            0.0D,
+                                            0.0D);
+                                }
                             }
                         }
                     }
@@ -91,13 +107,15 @@ public class CaduceusItem extends Item {
         }).start();
     }
 
+
+
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.caduceus_shift"));
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.head_of_medusa_shift"));
         } else if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.caduceus_ctrl"));
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.head_of_medusa_ctrl"));
         } else {
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.caduceus"));
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.head_of_medusa"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

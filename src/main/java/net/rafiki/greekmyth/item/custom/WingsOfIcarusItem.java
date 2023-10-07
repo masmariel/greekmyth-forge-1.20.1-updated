@@ -18,11 +18,10 @@ public class WingsOfIcarusItem extends ElytraItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.wings_of_icarus_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.wings_of_icarus_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.wings_of_icarus"));
-        }
-        if (Screen.hasControlDown()) {
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.wings_of_icarus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

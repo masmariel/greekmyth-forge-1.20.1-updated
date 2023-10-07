@@ -48,8 +48,8 @@ public class LyreOfOrpheusItem extends Item {
 
                 for (LivingEntity nearbyEntity : entities) {
                     if (!nearbyEntity.equals(player)) {
-                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400, 1, false, true, false));
-                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 0, false, true, false));
+                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 1, false, true, false));
+                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0, false, true, false));
                     }
                 }
 
@@ -59,8 +59,8 @@ public class LyreOfOrpheusItem extends Item {
 
                     new Thread(() -> {
                         try {
-                            for (int i = 0; i < 60; i++) {
-                                Thread.sleep(50);
+                            for (int i = 0; i < 50; i++) {
+                                Thread.sleep(40);
 
                                 for (double x = -radius; x <= radius; x += 1.0D) {
                                     for (double z = -radius; z <= radius; z += 1.0D) {
@@ -130,10 +130,10 @@ public class LyreOfOrpheusItem extends Item {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_orpheus_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_orpheus_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_orpheus"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_orpheus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
