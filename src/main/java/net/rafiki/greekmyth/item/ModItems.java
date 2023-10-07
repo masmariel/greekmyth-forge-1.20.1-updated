@@ -200,13 +200,13 @@ public class ModItems {
     //ARMOR
         //STYGIAN IRON
     public static final RegistryObject<Item> STYGIAN_IRON_HELMET = ITEMS.register("stygian_iron_helmet",
-            () -> new ArmorItem(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new StygianArmor(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> STYGIAN_IRON_CHESTPLATE = ITEMS.register("stygian_iron_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new StygianArmor(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> STYGIAN_IRON_LEGGINGS = ITEMS.register("stygian_iron_leggings",
-            () -> new ArmorItem(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new StygianArmor(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> STYGIAN_IRON_BOOTS = ITEMS.register("stygian_iron_boots",
-            () -> new ArmorItem(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new StygianArmor(ModArmorMaterials.STYGIAN_IRON, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> STYGIAN_IRON_HORSE_ARMOR = ITEMS.register("stygian_iron_horse_armor",
             () -> new HorseArmorItem(15, new ResourceLocation(GreekMyth.MOD_ID, "textures/entity/horse/armor/horse_armor_stygian_iron.png"), new Item.Properties().stacksTo(1)));
 
