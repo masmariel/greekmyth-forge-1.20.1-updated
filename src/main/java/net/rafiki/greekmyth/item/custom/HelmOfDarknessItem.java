@@ -28,8 +28,8 @@ public class HelmOfDarknessItem extends ArmorItem {
         Player player = (Player) pEntity;
         if (!pLevel.isClientSide && player.getInventory().armor.get(3) == pStack && pEntity instanceof Player) {
 
-                player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 0, false, false, false));
-                player.addEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 200, 0, false, false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 0, false, true, false));
+                player.addEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 200, 0, false, true, false));
 
         }
     }

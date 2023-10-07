@@ -19,6 +19,11 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> FLUTE_OF_PAN = registerSoundEvents("flute_of_pan");
     public static final RegistryObject<SoundEvent> LYRE_OF_ORPHEUS_MELODY = registerSoundEvents("lyre_of_orpheus_melody");
     public static final RegistryObject<SoundEvent> DRUM_OF_CYBELE = registerSoundEvents("drum_of_cybele");
+    public static final RegistryObject<SoundEvent> RATTLE_OF_CYBELE = registerSoundEvents("rattle_of_cybele");
+    public static final RegistryObject<SoundEvent> WHISTLE_OF_TANTALUS = registerSoundEvents("whistle_of_tantalus");
+    public static final RegistryObject<SoundEvent> AOLUS = registerSoundEvents("aolus");
+    public static final RegistryObject<SoundEvent> LYRE_OF_AMPHION_MELODY = registerSoundEvents("lyre_of_amphion_melody");
+    public static final RegistryObject<SoundEvent> GODLY_VOCALS = registerSoundEvents("godly_vocals");
 
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name){

@@ -110,6 +110,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CELESTIAL_BRONZE_HORSE_ARMOR.get());
                         output.accept(ModItems.BRONZE_HORSE_ARMOR.get());
 
+                        //OTHER
+                        output.accept(ModItems.SOUNDS_OF_THE_ANGELS.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> COURSE_TAB_2 = CREATIVE_MODE_TABS.register("course_tab_2",
@@ -154,6 +157,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CORNUCOPIA.get());
                         output.accept(ModItems.LYRE_OF_ORPHEUS.get());
                         output.accept(ModItems.DRUM_OF_CYBELE.get());
+                        output.accept(ModItems.RATTLE_OF_CYBELE.get());
+                        output.accept(ModItems.WHISTLE_OF_TANTALUS.get());
+                        output.accept(ModItems.AXE_OF_PERDIX.get());
+                        output.accept(ModItems.POUCH_OF_AEOLUS.get());
+                        output.accept(ModItems.CROWN_OF_DEUCALION.get());
+                        output.accept(ModItems.WREATH_OF_NIKE.get());
+                        output.accept(ModItems.BROKEN_WINGED_SANDALS.get());
+                        output.accept(ModItems.EMPERORS_CROWN.get());
+                        output.accept(ModItems.WINGS_OF_ICARUS.get());
+                        output.accept(ModItems.DRAKON_BONE_WINGS.get());
+                        output.accept(ModItems.AOLUS.get());
+                        output.accept(ModItems.LYRE_OF_AMPHION.get());
 
                     }).build());
 

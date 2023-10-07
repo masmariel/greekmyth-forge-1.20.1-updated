@@ -1,7 +1,10 @@
 package net.rafiki.greekmyth.item.custom;
 
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -24,7 +27,8 @@ import java.util.List;
 
 public class DrumOfCybeleItem extends Item {
     private boolean isPlaying = false;
-    private int COOLDOWN_TICKS = 90 * 20;
+    private int COOLDOWN_TICKS = 120 * 20;
+
     public DrumOfCybeleItem(Properties pProperties) {
         super(pProperties);
     }
@@ -44,14 +48,47 @@ public class DrumOfCybeleItem extends Item {
                         player.getX() + radius, player.getY() + radius, player.getZ() + radius));
 
                 for (Player nearbyPlayer : players) {
-                    nearbyPlayer.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 0, false, false, false));
+                    nearbyPlayer.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 0, false, true, false));
                 }
 
-                return InteractionResultHolder.success(itemstack);
+                if (world instanceof ServerLevel) {
+                    ServerLevel serverWorld = (ServerLevel) world;
+                    ParticleOptions particle = ParticleTypes.ANGRY_VILLAGER;
+                    spawnParticles(serverWorld, player, particle, radius);
+                }
             }
         }
-        return InteractionResultHolder.pass(itemstack);
+        return InteractionResultHolder.success(itemstack);
     }
+
+    private void spawnParticles(ServerLevel serverWorld, Player player, ParticleOptions particle, double radius) {
+        new Thread(() -> {
+            try {
+                for (int i = 0; i < 60; i++) {
+                    Thread.sleep(50);
+
+                    for (double x = -radius; x <= radius; x += 1.0D) {
+                        for (double z = -radius; z <= radius; z += 1.0D) {
+                            if (x * x + z * z <= radius * radius) {
+                                serverWorld.sendParticles(particle,
+                                        player.getX() + x,
+                                        player.getY(),
+                                        player.getZ() + z,
+                                        1,
+                                        0.0D,
+                                        0.0D,
+                                        0.0D,
+                                        0.0D);
+                            }
+                        }
+                    }
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
+
 
     @Override
     public void inventoryTick(ItemStack stack, Level world, Entity entity, int itemSlot, boolean isSelected) {
@@ -66,7 +103,6 @@ public class DrumOfCybeleItem extends Item {
 
     private void toggleMusic(Level world, @Nullable LivingEntity entity) {
         if (isPlaying) {
-            stopMusic(world);
         } else {
             playCustomSound(world, entity);
         }
@@ -80,9 +116,6 @@ public class DrumOfCybeleItem extends Item {
         }
     }
 
-    private void stopMusic(Level world) {
-
-    }
 
     private boolean isMusicPlaying() {
         return isPlaying;

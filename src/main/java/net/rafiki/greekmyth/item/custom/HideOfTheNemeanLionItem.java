@@ -25,7 +25,7 @@ public class HideOfTheNemeanLionItem extends ArmorItem {
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
         Player player = (Player) pEntity;
         if (!pLevel.isClientSide && player.getInventory().armor.get(2) == pStack && pEntity instanceof Player) {
-                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 0, false, false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 0, false, true, false));
         }
     }
 

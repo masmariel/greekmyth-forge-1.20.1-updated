@@ -50,7 +50,7 @@ public class TridentOfPoseidonItem extends TridentItem {
             boolean hasOffhand = player.getOffhandItem() == pStack;
 
             if (hasMainHand || hasOffhand) {
-                player.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 200, 1, false, false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 200, 1, false, true, false));
             }
         }
     }

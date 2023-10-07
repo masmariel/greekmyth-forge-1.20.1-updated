@@ -1,7 +1,10 @@
 package net.rafiki.greekmyth.item.custom;
 
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -24,7 +27,7 @@ import java.util.List;
 
 public class LyreOfOrpheusItem extends Item {
     private boolean isPlaying = false;
-    private int COOLDOWN_TICKS = 90 * 20;
+    private int COOLDOWN_TICKS = 120 * 20;
     public LyreOfOrpheusItem(Properties pProperties) {
         super(pProperties);
     }
@@ -39,14 +42,46 @@ public class LyreOfOrpheusItem extends Item {
 
                 double radius = 10.0D;
 
-                List<Player> players = world.getEntitiesOfClass(Player.class, new AABB(
+                List<LivingEntity> entities = world.getEntitiesOfClass(LivingEntity.class, new AABB(
                         player.getX() - radius, player.getY() - radius, player.getZ() - radius,
                         player.getX() + radius, player.getY() + radius, player.getZ() + radius));
 
-                for (Player nearbyPlayer : players) {
-                    if (!nearbyPlayer.equals(player)) {
-                        nearbyPlayer.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 0, false, false, false));
+                for (LivingEntity nearbyEntity : entities) {
+                    if (!nearbyEntity.equals(player)) {
+                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400, 1, false, true, false));
+                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 0, false, true, false));
                     }
+                }
+
+                if (world instanceof ServerLevel) {
+                    ServerLevel serverWorld = (ServerLevel) world;
+                    ParticleOptions particle = ParticleTypes.DRAGON_BREATH;
+
+                    new Thread(() -> {
+                        try {
+                            for (int i = 0; i < 60; i++) {
+                                Thread.sleep(50);
+
+                                for (double x = -radius; x <= radius; x += 1.0D) {
+                                    for (double z = -radius; z <= radius; z += 1.0D) {
+                                        if (x * x + z * z <= radius * radius) {
+                                            serverWorld.sendParticles(particle,
+                                                    player.getX() + x,
+                                                    player.getY(),
+                                                    player.getZ() + z,
+                                                    1,
+                                                    0.0D,
+                                                    0.0D,
+                                                    0.0D,
+                                                    0.0D);
+                                        }
+                                    }
+                                }
+                            }
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }).start();
                 }
 
                 return InteractionResultHolder.success(itemstack);

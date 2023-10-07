@@ -23,7 +23,7 @@ public class CrownOfDionysusItem extends ModArmorItem{
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
         Player player = (Player) pEntity;
         if (!pLevel.isClientSide && player.getInventory().armor.get(3) == pStack && pEntity instanceof Player) {
-            player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 0, false, true, false));
         }
     }
 

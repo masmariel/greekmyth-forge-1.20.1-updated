@@ -50,7 +50,7 @@ public class TridentOfOceanusItem extends TridentItem {
             boolean hasOffhand = player.getOffhandItem() == pStack;
 
             if (hasMainHand || hasOffhand) {
-                player.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 200, 0, false, false, false));
+                player.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 200, 0, false, true, false));
             }
         }
     }

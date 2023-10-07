@@ -24,6 +24,34 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266656_.put(ArmorItem.Type.HELMET, 2);
     }), 2, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.1F, () -> Ingredient.of(ModItems.WINGED_SANDALS_OF_HERMES.get())),
 
+    BROKEN_WINGED_SANDALS("broken_winged_sandals", 15, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
+        p_266656_.put(ArmorItem.Type.BOOTS, 1);
+        p_266656_.put(ArmorItem.Type.LEGGINGS, 5);
+        p_266656_.put(ArmorItem.Type.CHESTPLATE, 6);
+        p_266656_.put(ArmorItem.Type.HELMET, 2);
+    }), 2, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.of(ModItems.BROKEN_WINGED_SANDALS.get())),
+
+    CROWN_OF_DEUCALION("crown_of_deucalion", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
+        p_266656_.put(ArmorItem.Type.BOOTS, 2);
+        p_266656_.put(ArmorItem.Type.LEGGINGS, 2);
+        p_266656_.put(ArmorItem.Type.CHESTPLATE, 6);
+        p_266656_.put(ArmorItem.Type.HELMET, 1);
+    }), 2, SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> Ingredient.of(ModItems.CROWN_OF_DEUCALION.get())),
+
+    EMPERORS_CROWN("emperors_crown", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
+        p_266656_.put(ArmorItem.Type.BOOTS, 2);
+        p_266656_.put(ArmorItem.Type.LEGGINGS, 2);
+        p_266656_.put(ArmorItem.Type.CHESTPLATE, 6);
+        p_266656_.put(ArmorItem.Type.HELMET, 1);
+    }), 2, SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> Ingredient.of(ModItems.EMPERORS_CROWN.get())),
+
+    WREATH_OF_NIKE("wreath_of_nike", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
+        p_266656_.put(ArmorItem.Type.BOOTS, 2);
+        p_266656_.put(ArmorItem.Type.LEGGINGS, 2);
+        p_266656_.put(ArmorItem.Type.CHESTPLATE, 6);
+        p_266656_.put(ArmorItem.Type.HELMET, 0);
+    }), 2, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(ModItems.WREATH_OF_NIKE.get())),
+
     CESTUS_OF_APHRODITE("cestus_of_aphrodite", 30, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
         p_266656_.put(ArmorItem.Type.BOOTS, 2);
         p_266656_.put(ArmorItem.Type.LEGGINGS, 2);

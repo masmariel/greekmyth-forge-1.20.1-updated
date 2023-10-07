@@ -37,8 +37,6 @@ public class SpearOfDiomedesItem extends TridentItem {
         return attributeModifiers;
     }
 
-
-
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.spear_of_diomedes_shift"));

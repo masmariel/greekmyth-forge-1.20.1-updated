@@ -93,7 +93,7 @@ public class ModItems {
     public static final RegistryObject<Item> MEDALLION_OF_PERSEUS = ITEMS.register("medallion_of_perseus",
             () -> new MedallionOfPerseusItem(new Item.Properties().rarity(Rarity.RARE).setNoRepair().stacksTo(1)));
     public static final RegistryObject<Item> HAMMER_OF_HEPHAESTUS = ITEMS.register("hammer_of_hephaestus",
-            () -> new HammerOfHephaestusItem(ModToolTiers.BASE_SWORD, 9, -3.6f, new Item.Properties().defaultDurability(1200).rarity(Rarity.RARE).setNoRepair()));
+            () -> new HammerOfHephaestusItem(ModToolTiers.BASE_SWORD, 9, -3.6f, new Item.Properties().defaultDurability(1200).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> LOTUS_STAFF_OF_PERSOPHONE = ITEMS.register("lotus_staff_of_persephone",
             () -> new LotusStaffOfPersephoneItem(new Item.Properties().defaultDurability(150).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> FLUTE_OF_PAN = ITEMS.register("flute_of_pan",
@@ -108,7 +108,32 @@ public class ModItems {
             () -> new LyreOfOrpheusItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(125)));
     public static final RegistryObject<Item> DRUM_OF_CYBELE = ITEMS.register("drum_of_cybele",
             () -> new DrumOfCybeleItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(125)));
-
+    public static final RegistryObject<Item> RATTLE_OF_CYBELE = ITEMS.register("rattle_of_cybele",
+            () -> new RattleOfCybeleItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(125)));
+    public static final RegistryObject<Item> WHISTLE_OF_TANTALUS = ITEMS.register("whistle_of_tantalus",
+            () -> new WhistleOfTantalusItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(125)));
+    public static final RegistryObject<Item> AXE_OF_PERDIX = ITEMS.register("axe_of_perdix",
+            () -> new AxeOfPerdixItem(ModToolTiers.BASE_SWORD, 7, -3.0f, new Item.Properties().defaultDurability(375).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> POUCH_OF_AEOLUS = ITEMS.register("pouch_of_aeolus",
+            () -> new PouchOfAeolusItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(200)));
+    public static final RegistryObject<Item> CROWN_OF_DEUCALION = ITEMS.register("crown_of_deucalion",
+            () -> new CrownOfDeucalionItem(ModArmorMaterials.CROWN_OF_DEUCALION, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(275).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> WREATH_OF_NIKE = ITEMS.register("wreath_of_nike",
+            () -> new WreathOfNikeItem(ModArmorMaterials.WREATH_OF_NIKE, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(200).rarity(Rarity.RARE).setNoRepair()));
+    public static final RegistryObject<Item> BROKEN_WINGED_SANDALS = ITEMS.register("broken_winged_sandals",
+            () -> new BrokenWingedSandalsItem(ModArmorMaterials.BROKEN_WINGED_SANDALS, ArmorItem.Type.BOOTS, new Item.Properties().defaultDurability(250).rarity(Rarity.RARE).setNoRepair()));
+    public static final RegistryObject<Item> EMPERORS_CROWN = ITEMS.register("emperors_crown",
+            () -> new EmperorsCrownItem(ModArmorMaterials.EMPERORS_CROWN, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(225).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> WINGS_OF_ICARUS = ITEMS.register("wings_of_icarus",
+            () -> new WingsOfIcarusItem(new Item.Properties().rarity(Rarity.EPIC).defaultDurability(475)));
+    public static final RegistryObject<Item> DRAKON_BONE_WINGS = ITEMS.register("drakon_bone_wings",
+            () -> new DrakonBoneWingsItem(new Item.Properties().rarity(Rarity.EPIC).defaultDurability(475)));
+    public static final RegistryObject<Item> AOLUS = ITEMS.register("aolus",
+            () -> new AolusItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(125)));
+    public static final RegistryObject<Item> LYRE_OF_AMPHION = ITEMS.register("lyre_of_amphion",
+            () -> new LyreOfAmphionItem(new Item.Properties().rarity(Rarity.EPIC).defaultDurability(125)));
+    public static final RegistryObject<Item> SOUNDS_OF_THE_ANGELS = ITEMS.register("sounds_of_the_angels",
+            () -> new SoundsOfTheAngelsItem(new Item.Properties().rarity(Rarity.EPIC)));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",
@@ -117,7 +142,7 @@ public class ModItems {
     //FOOD
     public static final RegistryObject<Item> AMBROSIA = ITEMS.register("ambrosia",
             () -> new Item(new Item.Properties().food(ModFoodProperties.AMBROSIA).stacksTo(8).rarity(Rarity.RARE)));
- public static final RegistryObject<Item> GORGONS_BLOOD = ITEMS.register("gorgons_blood",
+    public static final RegistryObject<Item> GORGONS_BLOOD = ITEMS.register("gorgons_blood",
          () -> new Item(new Item.Properties().food(ModFoodProperties.GORGONS_BLOOD).stacksTo(16).rarity(Rarity.UNCOMMON)));
 
     //TOOLS

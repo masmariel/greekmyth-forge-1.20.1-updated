@@ -30,7 +30,7 @@ public class MedallionOfPerseusItem extends Item {
             boolean hasOffhand = player.getOffhandItem() == pStack;
 
             if (hasMainHand || hasOffhand) {
-                player.addEffect(new MobEffectInstance(ModEffects.POISON_RESISTANCE.get(), 200, 0, true, true, true));
+                player.addEffect(new MobEffectInstance(ModEffects.POISON_RESISTANCE.get(), 200, 0, false, true, false));
             }
         }
     }

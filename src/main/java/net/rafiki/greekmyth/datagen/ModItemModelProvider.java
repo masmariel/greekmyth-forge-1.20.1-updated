@@ -78,6 +78,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CORNUCOPIA);
         simpleItem(ModItems.LYRE_OF_ORPHEUS);
         simpleItem(ModItems.DRUM_OF_CYBELE);
+        simpleItem(ModItems.RATTLE_OF_CYBELE);
+        simpleItem(ModItems.WHISTLE_OF_TANTALUS);
+        handheldItem(ModItems.AXE_OF_PERDIX);
+        simpleItem(ModItems.POUCH_OF_AEOLUS);
+        simpleItem(ModItems.CROWN_OF_DEUCALION);
+        simpleItem(ModItems.WREATH_OF_NIKE);
+        simpleItem(ModItems.BROKEN_WINGED_SANDALS);
+        simpleItem(ModItems.EMPERORS_CROWN);
+        simpleItem(ModItems.WINGS_OF_ICARUS);
+        simpleItem(ModItems.DRAKON_BONE_WINGS);
+        simpleItem(ModItems.AOLUS);
+        simpleItem(ModItems.LYRE_OF_AMPHION);
+        simpleItem(ModItems.SOUNDS_OF_THE_ANGELS);
+
 
 
         //SPECIAL

@@ -40,5 +40,35 @@
     "sounds": [
       "greekmyth:drum_of_cybele"
     ]
+  },
+  "rattle_of_cybele": {
+    "subtitle": "sounds.greekmyth.rattle_of_cybele",
+    "sounds": [
+      "greekmyth:rattle_of_cybele"
+    ]
+  },
+  "whistle_of_tantalus": {
+    "subtitle": "sounds.greekmyth.whistle_of_tantalus",
+    "sounds": [
+      "greekmyth:whistle_of_tantalus"
+    ]
+  },
+  "aolus": {
+    "subtitle": "sounds.greekmyth.aolus",
+    "sounds": [
+      "greekmyth:aolus"
+    ]
+  },
+  "lyre_of_amphion_melody": {
+    "subtitle": "sounds.greekmyth.lyre_of_amphion_melody",
+    "sounds": [
+      "greekmyth:lyre_of_amphion_melody"
+    ]
+  },
+  "godly_vocals": {
+    "subtitle": "sounds.greekmyth.godly_vocals",
+    "sounds": [
+      "greekmyth:godly_vocals"
+    ]
   }
 }
