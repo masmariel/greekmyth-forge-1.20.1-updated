@@ -39,6 +39,8 @@ public class HelmOfDarknessItem extends ArmorItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.helm_of_darkness_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.helm_of_darkness"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.helm_of_darkness_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

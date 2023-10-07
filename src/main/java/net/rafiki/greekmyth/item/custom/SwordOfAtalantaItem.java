@@ -21,9 +21,10 @@ public class SwordOfAtalantaItem extends SwordItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_atalanta_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_atalanta"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_atalanta_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

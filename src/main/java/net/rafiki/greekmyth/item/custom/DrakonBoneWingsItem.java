@@ -20,9 +20,10 @@ public class DrakonBoneWingsItem extends ElytraItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.drakon_bone_wings_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.drakon_bone_wings"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.drakon_bone_wings_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

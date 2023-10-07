@@ -21,8 +21,10 @@ public class WingsOfIcarusItem extends ElytraItem {
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.wings_of_icarus"));
         }
+        if (Screen.hasControlDown()) {
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.wings_of_icarus_ctrl"));
+        }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

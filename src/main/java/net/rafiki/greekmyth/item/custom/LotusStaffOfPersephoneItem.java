@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class LotusStaffOfPersephoneItem extends Item {
-    private static final int COOLDOWN_TICKS = 100 * 20;
+    private static final int COOLDOWN_TICKS = 120 * 20;
     public LotusStaffOfPersephoneItem(Properties pProperties) {
         super(pProperties);
     }
@@ -44,7 +44,7 @@ public class LotusStaffOfPersephoneItem extends Item {
                         player.getX() + radius, player.getY() + radius, player.getZ() + radius));
 
                 for (Player nearbyPlayer : players) {
-                        nearbyPlayer.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 500, 0, false, true, false));
+                        nearbyPlayer.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 500, 1, false, true, false));
                 }
 
                 player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
@@ -95,10 +95,13 @@ public class LotusStaffOfPersephoneItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lotus_staff_of_persephone_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lotus_staff_of_persephone"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lotus_staff_of_persephone_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
+
 
     private int getDurability(ItemStack stack) {
         return stack.getMaxDamage() - stack.getDamageValue();

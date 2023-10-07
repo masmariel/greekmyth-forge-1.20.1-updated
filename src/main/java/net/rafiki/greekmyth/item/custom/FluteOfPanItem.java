@@ -127,9 +127,12 @@ public class FluteOfPanItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.flute_of_pan_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.flute_of_pan"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.flute_of_pan_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 }
+
 

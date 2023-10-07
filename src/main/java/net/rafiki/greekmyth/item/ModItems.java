@@ -57,7 +57,7 @@ public class ModItems {
     public static final RegistryObject<Item> HARPE_OF_PERSEUS = ITEMS.register("harpe_of_perseus",
             () -> new HarpeOfPerseusItem(ModToolTiers.BASE_SWORD, 7, -2.2f,new Item.Properties().durability(450).rarity(Rarity.RARE).setNoRepair()));
     public static final RegistryObject<Item> LABRYS = ITEMS.register("labrys",
-            () -> new LabrysItem(ModToolTiers.BASE_SWORD, 11, -3.8f,new Item.Properties().durability(400).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new LabrysItem(ModToolTiers.BASE_SWORD, 15, -3.8f,new Item.Properties().durability(400).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> THRYSUS = ITEMS.register("thrysus",
             () -> new ThrysusItem(new Item.Properties().defaultDurability(150).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> SPEAR_OF_ATHENA = ITEMS.register("spear_of_athena",
@@ -99,7 +99,7 @@ public class ModItems {
     public static final RegistryObject<Item> FLUTE_OF_PAN = ITEMS.register("flute_of_pan",
             () -> new FluteOfPanItem(new Item.Properties().defaultDurability(125).rarity(Rarity.RARE).setNoRepair()));
     public static final RegistryObject<Item> CHALICE_OF_NYX = ITEMS.register("chalice_of_nyx",
-            () -> new ChalaceOfNyxItem(new Item.Properties().defaultDurability(175).rarity(Rarity.RARE).setNoRepair()));
+            () -> new ChaliceOfNyxItem(new Item.Properties().defaultDurability(175).rarity(Rarity.RARE).setNoRepair()));
     public static final RegistryObject<Item> THE_MASTER_BOLT = ITEMS.register("the_master_bolt",
             () -> new TheMasterBoltItem(new Item.Properties().defaultDurability(500).rarity(Rarity.EPIC).setNoRepair(),0));
     public static final RegistryObject<Item> CORNUCOPIA = ITEMS.register("cornucopia",
@@ -134,6 +134,12 @@ public class ModItems {
             () -> new LyreOfAmphionItem(new Item.Properties().rarity(Rarity.EPIC).defaultDurability(125)));
     public static final RegistryObject<Item> SOUNDS_OF_THE_ANGELS = ITEMS.register("sounds_of_the_angels",
             () -> new SoundsOfTheAngelsItem(new Item.Properties().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> CONCH_OF_TRITON = ITEMS.register("conch_of_triton",
+            () -> new ConchOfTritonItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(125)));
+    public static final RegistryObject<Item> TRUMPET_OF_PHEME = ITEMS.register("trumpet_of_pheme",
+            () -> new TrumpetOfPhemeItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(125)));
+    public static final RegistryObject<Item> RING_OF_GYGES = ITEMS.register("ring_of_gyges",
+            () -> new RingOfGygesItem(new Item.Properties().rarity(Rarity.RARE).setNoRepair().stacksTo(1)));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",
@@ -148,7 +154,7 @@ public class ModItems {
     //TOOLS
         //STYGIAN IRON
     public static final RegistryObject<Item> STYGIAN_IRON_SWORD = ITEMS.register("stygian_iron_sword",
-            () -> new SwordItem(ModToolTiers.STYGIAN_IRON, 2, -2.4f,new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.STYGIAN_IRON, 3, -2.4f,new Item.Properties()));
     public static final RegistryObject<Item> STYGIAN_IRON_PICKAXE = ITEMS.register("stygian_iron_pickaxe",
             () -> new PickaxeItem(ModToolTiers.STYGIAN_IRON, 0, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> STYGIAN_IRON_SHOVEL = ITEMS.register("stygian_iron_shovel",

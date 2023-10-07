@@ -2,6 +2,9 @@ package net.rafiki.greekmyth.effect;
 
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -16,6 +19,11 @@ public class ModEffects {
             () -> new PoisonResistanceEffect(MobEffectCategory.BENEFICIAL, 0x36ebab));
     public static final RegistryObject<MobEffect> BLEEDING = MOB_EFFECTS.register("bleeding",
             () -> new BleedingEffect(MobEffectCategory.HARMFUL, 0x7c0a02));
+    public static final RegistryObject<MobEffect> BERSERK = MOB_EFFECTS.register("berserk",
+            () -> new BerserkEffect(MobEffectCategory.BENEFICIAL, 0xc30010)
+                    .addAttributeModifier(Attributes.ATTACK_DAMAGE, "0fb52f0a-28de-41e0-8a6d-1433f9db10e9", 2f, AttributeModifier.Operation.ADDITION)
+                    .addAttributeModifier(Attributes.ATTACK_SPEED, "b1d016ec-94f0-43dc-a5cb-925dfbc4f08b", 0.1f, AttributeModifier.Operation.MULTIPLY_TOTAL));
+
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

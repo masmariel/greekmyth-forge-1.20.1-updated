@@ -70,5 +70,23 @@
     "sounds": [
       "greekmyth:godly_vocals"
     ]
+  },
+  "trumpet_of_pheme": {
+    "subtitle": "sounds.greekmyth.trumpet_of_pheme",
+    "sounds": [
+      "greekmyth:trumpet_of_pheme"
+    ]
+  },
+  "conch_of_triton": {
+    "subtitle": "sounds.greekmyth.conch_of_triton",
+    "sounds": [
+      "greekmyth:conch_of_triton"
+    ]
+  },
+  "berserk": {
+    "subtitle": "sounds.greekmyth.berserk",
+    "sounds": [
+      "greekmyth:berserk"
+    ]
   }
 }

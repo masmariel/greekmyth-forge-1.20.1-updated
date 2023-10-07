@@ -32,9 +32,10 @@ public class CrownOfDionysusItem extends ModArmorItem{
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.crown_of_dionysus_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.crown_of_dionysus"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.crown_of_dionysus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

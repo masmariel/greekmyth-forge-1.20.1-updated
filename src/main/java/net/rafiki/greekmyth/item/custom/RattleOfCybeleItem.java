@@ -127,9 +127,12 @@ public class RattleOfCybeleItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.rattle_of_cybele_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.rattle_of_cybele"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.rattle_of_cybele_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 }
+
 

@@ -21,9 +21,10 @@ public class HarpeOfPerseusItem extends SwordItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.harpe_of_perseus_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.harpe_of_perseus"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.harpe_of_perseus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

@@ -21,9 +21,10 @@ public class ClawOfTheNemeanLionItem extends SwordItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.claw_of_the_nemean_lion_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.claw_of_the_nemean_lion"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.claw_of_the_nemean_lion_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

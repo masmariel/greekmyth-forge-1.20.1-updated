@@ -127,9 +127,12 @@ public class AolusItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.aolus_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.aolus"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.aolus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 }
+
 

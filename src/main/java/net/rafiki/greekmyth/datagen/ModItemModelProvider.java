@@ -90,9 +90,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.DRAKON_BONE_WINGS);
         simpleItem(ModItems.AOLUS);
         simpleItem(ModItems.LYRE_OF_AMPHION);
+        simpleItem(ModItems.RING_OF_GYGES);
+        simpleItem(ModItems.CONCH_OF_TRITON);
+        simpleItem(ModItems.TRUMPET_OF_PHEME);
+
+        //OTHER
         simpleItem(ModItems.SOUNDS_OF_THE_ANGELS);
-
-
 
         //SPECIAL
         buttonItem(ModBlocks.ADAMANTINE_BUTTON, ModBlocks.ADAMANTINE_BLOCK);

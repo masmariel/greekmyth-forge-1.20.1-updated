@@ -34,9 +34,10 @@ public class HideOfTheNemeanLionItem extends ArmorItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.hide_of_the_nemean_lion_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.hide_of_the_nemean_lion"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.hide_of_the_nemean_lion_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }

@@ -132,8 +132,11 @@ public class LyreOfOrpheusItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_orpheus_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_orpheus"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.lyre_of_orpheus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 }
+

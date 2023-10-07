@@ -2,6 +2,9 @@ package net.rafiki.greekmyth.item.custom;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -12,14 +15,33 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.rafiki.greekmyth.effect.ModEffects;
+import net.rafiki.greekmyth.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 public class SwordOfAresItem extends SwordItem {
+    private static final int COOLDOWN_TICKS = 120 * 20;
     public SwordOfAresItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
+
+    @Override
+    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
+        ItemStack itemStack = player.getItemInHand(hand);
+
+        if (!world.isClientSide) {
+            player.addEffect(new MobEffectInstance(ModEffects.BERSERK.get(), 300, 1, false, true, false));
+            itemStack.hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(hand));
+            player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
+            world.playSound(null, player.blockPosition(), ModSounds.BERSERK.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
+        }
+
+        return InteractionResultHolder.success(itemStack);
+    }
+
+
 
     @Override
     public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
@@ -35,6 +57,8 @@ public class SwordOfAresItem extends SwordItem {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_ares_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_ares"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.sword_of_ares_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

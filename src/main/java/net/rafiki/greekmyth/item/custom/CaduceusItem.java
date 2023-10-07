@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CaduceusItem extends Item {
-    private static final int COOLDOWN_TICKS = 100 * 20;
+    private static final int COOLDOWN_TICKS = 120 * 20;
     public CaduceusItem(Properties pProperties) {
         super(pProperties);
     }
@@ -96,6 +96,8 @@ public class CaduceusItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.caduceus_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.caduceus"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.caduceus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

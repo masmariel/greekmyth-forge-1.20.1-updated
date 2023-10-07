@@ -41,9 +41,10 @@ public class MedallionOfPerseusItem extends Item {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.medallion_of_perseus_shift"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.medallion_of_perseus"));
+        }if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.medallion_of_perseus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }
