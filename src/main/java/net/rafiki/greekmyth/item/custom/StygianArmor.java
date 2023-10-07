@@ -54,7 +54,5 @@ public class StygianArmor extends ArmorItem  implements GeoItem {
     }
 
     @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return cache;
-    }
+    public AnimatableInstanceCache getAnimatableInstanceCache() {return cache;}
 }

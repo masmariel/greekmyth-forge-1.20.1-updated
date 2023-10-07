@@ -17,7 +17,7 @@ public class StygianArmorModel extends GeoModel<StygianArmor> {
 
     @Override
     public ResourceLocation getTextureResource(StygianArmor animatable) {
-        return new ResourceLocation(GreekMyth.MOD_ID, "textures/models/armor/stygian_iron_3darmor.png");
+        return new ResourceLocation(GreekMyth.MOD_ID, "textures/models/armor/stygian_iron_armor.png");
     }
 
     @Override
