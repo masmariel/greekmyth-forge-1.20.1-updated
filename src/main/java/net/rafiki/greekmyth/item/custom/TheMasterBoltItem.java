@@ -64,10 +64,10 @@ public class TheMasterBoltItem extends TridentItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> pTooltipComponents, @NotNull TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.the_master_bolt_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.the_master_bolt_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.the_master_bolt"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.the_master_bolt_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

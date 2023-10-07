@@ -19,10 +19,10 @@ public class HarpeOfPerseusItem extends SwordItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.harpe_of_perseus_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.harpe_of_perseus_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.harpe_of_perseus"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.harpe_of_perseus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

@@ -39,10 +39,10 @@ public class ChaliceOfNyxItem extends Item {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.chalice_of_nyx_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.chalice_of_nyx_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.chalice_of_nyx"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.chalice_of_nyx_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

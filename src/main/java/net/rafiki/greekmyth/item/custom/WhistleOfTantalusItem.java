@@ -60,8 +60,8 @@ public class WhistleOfTantalusItem extends Item {
 
                     new Thread(() -> {
                         try {
-                            for (int i = 0; i < 60; i++) {
-                                Thread.sleep(50);
+                            for (int i = 0; i < 50; i++) {
+                                Thread.sleep(40);
 
                                 for (double x = -radius; x <= radius; x += 1.0D) {
                                     for (double z = -radius; z <= radius; z += 1.0D) {
@@ -131,10 +131,10 @@ public class WhistleOfTantalusItem extends Item {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.whistle_of_tantalus_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.whistle_of_tantalus_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.whistle_of_tantalus"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.whistle_of_tantalus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

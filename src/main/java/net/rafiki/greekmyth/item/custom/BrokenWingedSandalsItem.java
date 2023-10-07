@@ -33,10 +33,10 @@ public class BrokenWingedSandalsItem extends ArmorItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.broken_winged_sandals_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.broken_winged_sandals_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.broken_winged_sandals"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.broken_winged_sandals_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

@@ -54,6 +54,7 @@ public class ModCreativeModeTabs {
 
                         //FOODS
                         output.accept(ModItems.AMBROSIA.get());
+                        output.accept(ModItems.NECTAR.get());
                         output.accept(ModItems.GORGONS_BLOOD.get());
 
                         //FUEL
@@ -126,6 +127,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.HELM_OF_DARKNESS.get());
                         output.accept(ModItems.TRIDENT_OF_POSEIDON.get());
                         output.accept(ModItems.BIDENT_OF_HADES.get());
+                        output.accept(ModItems.JAR_OF_SOULS.get());
                         output.accept(ModItems.HIDE_OF_THE_NEMEAN_LION.get());
                         output.accept(ModItems.GOLDEN_FLEECE.get());
                         output.accept(ModItems.CADUCEUS.get());

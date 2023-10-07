@@ -57,11 +57,10 @@ public class BidentOfHadesItem extends TridentItem {
         if (pEntity instanceof Player) {
             Player player = (Player) pEntity;
             boolean hasMainHand = player.getMainHandItem() == pStack;
-            boolean hasOffhand = player.getOffhandItem() == pStack;
+            boolean hasOffhand = player.getOffhandItem().getItem() instanceof JarOfSoulsItem;
 
-            if (hasMainHand || hasOffhand) {
+            if ((hasMainHand || hasOffhand) && !hasOffhand) {
                 player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 200, 1, false, true, false));
-
             }
         }
     }
@@ -69,10 +68,10 @@ public class BidentOfHadesItem extends TridentItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.bident_of_hades_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.bident_of_hades_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.bident_of_hades"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.bident_of_hades_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

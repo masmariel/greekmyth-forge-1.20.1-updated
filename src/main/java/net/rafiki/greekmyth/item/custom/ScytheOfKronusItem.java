@@ -38,7 +38,7 @@ public class ScytheOfKronusItem extends SwordItem {
                     return InteractionResultHolder.pass(itemstack);
                 }
 
-                double radius = 5.0D;
+                double radius = 7.0D;
                 List<LivingEntity> entities = world.getEntitiesOfClass(LivingEntity.class, new AABB(
                         player.getX() - radius, player.getY() - radius, player.getZ() - radius,
                         player.getX() + radius, player.getY() + radius, player.getZ() + radius));
@@ -71,8 +71,8 @@ public class ScytheOfKronusItem extends SwordItem {
     private void spawnParticles(ServerLevel serverWorld, Player player, ParticleOptions particle, double radius) {
         new Thread(() -> {
             try {
-                for (int i = 0; i < 60; i++) {
-                    Thread.sleep(50);
+                for (int i = 0; i < 50; i++) {
+                    Thread.sleep(40);
 
                     for (double x = -radius; x <= radius; x += 1.0D) {
                         for (double z = -radius; z <= radius; z += 1.0D) {
@@ -108,10 +108,10 @@ public class ScytheOfKronusItem extends SwordItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.scythe_of_kronus_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.scythe_of_kronus_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.scythe_of_kronus"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.scythe_of_kronus_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

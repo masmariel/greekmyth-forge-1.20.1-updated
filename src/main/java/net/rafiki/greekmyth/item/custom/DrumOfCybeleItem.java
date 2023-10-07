@@ -53,7 +53,7 @@ public class DrumOfCybeleItem extends Item {
 
                 if (world instanceof ServerLevel) {
                     ServerLevel serverWorld = (ServerLevel) world;
-                    ParticleOptions particle = ParticleTypes.ANGRY_VILLAGER;
+                    ParticleOptions particle = ParticleTypes.SOUL_FIRE_FLAME;
                     spawnParticles(serverWorld, player, particle, radius);
                 }
             }
@@ -64,8 +64,8 @@ public class DrumOfCybeleItem extends Item {
     private void spawnParticles(ServerLevel serverWorld, Player player, ParticleOptions particle, double radius) {
         new Thread(() -> {
             try {
-                for (int i = 0; i < 60; i++) {
-                    Thread.sleep(50);
+                for (int i = 0; i < 50; i++) {
+                    Thread.sleep(40);
 
                     for (double x = -radius; x <= radius; x += 1.0D) {
                         for (double z = -radius; z <= radius; z += 1.0D) {
@@ -125,10 +125,10 @@ public class DrumOfCybeleItem extends Item {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.drum_of_cybele_shift"));
+        } else if (Screen.hasControlDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.drum_of_cybele_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.drum_of_cybele"));
-        }if (Screen.hasControlDown()){
-            pTooltipComponents.add(Component.translatable("tooltip.greekmyth.drum_of_cybele_ctrl"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
