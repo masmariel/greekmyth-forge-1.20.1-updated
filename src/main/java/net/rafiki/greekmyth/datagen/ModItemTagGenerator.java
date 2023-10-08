@@ -36,11 +36,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.CELESTIAL_BRONZE_HELMET.get(),
                         ModItems.CELESTIAL_BRONZE_CHESTPLATE.get(),
                         ModItems.CELESTIAL_BRONZE_LEGGINGS.get(),
-                        ModItems.CELESTIAL_BRONZE_BOOTS.get(),
-                        ModItems.BRONZE_HELMET.get(),
-                        ModItems.BRONZE_CHESTPLATE.get(),
-                        ModItems.BRONZE_LEGGINGS.get(),
-                        ModItems.BRONZE_BOOTS.get()
+                        ModItems.CELESTIAL_BRONZE_BOOTS.get()
+                        //ModItems.BRONZE_HELMET.get(),
+                        //ModItems.BRONZE_CHESTPLATE.get(),
+                        //ModItems.BRONZE_LEGGINGS.get(),
+                        //ModItems.BRONZE_BOOTS.get()
                 );
 
     }

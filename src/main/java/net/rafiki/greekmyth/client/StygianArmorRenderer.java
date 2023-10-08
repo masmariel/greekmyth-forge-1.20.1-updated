@@ -1,8 +1,7 @@
 package net.rafiki.greekmyth.client;
 
+import mod.azure.azurelib.renderer.GeoArmorRenderer;
 import net.rafiki.greekmyth.item.custom.StygianArmor;
-import software.bernie.geckolib.model.GeoModel;
-import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class StygianArmorRenderer extends GeoArmorRenderer<StygianArmor> {
     public StygianArmorRenderer() {

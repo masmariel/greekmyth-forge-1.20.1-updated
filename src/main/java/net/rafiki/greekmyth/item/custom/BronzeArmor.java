@@ -13,29 +13,29 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
-import net.rafiki.greekmyth.client.StygianArmorRenderer;
+import net.rafiki.greekmyth.client.BronzeArmorRenderer;
 
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class StygianArmor extends ArmorItem implements GeoItem {
+public class BronzeArmor extends ArmorItem implements GeoItem {
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
     private final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this);
 
-    public StygianArmor (ArmorMaterial pMaterial, Type pType, Properties pProperties) {
+    public BronzeArmor(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
 
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
-            private StygianArmorRenderer renderer = null;
+            private BronzeArmorRenderer renderer = null;
 
             @Override
             public HumanoidModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, HumanoidModel<LivingEntity> original) {
                 if (renderer == null)
-                    renderer = new StygianArmorRenderer();
+                    renderer = new BronzeArmorRenderer();
                 renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
             }

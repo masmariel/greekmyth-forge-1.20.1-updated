@@ -262,13 +262,13 @@ public class ModItems {
 
         //BRONZE
     public static final RegistryObject<Item> BRONZE_HELMET = ITEMS.register("bronze_helmet",
-                () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.HELMET, new Item.Properties()));
+                () -> new BronzeArmor(ModArmorMaterials.BRONZE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_CHESTPLATE = ITEMS.register("bronze_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new BronzeArmor(ModArmorMaterials.BRONZE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_LEGGINGS = ITEMS.register("bronze_leggings",
-            () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new BronzeArmor(ModArmorMaterials.BRONZE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_BOOTS = ITEMS.register("bronze_boots",
-            () -> new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new BronzeArmor(ModArmorMaterials.BRONZE, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_HORSE_ARMOR = ITEMS.register("bronze_horse_armor",
             () -> new HorseArmorItem(6, new ResourceLocation(GreekMyth.MOD_ID, "textures/entity/horse/armor/horse_armor_bronze.png"), new Item.Properties().stacksTo(1)));
 
