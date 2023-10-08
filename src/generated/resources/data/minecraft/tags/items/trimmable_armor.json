@@ -4,6 +4,10 @@
     "greekmyth:adamantine_chestplate",
     "greekmyth:adamantine_leggings",
     "greekmyth:adamantine_boots",
+    "greekmyth:stygian_iron_helmet",
+    "greekmyth:stygian_iron_chestplate",
+    "greekmyth:stygian_iron_leggings",
+    "greekmyth:stygian_iron_boots",
     "greekmyth:imperial_gold_helmet",
     "greekmyth:imperial_gold_chestplate",
     "greekmyth:imperial_gold_leggings",
@@ -11,6 +15,10 @@
     "greekmyth:celestial_bronze_helmet",
     "greekmyth:celestial_bronze_chestplate",
     "greekmyth:celestial_bronze_leggings",
-    "greekmyth:celestial_bronze_boots"
+    "greekmyth:celestial_bronze_boots",
+    "greekmyth:bronze_helmet",
+    "greekmyth:bronze_chestplate",
+    "greekmyth:bronze_leggings",
+    "greekmyth:bronze_boots"
   ]
 }

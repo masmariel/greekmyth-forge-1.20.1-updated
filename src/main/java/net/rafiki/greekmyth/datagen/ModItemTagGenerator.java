@@ -25,10 +25,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.ADAMANTINE_CHESTPLATE.get(),
                         ModItems.ADAMANTINE_LEGGINGS.get(),
                         ModItems.ADAMANTINE_BOOTS.get(),
-                        //ModItems.STYGIAN_IRON_HELMET.get(),
-                        //ModItems.STYGIAN_IRON_CHESTPLATE.get(),
-                        //ModItems.STYGIAN_IRON_LEGGINGS.get(),
-                        //ModItems.STYGIAN_IRON_BOOTS.get(),
+                        ModItems.STYGIAN_IRON_HELMET.get(),
+                        ModItems.STYGIAN_IRON_CHESTPLATE.get(),
+                        ModItems.STYGIAN_IRON_LEGGINGS.get(),
+                        ModItems.STYGIAN_IRON_BOOTS.get(),
                         ModItems.IMPERIAL_GOLD_HELMET.get(),
                         ModItems.IMPERIAL_GOLD_CHESTPLATE.get(),
                         ModItems.IMPERIAL_GOLD_LEGGINGS.get(),
@@ -36,11 +36,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.CELESTIAL_BRONZE_HELMET.get(),
                         ModItems.CELESTIAL_BRONZE_CHESTPLATE.get(),
                         ModItems.CELESTIAL_BRONZE_LEGGINGS.get(),
-                        ModItems.CELESTIAL_BRONZE_BOOTS.get()
-                        //ModItems.BRONZE_HELMET.get(),
-                        //ModItems.BRONZE_CHESTPLATE.get(),
-                        //ModItems.BRONZE_LEGGINGS.get(),
-                        //ModItems.BRONZE_BOOTS.get()
+                        ModItems.CELESTIAL_BRONZE_BOOTS.get(),
+                        ModItems.BRONZE_HELMET.get(),
+                        ModItems.BRONZE_CHESTPLATE.get(),
+                        ModItems.BRONZE_LEGGINGS.get(),
+                        ModItems.BRONZE_BOOTS.get()
                 );
 
     }
