@@ -84,8 +84,8 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266656_.put(ArmorItem.Type.BOOTS, 2);
         p_266656_.put(ArmorItem.Type.LEGGINGS, 5);
         p_266656_.put(ArmorItem.Type.CHESTPLATE, 6);
-        p_266656_.put(ArmorItem.Type.HELMET, 2);
-    }), 2, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.1F, () -> Ingredient.of(ModItems.HELM_OF_DARKNESS.get())),
+        p_266656_.put(ArmorItem.Type.HELMET, 3);
+    }), 2, SoundEvents.ARMOR_EQUIP_IRON, 2.0F, 0.2F, () -> Ingredient.of(ModItems.HELM_OF_DARKNESS.get())),
 
     STYGIAN_IRON("stygian_iron", 40, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266655_) -> {
         p_266655_.put(ArmorItem.Type.BOOTS, 5);
