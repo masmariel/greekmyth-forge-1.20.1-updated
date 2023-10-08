@@ -237,13 +237,13 @@ public class ModItems {
 
         //IMPERIAL_GOLD
     public static final RegistryObject<Item> IMPERIAL_GOLD_HELMET = ITEMS.register("imperial_gold_helmet",
-                () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.HELMET, new Item.Properties()));
+                () -> new ImperialArmor(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> IMPERIAL_GOLD_CHESTPLATE = ITEMS.register("imperial_gold_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ImperialArmor(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> IMPERIAL_GOLD_LEGGINGS = ITEMS.register("imperial_gold_leggings",
-            () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ImperialArmor(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> IMPERIAL_GOLD_BOOTS = ITEMS.register("imperial_gold_boots",
-            () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ImperialArmor(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> IMPERIAL_GOLD_HORSE_ARMOR = ITEMS.register("imperial_gold_horse_armor",
             () -> new HorseArmorItem(9, new ResourceLocation(GreekMyth.MOD_ID, "textures/entity/horse/armor/horse_armor_imperial_gold.png"), new Item.Properties().stacksTo(1)));
 
