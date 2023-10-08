@@ -15,21 +15,20 @@ import java.util.Map;
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    //.put(ModArmorMaterials.ADAMANTINE, new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1, false, true, false))
                     .build();
 
     public ModArmorItem(ArmorMaterial material, Type type, Properties properties) {
         super(material, type, properties);
     }
 
-    @Override
+    /*@Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
         if (!level.isClientSide()) {
             if (hasFullSuitOfArmorOn(player)) {
                 evaluateArmorEffects(player);
             }
         }
-    }
+    }*/
 
     private boolean hasFullSuitOfArmorOn(Player player) {
         ItemStack boots = player.getInventory().getArmor(0);

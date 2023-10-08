@@ -31,9 +31,7 @@ import java.util.function.Supplier;
 
 public class WingedSandalsOfHermesItem extends ArmorItem implements GeoItem {
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
-
     private final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this);
-
     public WingedSandalsOfHermesItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
