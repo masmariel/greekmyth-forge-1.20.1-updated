@@ -20,7 +20,7 @@ import java.util.List;
 
 public class GoldenFleeceItem extends Item {
     private static final List<MobEffectInstance> GOLDEN_FLEECE_EFFECTS = Arrays.asList(
-            new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, true, false)
+            new MobEffectInstance(MobEffects.REGENERATION, 219, 0, false, true, false)
     );
     private static final int COOLDOWN_TICKS = 100 * 20;
     public GoldenFleeceItem(Properties pProperties) {
@@ -39,7 +39,7 @@ public class GoldenFleeceItem extends Item {
                 for (MobEffectInstance effect : GOLDEN_FLEECE_EFFECTS) {
                     MobEffectInstance currentEffect = player.getEffect(effect.getEffect());
                     if (currentEffect == null || currentEffect.getDuration() <= 100) {
-                        player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, true, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 219, 1, false, true, false));
                         player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
                         decreaseDurability(itemstack, 1);
                     }

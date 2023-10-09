@@ -72,9 +72,9 @@ public class WingedSandalsOfHermesItem extends ArmorItem implements GeoItem {
         Player player = (Player) pEntity;
         if (!pLevel.isClientSide && player.getInventory().armor.get(0) == pStack && pEntity instanceof Player) {
 
-            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1, false, true, false));
-            player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, true, false));
-            player.addEffect(new MobEffectInstance(MobEffects.JUMP, 200, 4, false, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 219, 1, false, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 219, 0, false, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.JUMP, 219, 4, false, true, false));
         }
     }
 

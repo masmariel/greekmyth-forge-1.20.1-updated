@@ -60,7 +60,7 @@ public class BidentOfHadesItem extends TridentItem {
             boolean hasOffhand = player.getOffhandItem().getItem() instanceof JarOfSoulsItem;
 
             if ((hasMainHand || hasOffhand) && !hasOffhand) {
-                player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 200, 1, false, true, false));
+                player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 219, 1, false, true, false));
             }
         }
     }

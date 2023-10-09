@@ -74,7 +74,7 @@ public class BrokenWingedSandalsItem extends ArmorItem implements GeoItem {
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
         Player player = (Player) pEntity;
         if (!pLevel.isClientSide && player.getInventory().armor.get(0) == pStack && pEntity instanceof Player) {
-            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1, false, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 219, 1, false, true, false));
         }
     }
 

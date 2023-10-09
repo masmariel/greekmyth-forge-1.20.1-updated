@@ -60,7 +60,7 @@ public class HelmOfDarknessItem extends ArmorItem implements GeoItem {
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "controllerName", 0, event ->
         {
-            return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+            return event.setAndContinue(RawAnimation.begin().thenLoop("animation.idle"));
         }));
     }
 
@@ -74,8 +74,8 @@ public class HelmOfDarknessItem extends ArmorItem implements GeoItem {
         Player player = (Player) pEntity;
         if (!pLevel.isClientSide && player.getInventory().armor.get(3) == pStack && pEntity instanceof Player) {
 
-                player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 0, false, true, false));
-                player.addEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 200, 0, false, true, false));
+                player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 219, 0, false, true, false));
+                player.addEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 219, 0, false, true, false));
 
         }
     }

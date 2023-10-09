@@ -37,7 +37,7 @@ public class SpearOfAthenaItem extends TridentItem {
             boolean hasOffhand = player.getOffhandItem() == pStack;
 
             if (hasMainHand || hasOffhand) {
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 0, false, true, false));
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 219, 0, false, true, false));
             }
         }
     }

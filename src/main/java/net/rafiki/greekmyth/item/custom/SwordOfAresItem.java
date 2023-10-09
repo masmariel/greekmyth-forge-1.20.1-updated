@@ -32,7 +32,7 @@ public class SwordOfAresItem extends SwordItem {
         ItemStack itemStack = player.getItemInHand(hand);
 
         if (!world.isClientSide) {
-            player.addEffect(new MobEffectInstance(ModEffects.BERSERK.get(), 200, 1, false, true, false));
+            player.addEffect(new MobEffectInstance(ModEffects.BERSERK.get(), 219, 1, false, true, false));
             itemStack.hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(hand));
             player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
             world.playSound(null, player.blockPosition(), ModSounds.BERSERK.get(), SoundSource.PLAYERS, 1.0F, 1.0F);

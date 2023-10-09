@@ -48,7 +48,7 @@ public class LyreOfOrpheusItem extends Item {
 
                 for (LivingEntity nearbyEntity : entities) {
                     if (!nearbyEntity.equals(player)) {
-                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 1, false, true, false));
+                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 219, 1, false, true, false));
                         nearbyEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0, false, true, false));
                     }
                 }

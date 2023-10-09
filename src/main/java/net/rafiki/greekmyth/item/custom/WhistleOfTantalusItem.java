@@ -50,7 +50,7 @@ public class WhistleOfTantalusItem extends Item {
                 for (LivingEntity nearbyEntity : entities) {
                     if (!nearbyEntity.equals(player)) {
                         nearbyEntity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 1, false, true, false));
-                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0, false, true, false));
+                        nearbyEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 219, 0, false, true, false));
                     }
                 }
 

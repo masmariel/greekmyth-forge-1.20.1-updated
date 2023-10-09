@@ -30,8 +30,8 @@ public class AxeOfPerdixItem extends SwordItem {
             boolean hasOffhand = player.getOffhandItem() == pStack;
 
             if (hasMainHand || hasOffhand) {
-                player.addEffect(new MobEffectInstance(MobEffects.JUMP, 200, 2, false, true, false));
-                player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, true, false));
+                player.addEffect(new MobEffectInstance(MobEffects.JUMP, 219, 2, false, true, false));
+                player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 219, 0, false, true, false));
             }
         }
     }

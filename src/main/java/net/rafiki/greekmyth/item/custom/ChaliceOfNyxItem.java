@@ -26,7 +26,7 @@ public class ChaliceOfNyxItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         ItemStack stack = pPlayer.getItemInHand(pUsedHand);
         if (!pPlayer.getCooldowns().isOnCooldown(this)) {
-            pPlayer.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 0, false, true, false));
+            pPlayer.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 219, 0, false, true, false));
             stack.hurtAndBreak(1, pPlayer, (player1) -> {
                 player1.broadcastBreakEvent(pUsedHand);
             });

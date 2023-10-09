@@ -28,7 +28,7 @@ public class ThrysusItem extends Item {
     public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
         if (entity instanceof LivingEntity livingEntity) {
             if (!player.getCooldowns().isOnCooldown(this)) {
-                livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 1), player);
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 219, 1), player);
                 stack.hurtAndBreak(1, player, (player1) -> {
                     player1.broadcastBreakEvent(player.getUsedItemHand());
                 });

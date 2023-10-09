@@ -29,7 +29,7 @@ public class RingOfGygesItem extends Item {
             boolean hasOffhand = player.getOffhandItem() == pStack;
 
             if (hasMainHand || hasOffhand) {
-                player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 0, false, true, false));
+                player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 219, 0, false, true, false));
             }
         }
     }

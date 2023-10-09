@@ -23,8 +23,8 @@ public class EmperorsCrownItem extends ModArmorItem{
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
         Player player = (Player) pEntity;
         if (!pLevel.isClientSide && player.getInventory().armor.get(3) == pStack && pEntity instanceof Player) {
-            player.addEffect(new MobEffectInstance(MobEffects.LUCK, 200, 2, false, true, false));
-            player.addEffect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 200, 0, false, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.LUCK, 219, 2, false, true, false));
+            player.addEffect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 219, 0, false, true, false));
         }
     }
 
