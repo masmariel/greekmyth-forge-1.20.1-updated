@@ -250,13 +250,13 @@ public class ModItems {
 
         //CELESTIAL BRONZE
     public static final RegistryObject<Item> CELESTIAL_BRONZE_HELMET = ITEMS.register("celestial_bronze_helmet",
-                () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.HELMET, new Item.Properties()));
+                () -> new CelestialArmor(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> CELESTIAL_BRONZE_CHESTPLATE = ITEMS.register("celestial_bronze_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new CelestialArmor(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> CELESTIAL_BRONZE_LEGGINGS = ITEMS.register("celestial_bronze_leggings",
-            () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new CelestialArmor(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> CELESTIAL_BRONZE_BOOTS = ITEMS.register("celestial_bronze_boots",
-            () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new CelestialArmor(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> CELESTIAL_BRONZE_HORSE_ARMOR = ITEMS.register("celestial_bronze_horse_armor",
             () -> new HorseArmorItem(7, new ResourceLocation(GreekMyth.MOD_ID, "textures/entity/horse/armor/horse_armor_celestial_bronze.png"), new Item.Properties().stacksTo(1)));
 
