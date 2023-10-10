@@ -1,6 +1,15 @@
 package net.rafiki.greekmyth.item.custom;
 
+import mod.azure.azurelib.animatable.GeoItem;
+import mod.azure.azurelib.animatable.client.RenderProvider;
+import mod.azure.azurelib.core.animatable.instance.AnimatableInstanceCache;
+import mod.azure.azurelib.core.animation.AnimatableManager;
+import mod.azure.azurelib.core.animation.AnimationController;
+import mod.azure.azurelib.core.object.PlayState;
+import mod.azure.azurelib.util.AzureLibUtil;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -20,14 +29,51 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import net.rafiki.greekmyth.client.CaduceusRenderer;
+import net.rafiki.greekmyth.client.HammerOfHephaestusRenderer;
+import net.rafiki.greekmyth.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
-public class HammerOfHephaestusItem extends SwordItem {
+public class HammerOfHephaestusItem extends SwordItem implements GeoItem {
+    private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
+    private final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this);
     private static final int COOLDOWN_TICKS = 110 * 20;
     public HammerOfHephaestusItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
+    }
+
+    @Override
+    public void createRenderer(Consumer<Object> consumer) {
+        consumer.accept(new RenderProvider() {
+            private HammerOfHephaestusRenderer renderer = null;
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                if (renderer == null)
+                    return new HammerOfHephaestusRenderer();
+                return this.renderer;
+            }
+        });
+    }
+
+    @Override
+    public Supplier<Object> getRenderProvider() {
+        return renderProvider;
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return cache;
+    }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this, "controllerName",
+                event -> PlayState.CONTINUE));
     }
 
     @Override
@@ -66,6 +112,7 @@ public class HammerOfHephaestusItem extends SwordItem {
                     ServerLevel serverWorld = (ServerLevel) world;
                     ParticleOptions particle = ParticleTypes.SWEEP_ATTACK;
                     spawnParticles(serverWorld, player, particle, radius);
+                    world.playSound(null, player.blockPosition(), ModSounds.HAMMER_OF_HEPHAESTUS.get(), SoundSource.PLAYERS, 0.1F, 1.0F);
                 }
 
                 return InteractionResultHolder.success(itemstack);

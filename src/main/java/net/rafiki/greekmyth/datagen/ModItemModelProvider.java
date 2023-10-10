@@ -71,7 +71,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FLUTE_OF_PAN);
         simpleItem(ModItems.CHALICE_OF_NYX);
         simpleItem(ModItems.MEDALLION_OF_PERSEUS);
-        handheldItem(ModItems.HAMMER_OF_HEPHAESTUS);
         handheldItem(ModItems.LOTUS_STAFF_OF_PERSOPHONE);
         handheldItem(ModItems.THE_MASTER_BOLT);
         simpleItem(ModItems.CORNUCOPIA);

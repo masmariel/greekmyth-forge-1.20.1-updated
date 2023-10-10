@@ -88,5 +88,17 @@
     "sounds": [
       "greekmyth:berserk"
     ]
+  },
+  "caduceus": {
+    "subtitle": "sounds.greekmyth.caduceus",
+    "sounds": [
+      "greekmyth:caduceus"
+    ]
+  },
+  "hammer_of_hephaestus": {
+    "subtitle": "sounds.greekmyth.hammer_of_hephaestus",
+    "sounds": [
+      "greekmyth:hammer_of_hephaestus"
+    ]
   }
 }

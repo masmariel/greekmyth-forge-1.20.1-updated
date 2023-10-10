@@ -13,6 +13,7 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -27,6 +28,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.rafiki.greekmyth.client.CaduceusRenderer;
 import net.rafiki.greekmyth.client.SwordOfAresRenderer;
+import net.rafiki.greekmyth.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
@@ -99,6 +101,7 @@ public class CaduceusItem extends Item implements GeoItem {
                     ServerLevel serverWorld = (ServerLevel) world;
                     ParticleOptions particle = ParticleTypes.WAX_ON;
                     spawnParticles(serverWorld, player, particle, radius);
+                    world.playSound(null, player.blockPosition(), ModSounds.CADUCEUS.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
                 }
 
                 return InteractionResultHolder.success(itemstack);

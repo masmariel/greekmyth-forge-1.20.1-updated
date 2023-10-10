@@ -27,6 +27,8 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> TRUMPET_OF_PHEME = registerSoundEvents("trumpet_of_pheme");
     public static final RegistryObject<SoundEvent> CONCH_OF_TRITON = registerSoundEvents("conch_of_triton");
     public static final RegistryObject<SoundEvent> BERSERK = registerSoundEvents("berserk");
+    public static final RegistryObject<SoundEvent> CADUCEUS = registerSoundEvents("caduceus");
+    public static final RegistryObject<SoundEvent> HAMMER_OF_HEPHAESTUS = registerSoundEvents("hammer_of_hephaestus");
 
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name){
