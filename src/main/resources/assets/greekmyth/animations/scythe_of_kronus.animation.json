@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.revolving": {
+			"loop": true,
+			"animation_length": 0.29167,
+			"bones": {
+				"center": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.0417": {
+							"vector": [45, 0, 0]
+						},
+						"0.0833": {
+							"vector": [90, 0, 0]
+						},
+						"0.125": {
+							"vector": [135, 0, 0]
+						},
+						"0.1667": {
+							"vector": [180, 0, 0]
+						},
+						"0.2083": {
+							"vector": [225, 0, 0]
+						},
+						"0.25": {
+							"vector": [315, 0, 0]
+						},
+						"0.2917": {
+							"vector": [360, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}
