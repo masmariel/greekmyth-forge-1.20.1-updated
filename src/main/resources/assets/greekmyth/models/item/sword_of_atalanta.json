@@ -15,7 +15,7 @@
       "translation": [
         0,
         -6.5,
-        0
+        1.25
       ]
     },
     "thirdperson_lefthand": {
@@ -27,7 +27,7 @@
       "translation": [
         0,
         -6.5,
-        0
+        1.25
       ]
     },
     "firstperson_righthand": {
@@ -37,14 +37,9 @@
         0
       ],
       "translation": [
-        0,
+        4,
         -8,
         0
-      ],
-      "scale": [
-        0.75,
-        0.75,
-        0.75
       ]
     },
     "firstperson_lefthand": {
@@ -54,14 +49,9 @@
         0
       ],
       "translation": [
-        0,
+        4,
         -8,
         0
-      ],
-      "scale": [
-        0.75,
-        0.75,
-        0.75
       ]
     },
     "ground": {
@@ -69,6 +59,11 @@
         0,
         -3,
         0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "gui": {
