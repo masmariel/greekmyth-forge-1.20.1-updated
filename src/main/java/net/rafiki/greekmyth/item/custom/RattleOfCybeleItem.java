@@ -31,6 +31,7 @@ import net.minecraft.world.phys.AABB;
 import net.rafiki.greekmyth.client.AxeOfPerdixRenderer;
 import net.rafiki.greekmyth.client.DrumOfCybeleModel;
 import net.rafiki.greekmyth.client.DrumOfCybeleRenderer;
+import net.rafiki.greekmyth.client.RattleOfCybeleRenderer;
 import net.rafiki.greekmyth.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
@@ -51,12 +52,12 @@ public class RattleOfCybeleItem extends Item implements GeoItem {
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
-            private DrumOfCybeleRenderer renderer = null;
+            private RattleOfCybeleRenderer renderer = null;
 
             @Override
             public BlockEntityWithoutLevelRenderer getCustomRenderer() {
                 if (renderer == null)
-                    return new DrumOfCybeleRenderer();
+                    return new RattleOfCybeleRenderer();
                 return this.renderer;
             }
         });
