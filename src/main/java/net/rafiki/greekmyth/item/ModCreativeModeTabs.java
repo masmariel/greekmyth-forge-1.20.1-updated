@@ -50,7 +50,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NETHER_ADAMANTINE_ORE.get());
                         output.accept(ModBlocks.END_STONE_ADAMANTINE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get());
-                        output.accept(ModBlocks.SOUND_BLOCK.get());
+                        //output.accept(ModBlocks.SOUND_BLOCK.get());
 
                         //FOODS
                         output.accept(ModItems.AMBROSIA.get());

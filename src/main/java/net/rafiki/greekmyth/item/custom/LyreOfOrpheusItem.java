@@ -1,6 +1,14 @@
 package net.rafiki.greekmyth.item.custom;
 
+import mod.azure.azurelib.animatable.GeoItem;
+import mod.azure.azurelib.animatable.client.RenderProvider;
+import mod.azure.azurelib.core.animatable.instance.AnimatableInstanceCache;
+import mod.azure.azurelib.core.animation.AnimatableManager;
+import mod.azure.azurelib.core.animation.AnimationController;
+import mod.azure.azurelib.core.object.PlayState;
+import mod.azure.azurelib.util.AzureLibUtil;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -20,16 +28,53 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
+import net.rafiki.greekmyth.client.AxeOfPerdixRenderer;
+import net.rafiki.greekmyth.client.LyreOfAmphionRenderer;
+import net.rafiki.greekmyth.client.LyreOfOrpheusRenderer;
 import net.rafiki.greekmyth.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
-public class LyreOfOrpheusItem extends Item {
+public class LyreOfOrpheusItem extends Item implements GeoItem {
+    private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
+    private final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this);
     private boolean isPlaying = false;
     private int COOLDOWN_TICKS = 120 * 20;
     public LyreOfOrpheusItem(Properties pProperties) {
         super(pProperties);
+    }
+
+    @Override
+    public void createRenderer(Consumer<Object> consumer) {
+        consumer.accept(new RenderProvider() {
+            private LyreOfOrpheusRenderer renderer = null;
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                if (renderer == null)
+                    return new LyreOfOrpheusRenderer();
+                return this.renderer;
+            }
+        });
+    }
+
+    @Override
+    public Supplier<Object> getRenderProvider() {
+        return renderProvider;
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return cache;
+    }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this, "controllerName",
+                event -> PlayState.CONTINUE));
     }
 
     @Override

@@ -52,28 +52,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CROWN_OF_DIONYSUS);
         simpleItem(ModItems.AMULET_OF_HECATE);
         simpleItem(ModItems.NECKLACE_OF_HARMONIA);
-        simpleItem(ModItems.FLUTE_OF_PAN);
-        simpleItem(ModItems.CHALICE_OF_NYX);
         simpleItem(ModItems.MEDALLION_OF_PERSEUS);
-        handheldItem(ModItems.THE_MASTER_BOLT);
-        simpleItem(ModItems.CORNUCOPIA);
-        simpleItem(ModItems.LYRE_OF_ORPHEUS);
-        simpleItem(ModItems.DRUM_OF_CYBELE);
-        simpleItem(ModItems.RATTLE_OF_CYBELE);
-        simpleItem(ModItems.WHISTLE_OF_TANTALUS);
         simpleItem(ModItems.POUCH_OF_AEOLUS);
         simpleItem(ModItems.CROWN_OF_DEUCALION);
         simpleItem(ModItems.WREATH_OF_NIKE);
         simpleItem(ModItems.BROKEN_WINGED_SANDALS);
         simpleItem(ModItems.EMPERORS_CROWN);
-        simpleItem(ModItems.WINGS_OF_ICARUS);
-        simpleItem(ModItems.DRAKON_BONE_WINGS);
-        simpleItem(ModItems.AOLUS);
         simpleItem(ModItems.LYRE_OF_AMPHION);
         simpleItem(ModItems.RING_OF_GYGES);
         simpleItem(ModItems.CONCH_OF_TRITON);
-        simpleItem(ModItems.TRUMPET_OF_PHEME);
-        simpleItem(ModItems.JAR_OF_SOULS);
 
         //OTHER
         simpleItem(ModItems.SOUNDS_OF_THE_ANGELS);
