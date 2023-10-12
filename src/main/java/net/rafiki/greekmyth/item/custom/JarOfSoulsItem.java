@@ -5,6 +5,7 @@ import mod.azure.azurelib.animatable.client.RenderProvider;
 import mod.azure.azurelib.core.animatable.instance.AnimatableInstanceCache;
 import mod.azure.azurelib.core.animation.AnimatableManager;
 import mod.azure.azurelib.core.animation.AnimationController;
+import mod.azure.azurelib.core.animation.RawAnimation;
 import mod.azure.azurelib.core.object.PlayState;
 import mod.azure.azurelib.util.AzureLibUtil;
 import net.minecraft.client.gui.screens.Screen;
@@ -60,7 +61,10 @@ public class JarOfSoulsItem extends Item implements GeoItem {
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "controllerName",
-                event -> PlayState.CONTINUE));
+                event ->
+                {
+                    return event.setAndContinue(RawAnimation.begin().thenLoop("animation.souls"));
+                }));
     }
 
     public void inventoryTick(ItemStack stack, Level world, LivingEntity entity, int itemSlot, boolean isSelected) {

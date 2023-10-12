@@ -42,7 +42,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FORGE_COAL);
 
         //CUSTOM ITEMS
-        simpleItem(ModItems.LYRE_OF_APOLLO);
         simpleItem(ModItems.WINGED_SANDALS_OF_HERMES);
         simpleItem(ModItems.HELM_OF_DARKNESS);
         simpleItem(ModItems.HIDE_OF_THE_NEMEAN_LION);
@@ -58,7 +57,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.WREATH_OF_NIKE);
         simpleItem(ModItems.BROKEN_WINGED_SANDALS);
         simpleItem(ModItems.EMPERORS_CROWN);
-        simpleItem(ModItems.LYRE_OF_AMPHION);
         simpleItem(ModItems.RING_OF_GYGES);
         simpleItem(ModItems.CONCH_OF_TRITON);
 

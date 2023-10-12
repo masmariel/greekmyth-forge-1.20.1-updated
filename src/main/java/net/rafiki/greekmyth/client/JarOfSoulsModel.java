@@ -11,7 +11,7 @@ public class JarOfSoulsModel extends GeoModel<JarOfSoulsItem> {
     // Textures must be stored in assets/<modid>/textures with subfolders supported inside the textures folder
     private static final ResourceLocation texture = new ResourceLocation("greekmyth", "textures/models/item/jar_of_souls.png");
     // Animations must be stored in assets/<modid>/animations with subfolders supported inside the animations folder
-    private static final ResourceLocation animation = new ResourceLocation("greekmyth", "animations/armor.animation.json");
+    private static final ResourceLocation animation = new ResourceLocation("greekmyth", "animations/jar_of_souls.animation.json");
 
     @Override
     public ResourceLocation getModelResource(JarOfSoulsItem object) {
