@@ -47,17 +47,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.HELM_OF_DARKNESS);
         simpleItem(ModItems.HIDE_OF_THE_NEMEAN_LION);
         simpleItem(ModItems.GOLDEN_FLEECE);
-        handheldItem(ModItems.SPEAR_OF_ATHENA);
-        handheldItem(ModItems.SPEAR_OF_ACHILLES);
         simpleItem(ModItems.CESTUS_OF_APHRODITE);
         simpleItem(ModItems.GIRDLE_OF_HIPPOLYTA);
-        handheldItem(ModItems.CLAW_OF_THE_NEMEAN_LION);
         simpleItem(ModItems.CROWN_OF_DIONYSUS);
         simpleItem(ModItems.AMULET_OF_HECATE);
         simpleItem(ModItems.NECKLACE_OF_HARMONIA);
-        handheldItem(ModItems.SPEAR_OF_DIOMEDES);
-        handheldItem(ModItems.SWORD_OF_DAMASEN);
-        handheldItem(ModItems.TRIDENT_OF_TRITON);
         simpleItem(ModItems.FLUTE_OF_PAN);
         simpleItem(ModItems.CHALICE_OF_NYX);
         simpleItem(ModItems.MEDALLION_OF_PERSEUS);
@@ -79,7 +73,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RING_OF_GYGES);
         simpleItem(ModItems.CONCH_OF_TRITON);
         simpleItem(ModItems.TRUMPET_OF_PHEME);
-        simpleItem(ModItems.HEAD_OF_MEDUSA);
         simpleItem(ModItems.JAR_OF_SOULS);
 
         //OTHER

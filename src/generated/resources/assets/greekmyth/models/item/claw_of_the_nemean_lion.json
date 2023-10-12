@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "greekmyth:item/claw_of_the_nemean_lion"
-  }
-}
