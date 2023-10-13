@@ -5,16 +5,17 @@ import mod.azure.azurelib.animatable.client.RenderProvider;
 import mod.azure.azurelib.core.animatable.instance.AnimatableInstanceCache;
 import mod.azure.azurelib.core.animation.AnimatableManager;
 import mod.azure.azurelib.core.animation.AnimationController;
-import mod.azure.azurelib.core.object.PlayState;
+import mod.azure.azurelib.core.animation.RawAnimation;
 import mod.azure.azurelib.util.AzureLibUtil;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ElytraItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.rafiki.greekmyth.client.AolusRenderer;
 import net.rafiki.greekmyth.client.DrakonBoneWingsRenderer;
 import org.jetbrains.annotations.Nullable;
 
@@ -35,17 +36,13 @@ public class DrakonBoneWingsItem extends ElytraItem implements GeoItem {
             private DrakonBoneWingsRenderer renderer = null;
 
             @Override
-            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+            public HumanoidModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, HumanoidModel<LivingEntity> original) {
                 if (renderer == null)
-                    return new DrakonBoneWingsRenderer();
+                    renderer = new DrakonBoneWingsRenderer();
+                renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
             }
         });
-    }
-
-    @Override
-    public Supplier<Object> getRenderProvider() {
-        return renderProvider;
     }
 
     @Override
@@ -53,10 +50,18 @@ public class DrakonBoneWingsItem extends ElytraItem implements GeoItem {
         return cache;
     }
 
-    @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "controllerName",
-                event -> PlayState.CONTINUE));
+        controllers.add(new AnimationController<>(this, "controllerName", 0, event ->
+        {
+                return event.setAndContinue(RawAnimation.begin().thenLoop("animation.flying"));
+
+        }));
+    }
+
+
+    @Override
+    public Supplier<Object> getRenderProvider() {
+        return renderProvider;
     }
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {

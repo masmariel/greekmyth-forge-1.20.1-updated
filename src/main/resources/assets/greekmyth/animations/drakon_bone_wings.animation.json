@@ -1,0 +1,125 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.flying": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"wing1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [38.82079, 35.03645, -17.79243]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"wing2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [23.52183, 46.23055, -6.05118]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"wing3": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [25.11906, 40.01368, -0.53688]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"wing4": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [22.65111, -28.0792, 7.69318]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"wing5": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [48.36536, -31.81446, 13.81771]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"wing6": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [47.5, -45, 0]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.idle": {
+			"loop": true,
+			"bones": {
+				"wing1": {
+					"rotation": {
+						"vector": [0, 0, -82.5]
+					}
+				},
+				"wing2": {
+					"rotation": {
+						"vector": [-25.1744, 8.90559, -22.19142]
+					}
+				},
+				"wing3": {
+					"rotation": {
+						"vector": [-30, 0, 0]
+					}
+				},
+				"wing4": {
+					"rotation": {
+						"vector": [-31.25112, -6.38015, 61.11714]
+					}
+				},
+				"wing5": {
+					"rotation": {
+						"vector": [7.52679, -12.59836, 53.39699]
+					}
+				},
+				"wing6": {
+					"rotation": {
+						"vector": [0, 0, 30]
+					}
+				}
+			}
+		}
+	},
+	"azurelib_format_version": 2
+}
