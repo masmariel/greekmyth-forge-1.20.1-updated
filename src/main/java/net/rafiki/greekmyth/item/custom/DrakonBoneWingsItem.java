@@ -22,28 +22,17 @@ import net.minecraft.world.level.Level;
 import net.rafiki.greekmyth.client.DrakonBoneWingsRenderer;
 import org.jetbrains.annotations.Nullable;
 
+import java.lang.reflect.Type;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class DrakonBoneWingsItem extends ArmorItem implements GeoItem {
+public class DrakonBoneWingsItem extends ElytraItem implements GeoItem {
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
     private final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this);
-    public DrakonBoneWingsItem(ArmorMaterial material, Type type, Properties properties) {
-        super(material, type, properties);
-    }
 
-    @Override
-    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
-        if (pEntity instanceof Player player) {
-            if (!pLevel.isClientSide && player.getInventory().armor.get(2).equals(pStack)) {
-                if (Minecraft.getInstance().options.keyJump.isDown()) {
-                    player.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 4, false, true, false));
-                } else {
-                    player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 219, 0, false, true, false));
-                }
-            }
-        }
+    public DrakonBoneWingsItem(Properties pProperties) {
+        super(pProperties);
     }
 
     @Override
