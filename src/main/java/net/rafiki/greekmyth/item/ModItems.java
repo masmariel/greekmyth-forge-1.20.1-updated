@@ -125,7 +125,7 @@ public class ModItems {
     public static final RegistryObject<Item> EMPERORS_CROWN = ITEMS.register("emperors_crown",
             () -> new EmperorsCrownItem(ModArmorMaterials.EMPERORS_CROWN, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(225).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> WINGS_OF_ICARUS = ITEMS.register("wings_of_icarus",
-            () -> new WingsOfIcarusItem(new Item.Properties().rarity(Rarity.EPIC).defaultDurability(475)));
+            () -> new WingsOfIcarusItem(ModArmorMaterials.WINGS_OF_ICARUS, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.EPIC).defaultDurability(550)));
     public static final RegistryObject<Item> DRAKON_BONE_WINGS = ITEMS.register("drakon_bone_wings",
             () -> new DrakonBoneWingsItem(ModArmorMaterials.DRAKON_BONE_WINGS, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.EPIC).defaultDurability(550)));
     public static final RegistryObject<Item> AOLUS = ITEMS.register("aolus",

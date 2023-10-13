@@ -89,7 +89,6 @@ public class DrakonBoneWingsItem extends ArmorItem implements GeoItem {
         return attributeModifiers;
     }
 
-
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.drakon_bone_wings_shift"));

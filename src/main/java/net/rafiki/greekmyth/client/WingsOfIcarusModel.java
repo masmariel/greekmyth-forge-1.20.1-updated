@@ -9,9 +9,9 @@ public class WingsOfIcarusModel extends GeoModel<WingsOfIcarusItem> {
     // Models must be stored in assets/<modid>/geo with subfolders supported inside the geo folder
     private static final ResourceLocation model = new ResourceLocation("greekmyth", "geo/wings_of_icarus.geo.json");
     // Textures must be stored in assets/<modid>/textures with subfolders supported inside the textures folder
-    private static final ResourceLocation texture = new ResourceLocation("greekmyth", "textures/models/wings/wings_of_icarus.png");
+    private static final ResourceLocation texture = new ResourceLocation("greekmyth", "textures/models/armor/wings_of_icarus.png");
     // Animations must be stored in assets/<modid>/animations with subfolders supported inside the animations folder
-    private static final ResourceLocation animation = new ResourceLocation("greekmyth", "animations/armor.animation.json");
+    private static final ResourceLocation animation = new ResourceLocation("greekmyth", "animations/wings_of_icarus.animation.json");
 
     @Override
     public ResourceLocation getModelResource(WingsOfIcarusItem object) {

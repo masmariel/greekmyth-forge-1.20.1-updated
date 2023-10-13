@@ -24,10 +24,17 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266656_.put(ArmorItem.Type.HELMET, 2);
     }), 2, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.1F, () -> Ingredient.of(ModItems.WINGED_SANDALS_OF_HERMES.get())),
 
-    DRAKON_BONE_WINGS("drakon_bone_wings", 15, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
+    WINGS_OF_ICARUS("wings_of_icarus", 15, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
         p_266656_.put(ArmorItem.Type.BOOTS, 2);
         p_266656_.put(ArmorItem.Type.LEGGINGS, 5);
         p_266656_.put(ArmorItem.Type.CHESTPLATE, 4);
+        p_266656_.put(ArmorItem.Type.HELMET, 2);
+    }), 2, SoundEvents.ARMOR_EQUIP_CHAIN, 1.0F, 0.1F, () -> Ingredient.of(ModItems.WINGS_OF_ICARUS.get())),
+
+    DRAKON_BONE_WINGS("drakon_bone_wings", 15, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
+        p_266656_.put(ArmorItem.Type.BOOTS, 2);
+        p_266656_.put(ArmorItem.Type.LEGGINGS, 5);
+        p_266656_.put(ArmorItem.Type.CHESTPLATE, 3);
         p_266656_.put(ArmorItem.Type.HELMET, 2);
     }), 2, SoundEvents.ARMOR_EQUIP_CHAIN, 1.0F, 0.1F, () -> Ingredient.of(ModItems.DRAKON_BONE_WINGS.get())),
 
