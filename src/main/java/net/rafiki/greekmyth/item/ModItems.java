@@ -127,7 +127,7 @@ public class ModItems {
     public static final RegistryObject<Item> WINGS_OF_ICARUS = ITEMS.register("wings_of_icarus",
             () -> new WingsOfIcarusItem(new Item.Properties().rarity(Rarity.EPIC).defaultDurability(475)));
     public static final RegistryObject<Item> DRAKON_BONE_WINGS = ITEMS.register("drakon_bone_wings",
-            () -> new DrakonBoneWingsItem(new Item.Properties().rarity(Rarity.EPIC).defaultDurability(550)));
+            () -> new DrakonBoneWingsItem(ModArmorMaterials.DRAKON_BONE_WINGS, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.EPIC).defaultDurability(550)));
     public static final RegistryObject<Item> AOLUS = ITEMS.register("aolus",
             () -> new AolusItem(new Item.Properties().rarity(Rarity.RARE).defaultDurability(125)));
     public static final RegistryObject<Item> LYRE_OF_AMPHION = ITEMS.register("lyre_of_amphion",
