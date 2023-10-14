@@ -24,6 +24,13 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266656_.put(ArmorItem.Type.HELMET, 2);
     }), 2, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.1F, () -> Ingredient.of(ModItems.WINGED_SANDALS_OF_HERMES.get())),
 
+    FORGED_WINGS_OF_HEPHAESTUS("forged_wings_of_hephaestus", 15, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
+        p_266656_.put(ArmorItem.Type.BOOTS, 2);
+        p_266656_.put(ArmorItem.Type.LEGGINGS, 5);
+        p_266656_.put(ArmorItem.Type.CHESTPLATE, 6);
+        p_266656_.put(ArmorItem.Type.HELMET, 2);
+    }), 2, SoundEvents.ARMOR_EQUIP_CHAIN, 1.0F, 0.1F, () -> Ingredient.of(ModItems.FORGED_WINGS_OF_HEPHAESTUS.get())),
+
     WINGS_OF_ICARUS("wings_of_icarus", 15, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266656_) -> {
         p_266656_.put(ArmorItem.Type.BOOTS, 2);
         p_266656_.put(ArmorItem.Type.LEGGINGS, 5);

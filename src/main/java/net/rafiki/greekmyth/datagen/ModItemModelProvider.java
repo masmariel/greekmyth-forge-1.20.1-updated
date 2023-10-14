@@ -61,6 +61,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CONCH_OF_TRITON);
         simpleItem(ModItems.DRAKON_BONE_WINGS);
         simpleItem(ModItems.WINGS_OF_ICARUS);
+        simpleItem(ModItems.FORGED_WINGS_OF_HEPHAESTUS);
+        simpleItem(ModItems.CORNUCOPIA);
+
+
 
         //OTHER
         simpleItem(ModItems.SOUNDS_OF_THE_ANGELS);
