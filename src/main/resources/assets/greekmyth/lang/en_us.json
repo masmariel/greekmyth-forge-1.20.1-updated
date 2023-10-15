@@ -128,6 +128,8 @@
   "item.greekmyth.ring_of_gyges": "Ring of Gyges",
   "item.greekmyth.head_of_medusa": "Head of Medusa",
   "item.greekmyth.jar_of_souls": "Jar of Souls",
+  "item.greekmyth.forged_wings_of_hephaestus": "Forged Wings of Hephaestus",
+  "item.greekmyth.stymphalian_bird_wings": "Stymphalian Bird Wings",
 
   "item.greekmyth.sounds_of_the_angels": "Sounds of the Angels",
 
@@ -235,6 +237,9 @@
   "tooltip.greekmyth.ring_of_gyges_ctrl": "Invisibility I (P)",
   "tooltip.greekmyth.head_of_medusa_ctrl": "Medusa's Stone Gaze I (AoE), (150s CD)",
   "tooltip.greekmyth.jar_of_souls_ctrl": "Negates Hunger from Bident of Hades",
+  "tooltip.greekmyth.forged_wings_of_hephaestus_ctrl": "No Effects, Elytra Reskin",
+  "tooltip.greekmyth.stymphalian_bird_wings_ctrl": "No Effects, Elytra Reskin",
+
 
 
   "tooltip.greekmyth.lyre_of_apollo_shift": "A beautiful melody can be played with the lyre.",
@@ -344,5 +349,9 @@
   "tooltip.greekmyth.head_of_medusa_shift": "Even decapitated, the gaze is still deadly.",
   "tooltip.greekmyth.head_of_medusa": "Hold §eSHIFT§r or §aCTRL§r for more Information",
   "tooltip.greekmyth.jar_of_souls_shift": "Souls of the damned trapped forever. Maybe Hades would like these.",
-  "tooltip.greekmyth.jar_of_souls": "Hold §eSHIFT§r or §aCTRL§r for more Information"
+  "tooltip.greekmyth.jar_of_souls": "Hold §eSHIFT§r or §aCTRL§r for more Information",
+  "tooltip.greekmyth.forged_wings_of_hephaestus_shift": "Wings forged by Hephaestus.",
+  "tooltip.greekmyth.forged_wings_of_hephaestus": "Hold §eSHIFT§r or §aCTRL§r for more Information",
+  "tooltip.greekmyth.stymphalian_bird_wings_shift": "Sharp, metallic feathers on the wings of the Stymphalian bird.",
+  "tooltip.greekmyth.stymphalian_bird_wings": "Hold §eSHIFT§r or §aCTRL§r for more Information"
 }

@@ -1,0 +1,66 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.idle": {
+			"loop": true,
+			"bones": {
+				"leftWing": {
+					"rotation": {
+						"vector": [0, 0, 110]
+					},
+					"scale": {
+						"vector": [1, 1, 1]
+					}
+				},
+				"rightWing": {
+					"rotation": {
+						"vector": [0, 0, -110]
+					}
+				},
+				"blades2": {
+					"scale": {
+						"vector": [0, 1, 1]
+					}
+				},
+				"blades1": {
+					"scale": {
+						"vector": [0, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.flying": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"leftWing": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 12.5, 0]
+						},
+						"0.75": {
+							"vector": [0, -67.5, 0]
+						},
+						"1.0": {
+							"vector": [0, 12.5, 0]
+						}
+					}
+				},
+				"rightWing": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -12.5, 0]
+						},
+						"0.75": {
+							"vector": [0, 67.5, 0]
+						},
+						"1.0": {
+							"vector": [0, -12.5, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"azurelib_format_version": 2
+}

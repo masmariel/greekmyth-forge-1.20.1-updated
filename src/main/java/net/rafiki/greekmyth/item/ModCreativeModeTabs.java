@@ -175,6 +175,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TRUMPET_OF_PHEME.get());
                         output.accept(ModItems.CONCH_OF_TRITON.get());
                         output.accept(ModItems.HEAD_OF_MEDUSA.get());
+                        output.accept(ModItems.FORGED_WINGS_OF_HEPHAESTUS.get());
+                        output.accept(ModItems.STYMPHALIAN_BIRD_WINGS.get());
 
                     }).build());
 

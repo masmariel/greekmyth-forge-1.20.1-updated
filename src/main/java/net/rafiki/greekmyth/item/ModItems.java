@@ -144,7 +144,10 @@ public class ModItems {
             () -> new HeadOfMedusaItem(new Item.Properties().rarity(Rarity.EPIC).defaultDurability(125)));
     public static final RegistryObject<Item> JAR_OF_SOULS = ITEMS.register("jar_of_souls",
             () -> new JarOfSoulsItem(new Item.Properties().rarity(Rarity.RARE).setNoRepair().stacksTo(1)));
-
+    public static final RegistryObject<Item> FORGED_WINGS_OF_HEPHAESTUS = ITEMS.register("forged_wings_of_hephaestus",
+            () -> new ForgedWingsOfHephaestusItem(ModArmorMaterials.FORGED_WINGS_OF_HEPHAESTUS, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.EPIC).defaultDurability(550)));
+    public static final RegistryObject<Item> STYMPHALIAN_BIRD_WINGS = ITEMS.register("stymphalian_bird_wings",
+            () -> new StymphalianBirdWingsItem(ModArmorMaterials.STYMPHALIAN_BIRD_WINGS, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.EPIC).defaultDurability(550)));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",

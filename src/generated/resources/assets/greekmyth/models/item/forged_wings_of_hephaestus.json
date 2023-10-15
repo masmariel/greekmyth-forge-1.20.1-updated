@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "greekmyth:item/forged_wings_of_hephaestus"
+  }
+}
