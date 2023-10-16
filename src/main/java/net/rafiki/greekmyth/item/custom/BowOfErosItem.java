@@ -1,7 +1,14 @@
 package net.rafiki.greekmyth.item.custom;
 
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.renderer.EffectInstance;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -26,5 +33,4 @@ public class BowOfErosItem extends BowItem{
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
-
 }
