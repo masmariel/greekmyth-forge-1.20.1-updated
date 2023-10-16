@@ -15,6 +15,7 @@ import net.rafiki.greekmyth.block.ModBlocks;
 import net.rafiki.greekmyth.effect.ModEffects;
 import net.rafiki.greekmyth.enchantment.ModEnchantments;
 import net.rafiki.greekmyth.item.ModCreativeModeTabs;
+import net.rafiki.greekmyth.item.ModItemProperties;
 import net.rafiki.greekmyth.item.ModItems;
 import net.rafiki.greekmyth.sound.ModSounds;
 import org.slf4j.Logger;
@@ -84,7 +85,10 @@ public class GreekMyth
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            event.enqueueWork(() -> {
+                ModItemProperties.addCustomItemProperties();
 
+            });
         }
     }
 }
