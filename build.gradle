@@ -90,8 +90,6 @@ dependencies {
 
     implementation fg.deobf("curse.maven:structure-expansion-398430:4680798")
 
-    implementation fg.deobf("curse.maven:worldedit-225608:4586218")
-
 }
 
 tasks.named('processResources', ProcessResources).configure {
