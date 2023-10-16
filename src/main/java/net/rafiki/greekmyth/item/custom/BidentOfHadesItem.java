@@ -108,7 +108,6 @@ public class BidentOfHadesItem extends TridentItem implements GeoItem {
             }
         }
     }
-
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.bident_of_hades_shift"));

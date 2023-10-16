@@ -10,6 +10,18 @@ public class ModItemProperties {
         ItemProperties.register(ModItems.SHIELD_OF_ARES.get(), new ResourceLocation("blocking"), (p_174575_, p_174576_, p_174577_, p_174578_) -> {
             return p_174577_ != null && p_174577_.isUsingItem() && p_174577_.getUseItem() == p_174575_ ? 1.0F : 0.0F;
         });
+        ItemProperties.register(ModItems.BIDENT_OF_HADES.get(), new ResourceLocation("throwing"), (p_234996_, p_234997_, p_234998_, p_234999_) -> {
+            return p_234998_ != null && p_234998_.isUsingItem() && p_234998_.getUseItem() == p_234996_ ? 1.0F : 0.0F;
+        });
+        ItemProperties.register(ModItems.TRIDENT_OF_OCEANUS.get(), new ResourceLocation("throwing"), (p_234996_, p_234997_, p_234998_, p_234999_) -> {
+            return p_234998_ != null && p_234998_.isUsingItem() && p_234998_.getUseItem() == p_234996_ ? 1.0F : 0.0F;
+        });
+        ItemProperties.register(ModItems.TRIDENT_OF_POSEIDON.get(), new ResourceLocation("throwing"), (p_234996_, p_234997_, p_234998_, p_234999_) -> {
+            return p_234998_ != null && p_234998_.isUsingItem() && p_234998_.getUseItem() == p_234996_ ? 1.0F : 0.0F;
+        });
+        ItemProperties.register(ModItems.TRIDENT_OF_TRITON.get(), new ResourceLocation("throwing"), (p_234996_, p_234997_, p_234998_, p_234999_) -> {
+            return p_234998_ != null && p_234998_.isUsingItem() && p_234998_.getUseItem() == p_234996_ ? 1.0F : 0.0F;
+        });
 
         makeBow(ModItems.BOW_OF_EROS.get());
         makeBow(ModItems.BOW_OF_APOLLO.get());

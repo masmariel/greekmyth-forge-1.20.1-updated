@@ -90,5 +90,13 @@
         0.5
       ]
     }
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "throwing": 1
+      },
+      "model": "greekmyth:item/trident_of_poseidon_throwing"
+    }
+  ]
 }
