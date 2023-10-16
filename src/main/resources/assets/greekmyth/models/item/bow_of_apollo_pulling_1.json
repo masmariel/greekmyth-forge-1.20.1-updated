@@ -1,0 +1,6 @@
+{
+    "parent": "greekmyth:item/bow_of_apollo",
+    "textures": {
+        "layer0": "greekmyth:item/bow_of_apollo_pulling_1"
+    }
+}

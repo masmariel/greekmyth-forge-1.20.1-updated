@@ -149,7 +149,9 @@ public class ModItems {
     public static final RegistryObject<Item> STYMPHALIAN_BIRD_WINGS = ITEMS.register("stymphalian_bird_wings",
             () -> new StymphalianBirdWingsItem(ModArmorMaterials.STYMPHALIAN_BIRD_WINGS, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.EPIC).defaultDurability(550)));
     public static final RegistryObject<Item> BOW_OF_EROS = ITEMS.register("bow_of_eros",
-            () -> new BowOfErosItem(new Item.Properties().durability(500).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new BowOfErosItem(new Item.Properties().durability(450).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> BOW_OF_APOLLO = ITEMS.register("bow_of_apollo",
+            () -> new BowOfApolloItem(new Item.Properties().durability(450).rarity(Rarity.EPIC).setNoRepair()));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",

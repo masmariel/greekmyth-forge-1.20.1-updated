@@ -9,6 +9,7 @@ public class ModItemProperties {
     public static void addCustomItemProperties() {
 
         makeBow(ModItems.BOW_OF_EROS.get());
+        makeBow(ModItems.BOW_OF_APOLLO.get());
     }
 
     private static void makeBow(Item item) {
