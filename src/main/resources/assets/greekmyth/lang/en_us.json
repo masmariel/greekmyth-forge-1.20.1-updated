@@ -133,6 +133,7 @@
   "item.greekmyth.bow_of_eros": "Bow of Eros",
   "item.greekmyth.bow_of_apollo": "Bow of Apollo",
   "item.greekmyth.bow_of_hercules": "Bow of Hercules",
+  "item.greekmyth.shield_of_ares": "Shield of Ares",
 
   "item.greekmyth.sounds_of_the_angels": "Sounds of the Angels",
 
@@ -245,6 +246,7 @@
   "tooltip.greekmyth.bow_of_eros_ctrl": "WIP, Regeneration I (A)",
   "tooltip.greekmyth.bow_of_apollo_ctrl": "WIP",
   "tooltip.greekmyth.bow_of_hercules_ctrl": "WIP, Posion I (A)",
+  "tooltip.greekmyth.shield_of_ares_ctrl": "Strength I (P)",
 
 
   "tooltip.greekmyth.lyre_of_apollo_shift": "A beautiful melody can be played with the lyre.",
@@ -364,5 +366,7 @@
   "tooltip.greekmyth.bow_of_apollo_shift": "Golden bow of Apollo.",
   "tooltip.greekmyth.bow_of_apollo": "Hold §eSHIFT§r or §aCTRL§r for more Information",
   "tooltip.greekmyth.bow_of_hercules_shift": "The legendary bow of the greatest demigod, with arrows dipped in the blood of the hydra.",
-  "tooltip.greekmyth.bow_of_hercules": "Hold §eSHIFT§r or §aCTRL§r for more Information"
+  "tooltip.greekmyth.bow_of_hercules": "Hold §eSHIFT§r or §aCTRL§r for more Information",
+  "tooltip.greekmyth.shield_of_ares_shift": "The rage of Ares surges through your body.",
+  "tooltip.greekmyth.shield_of_ares": "Hold §eSHIFT§r or §aCTRL§r for more Information"
 }

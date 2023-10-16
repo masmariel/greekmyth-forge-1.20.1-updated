@@ -3,10 +3,13 @@ package net.rafiki.greekmyth.item;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.rafiki.greekmyth.item.ModItems;
 
 public class ModItemProperties {
     public static void addCustomItemProperties() {
+
+        ItemProperties.register(ModItems.SHIELD_OF_ARES.get(), new ResourceLocation("blocking"), (p_174575_, p_174576_, p_174577_, p_174578_) -> {
+            return p_174577_ != null && p_174577_.isUsingItem() && p_174577_.getUseItem() == p_174575_ ? 1.0F : 0.0F;
+        });
 
         makeBow(ModItems.BOW_OF_EROS.get());
         makeBow(ModItems.BOW_OF_APOLLO.get());

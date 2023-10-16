@@ -180,6 +180,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BOW_OF_EROS.get());
                         output.accept(ModItems.BOW_OF_APOLLO.get());
                         output.accept(ModItems.BOW_OF_HERCULES.get());
+                        output.accept(ModItems.SHIELD_OF_ARES.get());
 
                     }).build());
 
