@@ -132,6 +132,7 @@
   "item.greekmyth.stymphalian_bird_wings": "Stymphalian Bird Wings",
   "item.greekmyth.bow_of_eros": "Bow of Eros",
   "item.greekmyth.bow_of_apollo": "Bow of Apollo",
+  "item.greekmyth.bow_of_hercules": "Bow of Hercules",
 
   "item.greekmyth.sounds_of_the_angels": "Sounds of the Angels",
 
@@ -241,8 +242,9 @@
   "tooltip.greekmyth.jar_of_souls_ctrl": "Negates Hunger from Bident of Hades",
   "tooltip.greekmyth.forged_wings_of_hephaestus_ctrl": "No Effects, Elytra Reskin",
   "tooltip.greekmyth.stymphalian_bird_wings_ctrl": "No Effects, Elytra Reskin",
-  "tooltip.greekmyth.bow_of_eros_ctrl": "WIP",
+  "tooltip.greekmyth.bow_of_eros_ctrl": "WIP, Regeneration I (A)",
   "tooltip.greekmyth.bow_of_apollo_ctrl": "WIP",
+  "tooltip.greekmyth.bow_of_hercules_ctrl": "WIP, Posion I (A)",
 
 
   "tooltip.greekmyth.lyre_of_apollo_shift": "A beautiful melody can be played with the lyre.",
@@ -357,8 +359,10 @@
   "tooltip.greekmyth.forged_wings_of_hephaestus": "Hold §eSHIFT§r or §aCTRL§r for more Information",
   "tooltip.greekmyth.stymphalian_bird_wings_shift": "Sharp, metallic feathers on the wings of the Stymphalian bird.",
   "tooltip.greekmyth.stymphalian_bird_wings": "Hold §eSHIFT§r or §aCTRL§r for more Information",
-  "tooltip.greekmyth.bow_of_eros_shift": "A bow of love.",
+  "tooltip.greekmyth.bow_of_eros_shift": "A bow of love, giving good health when struck.",
   "tooltip.greekmyth.bow_of_eros": "Hold §eSHIFT§r or §aCTRL§r for more Information",
   "tooltip.greekmyth.bow_of_apollo_shift": "Golden bow of Apollo.",
-  "tooltip.greekmyth.bow_of_apollo": "Hold §eSHIFT§r or §aCTRL§r for more Information"
+  "tooltip.greekmyth.bow_of_apollo": "Hold §eSHIFT§r or §aCTRL§r for more Information",
+  "tooltip.greekmyth.bow_of_hercules_shift": "The legendary bow of the greatest demigod, with arrows dipped in the blood of the hydra.",
+  "tooltip.greekmyth.bow_of_hercules": "Hold §eSHIFT§r or §aCTRL§r for more Information"
 }

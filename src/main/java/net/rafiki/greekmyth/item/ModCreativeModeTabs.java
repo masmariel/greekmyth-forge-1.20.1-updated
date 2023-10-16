@@ -179,6 +179,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.STYMPHALIAN_BIRD_WINGS.get());
                         output.accept(ModItems.BOW_OF_EROS.get());
                         output.accept(ModItems.BOW_OF_APOLLO.get());
+                        output.accept(ModItems.BOW_OF_HERCULES.get());
 
                     }).build());
 

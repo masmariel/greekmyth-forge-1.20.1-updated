@@ -152,6 +152,8 @@ public class ModItems {
             () -> new BowOfErosItem(new Item.Properties().durability(450).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> BOW_OF_APOLLO = ITEMS.register("bow_of_apollo",
             () -> new BowOfApolloItem(new Item.Properties().durability(450).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> BOW_OF_HERCULES = ITEMS.register("bow_of_hercules",
+            () -> new BowOfHerculesItem(new Item.Properties().durability(450).rarity(Rarity.EPIC).setNoRepair()));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",

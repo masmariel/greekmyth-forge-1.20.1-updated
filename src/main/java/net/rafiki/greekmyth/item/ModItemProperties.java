@@ -10,6 +10,7 @@ public class ModItemProperties {
 
         makeBow(ModItems.BOW_OF_EROS.get());
         makeBow(ModItems.BOW_OF_APOLLO.get());
+        makeBow(ModItems.BOW_OF_HERCULES.get());
     }
 
     private static void makeBow(Item item) {
