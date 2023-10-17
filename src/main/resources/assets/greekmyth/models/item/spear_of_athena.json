@@ -100,5 +100,13 @@
         0.6
       ]
     }
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "throwing": 1
+      },
+      "model": "greekmyth:item/spear_of_athena_throwing"
+    }
+  ]
 }
