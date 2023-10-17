@@ -89,6 +89,7 @@ dependencies {
     compileOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
 
     implementation fg.deobf("curse.maven:structure-expansion-398430:4680798")
+    implementation fg.deobf("curse.maven:worldedit-225608:4586218")
 
 }
 
