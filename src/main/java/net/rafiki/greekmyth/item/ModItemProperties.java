@@ -13,6 +13,9 @@ public class ModItemProperties {
         ItemProperties.register(ModItems.AEGIS.get(), new ResourceLocation("blocking"), (p_174575_, p_174576_, p_174577_, p_174578_) -> {
             return p_174577_ != null && p_174577_.isUsingItem() && p_174577_.getUseItem() == p_174575_ ? 1.0F : 0.0F;
         });
+        ItemProperties.register(ModItems.SHIELD_OF_APOLLO.get(), new ResourceLocation("blocking"), (p_174575_, p_174576_, p_174577_, p_174578_) -> {
+            return p_174577_ != null && p_174577_.isUsingItem() && p_174577_.getUseItem() == p_174575_ ? 1.0F : 0.0F;
+        });
 
         ItemProperties.register(ModItems.BIDENT_OF_HADES.get(), new ResourceLocation("throwing"), (p_234996_, p_234997_, p_234998_, p_234999_) -> {
             return p_234998_ != null && p_234998_.isUsingItem() && p_234998_.getUseItem() == p_234996_ ? 1.0F : 0.0F;

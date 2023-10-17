@@ -158,6 +158,8 @@ public class ModItems {
             () -> new ShieldOfAresItem(new Item.Properties().durability(500).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> AEGIS = ITEMS.register("aegis",
             () -> new AegisItem(new Item.Properties().durability(500).rarity(Rarity.EPIC).setNoRepair()));
+    public static final RegistryObject<Item> SHIELD_OF_APOLLO = ITEMS.register("shield_of_apollo",
+            () -> new ShieldOfApolloItem(new Item.Properties().durability(500).rarity(Rarity.EPIC).setNoRepair()));
 
     //FUEL
     public static final RegistryObject<Item> FORGE_COAL = ITEMS.register("forge_coal",
