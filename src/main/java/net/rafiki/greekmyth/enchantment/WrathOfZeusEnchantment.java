@@ -37,6 +37,30 @@ public class WrathOfZeusEnchantment extends Enchantment {
         }
     }
 
+    public boolean isAllowedOnBooks() {
+        return false;
+    }
+
+    public boolean canApplyAtEnchantingTable(ItemStack stack) {
+        return false;
+    }
+
+    public boolean isTreasureOnly() {
+        return false;
+    }
+
+    public boolean isCurse() {
+        return false;
+    }
+
+    public boolean isTradeable() {
+        return false;
+    }
+
+    public boolean isDiscoverable() {
+        return false;
+    }
+
     @Override
     public int getMaxLevel() {
         return 3;
