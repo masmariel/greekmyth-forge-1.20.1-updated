@@ -29,7 +29,7 @@ public class ShieldOfApolloItem extends ShieldItem {
             boolean hasOffhand = player.getOffhandItem() == pStack;
 
             if (hasMainHand || hasOffhand) {
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 219, 2, false, true, false));
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 219, 1, false, true, false));
             }
         }
     }
