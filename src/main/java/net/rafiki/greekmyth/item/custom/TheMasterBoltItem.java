@@ -6,14 +6,11 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.TridentItem;
 import net.minecraft.world.item.ItemStack;
@@ -21,7 +18,6 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.rafiki.greekmyth.enchantment.ModEnchantments;
-import net.rafiki.greekmyth.entity.ThrownMasterBoltEntity;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -31,6 +27,7 @@ import java.util.UUID;
 public class TheMasterBoltItem extends TridentItem {
     private static final UUID ATTACK_DAMAGE_MODIFIER_UUID = UUID.fromString("CB3F55D3-645C-4F38-A497-9C13A33DB5CF");
     private final double attackDamage;
+
     public TheMasterBoltItem(Properties properties, double attackDamage) {
         super(properties);
         this.attackDamage = attackDamage;
@@ -64,7 +61,7 @@ public class TheMasterBoltItem extends TridentItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> pTooltipComponents, @NotNull TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.the_master_bolt_shift"));
-        } else if (Screen.hasControlDown()){
+        } else if (Screen.hasControlDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.the_master_bolt_ctrl"));
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.the_master_bolt"));
@@ -82,11 +79,6 @@ public class TheMasterBoltItem extends TridentItem {
             if (EnchantmentHelper.getItemEnchantmentLevel(ModEnchantments.WRATH_OF_ZEUS.get(), stack) == 0) {
                 stack.enchant(ModEnchantments.WRATH_OF_ZEUS.get(), 3);
             }
-            super.releaseUsing(stack, worldIn, playerIn, timeLeft);
         }
-    }
-
-    protected ThrownTrident newProjectile(LivingEntity shooter, Level world, ItemStack stack) {
-        return new ThrownMasterBoltEntity(world, shooter, stack);
     }
 }
