@@ -2,15 +2,7 @@ package net.rafiki.greekmyth.item.custom;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import mod.azure.azurelib.animatable.GeoItem;
-import mod.azure.azurelib.animatable.client.RenderProvider;
-import mod.azure.azurelib.core.animatable.instance.AnimatableInstanceCache;
-import mod.azure.azurelib.core.animation.AnimatableManager;
-import mod.azure.azurelib.core.animation.AnimationController;
-import mod.azure.azurelib.core.object.PlayState;
-import mod.azure.azurelib.util.AzureLibUtil;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -28,8 +20,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
-import net.rafiki.greekmyth.client.AxeOfPerdixRenderer;
-import net.rafiki.greekmyth.client.TheMasterBoltRenderer;
 import net.rafiki.greekmyth.enchantment.ModEnchantments;
 import net.rafiki.greekmyth.entity.ThrownMasterBoltEntity;
 import org.jetbrains.annotations.NotNull;
@@ -37,47 +27,13 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
 
-public class TheMasterBoltItem extends TridentItem implements GeoItem {
-    private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
-    private final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this);
+public class TheMasterBoltItem extends TridentItem {
     private static final UUID ATTACK_DAMAGE_MODIFIER_UUID = UUID.fromString("CB3F55D3-645C-4F38-A497-9C13A33DB5CF");
     private final double attackDamage;
     public TheMasterBoltItem(Properties properties, double attackDamage) {
         super(properties);
         this.attackDamage = attackDamage;
-    }
-
-    @Override
-    public void createRenderer(Consumer<Object> consumer) {
-        consumer.accept(new RenderProvider() {
-            private TheMasterBoltRenderer renderer = null;
-
-            @Override
-            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-                if (renderer == null)
-                    return new TheMasterBoltRenderer();
-                return this.renderer;
-            }
-        });
-    }
-
-    @Override
-    public Supplier<Object> getRenderProvider() {
-        return renderProvider;
-    }
-
-    @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return cache;
-    }
-
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "controllerName",
-                event -> PlayState.CONTINUE));
     }
 
     @Override
