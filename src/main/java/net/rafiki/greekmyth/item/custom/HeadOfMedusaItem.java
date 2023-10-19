@@ -154,8 +154,6 @@ public class HeadOfMedusaItem extends Item implements GeoItem {
         }).start();
     }
 
-
-
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.head_of_medusa_shift"));

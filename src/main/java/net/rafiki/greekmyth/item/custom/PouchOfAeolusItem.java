@@ -20,25 +20,26 @@ public class PouchOfAeolusItem extends Item {
         super(pProperties);
     }
 
-    /* CRASHES GAME
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
-        Vec3 lookVec = player.getLookAngle();
+        if (!world.isClientSide) {
+            Vec3 lookVec = player.getLookAngle();
 
-        double radius = 3.0D;
-        List<Entity> entities = world.getEntities(player, player.getBoundingBox().inflate(radius), null);
-        for (Entity entity : entities) {
-            if (!entity.equals(player)) {
-                if (entity.distanceTo(player) <= radius) {
-                    Vec3 pushVec = lookVec.normalize().scale(1);
-                    entity.push(pushVec.x, pushVec.y, pushVec.z);
+            double radius = 5.0D;
+            List<Entity> entities = world.getEntities(player, player.getBoundingBox().inflate(radius), null);
+            for (Entity entity : entities) {
+                if (!entity.equals(player)) {
+                    if (entity.distanceTo(player) <= radius) {
+                        Vec3 pushVec = lookVec.normalize().scale(5);
+                        entity.setDeltaMovement(pushVec.x, pushVec.y, pushVec.z);
+                    }
                 }
             }
         }
 
         return InteractionResultHolder.success(player.getItemInHand(hand));
     }
-     */
+
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             pTooltipComponents.add(Component.translatable("tooltip.greekmyth.pouch_of_aeolus_shift"));

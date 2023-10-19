@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-26T15:17:07.3408722	Loot Tables
+// 1.20.1	2023-10-18T17:03:37.0923604	Loot Tables
 2cd90e0ee02f285985289c78be6a1c58869eb1b7 data/greekmyth/loot_tables/blocks/adamantine_block.json
 9cf6bcfe154efad9df48e374c0ed26f78e1172ce data/greekmyth/loot_tables/blocks/adamantine_button.json
 e8621af220229e9f21c3de86fe3efdcf694eb1e0 data/greekmyth/loot_tables/blocks/adamantine_door.json
@@ -12,6 +12,7 @@ a71743c2dd044f52a541edbda133beb205b8b441 data/greekmyth/loot_tables/blocks/adama
 57df77b0fe71ab43ccc500ffdf8dfb14694e1ca2 data/greekmyth/loot_tables/blocks/adamantine_wall.json
 ece5dd4a7bf81385336668e5553cc49fcb7652d6 data/greekmyth/loot_tables/blocks/bronze_block.json
 e7145871033f39d9cbfb683772cb7cd5aa27e078 data/greekmyth/loot_tables/blocks/celestial_bronze_block.json
+e2a08b57d8485be861539bf480a8185c9384349a data/greekmyth/loot_tables/blocks/cyclops_forge.json
 7ec1052c0600bffb22da784f8442c338dc10b4fd data/greekmyth/loot_tables/blocks/deepslate_adamantine_ore.json
 46621e9fa7bad64e00ae663aab00dd6074ff77cd data/greekmyth/loot_tables/blocks/end_stone_adamantine_ore.json
 bac3eeb5bd545133ddead289ba1e1e7e7e1d460d data/greekmyth/loot_tables/blocks/imperial_gold_block.json
