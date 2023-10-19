@@ -183,6 +183,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SHIELD_OF_ARES.get());
                         output.accept(ModItems.AEGIS.get());
                         output.accept(ModItems.SHIELD_OF_APOLLO.get());
+                        output.accept(ModItems.STAFF_OF_APOLLO.get());
 
                     }).build());
 
