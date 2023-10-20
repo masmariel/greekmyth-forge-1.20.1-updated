@@ -1,6 +1,7 @@
 package net.rafiki.greekmyth;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -14,6 +15,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rafiki.greekmyth.block.ModBlocks;
 import net.rafiki.greekmyth.effect.ModEffects;
 import net.rafiki.greekmyth.enchantment.ModEnchantments;
+import net.rafiki.greekmyth.entity.ModEntities;
+import net.rafiki.greekmyth.entity.client.CalydonianBoarRenderer;
+import net.rafiki.greekmyth.entity.client.ErymanthianBoarRenderer;
+import net.rafiki.greekmyth.entity.client.MedusaRenderer;
 import net.rafiki.greekmyth.item.ModCreativeModeTabs;
 import net.rafiki.greekmyth.item.ModItemProperties;
 import net.rafiki.greekmyth.item.ModItems;
@@ -49,6 +54,9 @@ public class GreekMyth
 
         //Register mod effects in ModEffects class
         ModEffects.register(modEventBus);
+
+        //Register mod entities in ModEntities
+        ModEntities.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -87,6 +95,10 @@ public class GreekMyth
         {
             event.enqueueWork(() -> {
                 ModItemProperties.addCustomItemProperties();
+
+                EntityRenderers.register(ModEntities.ERYMANTHIAN_BOAR.get(), ErymanthianBoarRenderer::new);
+                EntityRenderers.register(ModEntities.CALYDONIAN_BOAR.get(), CalydonianBoarRenderer::new);
+                EntityRenderers.register(ModEntities.MEDUSA.get(), MedusaRenderer::new);
 
             });
         }

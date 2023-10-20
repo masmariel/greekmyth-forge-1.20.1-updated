@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-18T17:03:37.0871199	Block States: greekmyth
+// 1.20.1	2023-10-19T20:20:01.1313617	Block States: greekmyth
 dcf1afd027086614c247af256b6bc88e909119fd assets/greekmyth/blockstates/adamantine_block.json
 6cd1bd6a2ba557a556aa31ffe83bbdbbc1756154 assets/greekmyth/blockstates/adamantine_button.json
 d967950a281581908146c60c37d931dd50d9858f assets/greekmyth/blockstates/adamantine_door.json
@@ -12,7 +12,6 @@ b57bdca0b1a4f5922b59a617fec21905305ef5ba assets/greekmyth/blockstates/adamantine
 23c3ba22da09743632fab62404d1691208fa5f2a assets/greekmyth/blockstates/adamantine_wall.json
 1c257b24e5831dedb45f6d0b0503f1802fb0ce3e assets/greekmyth/blockstates/bronze_block.json
 4682ccdb37cb60ad198e934aca9c74b5c833163c assets/greekmyth/blockstates/celestial_bronze_block.json
-c48741113fc7ec0ba5db0bfb7adc42c634fe3718 assets/greekmyth/blockstates/cyclops_forge.json
 d03af1bfda00480749ff15188d5edce0e83b75d7 assets/greekmyth/blockstates/deepslate_adamantine_ore.json
 a4576b1588740023762da4bf589c1548f1da33d6 assets/greekmyth/blockstates/end_stone_adamantine_ore.json
 8f573be821725f5384dbd15addfc401b49815c3d assets/greekmyth/blockstates/imperial_gold_block.json

@@ -103,6 +103,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CELESTIAL_BRONZE_HORSE_ARMOR);
         simpleItem(ModItems.BRONZE_HORSE_ARMOR);
 
+        //SPAWN EGGS
+        withExistingParent(ModItems.CALYDONIAN_BOAR_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.ERYMANTHIAN_BOAR_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.MEDUSA_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
     }
 
     private ItemModelBuilder complexBlock(Block block) {

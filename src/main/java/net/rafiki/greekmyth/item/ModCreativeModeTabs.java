@@ -187,6 +187,17 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
+    public static final RegistryObject<CreativeModeTab> COURSE_TAB_3 = CREATIVE_MODE_TABS.register("course_tab_3",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.HEAD_OF_MEDUSA.get()))
+                    .title(Component.translatable("creativetab.course_tab_3"))
+                    .displayItems((displayParameters, output) -> {
+
+                        output.accept(ModItems.CALYDONIAN_BOAR_SPAWN_EGG.get());
+                        output.accept(ModItems.ERYMANTHIAN_BOAR_SPAWN_EGG.get());
+                        output.accept(ModItems.MEDUSA_SPAWN_EGG.get());
+
+                    }).build());
+
     public static void register(IEventBus eventBus){
         CREATIVE_MODE_TABS.register(eventBus);
     }

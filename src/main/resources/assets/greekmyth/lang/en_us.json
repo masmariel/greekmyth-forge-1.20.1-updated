@@ -56,6 +56,10 @@
   "item.greekmyth.bronze_boots": "Bronze Boots",
   "item.greekmyth.bronze_horse_armor": "Bronze Horse Armor",
 
+  "item.greekmyth.erymanthian_boar_spawn_egg": "Erymanthian Boar Spawn Egg",
+  "item.greekmyth.calydonian_boar_spawn_egg": "Calydonian Boar Spawn Egg",
+  "item.greekmyth.medusa_spawn_egg": "Medusa Spawn Egg",
+
   "item.greekmyth.godly_essence": "Godly Essence",
   "item.greekmyth.essence_of_tartarus": "Essence of Tartarus",
 
@@ -165,6 +169,7 @@
 
   "creativetab.course_tab": "Greek Mythology",
   "creativetab.course_tab_2": "Greek Mythology Artifacts",
+  "creativetab.course_tab_3": "Greek Mythology Creatures",
 
   "sounds.greekmyth.lyre_of_apollo_melody": "Lyre of Apollo Melody",
   "sounds.greekmyth.ginger": "Ginger",

@@ -2,16 +2,29 @@ package net.rafiki.greekmyth.item;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rafiki.greekmyth.GreekMyth;
+import net.rafiki.greekmyth.entity.ModEntities;
 import net.rafiki.greekmyth.item.custom.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, GreekMyth.MOD_ID);
+
+    //ENTITIES
+    public static final RegistryObject<Item> CALYDONIAN_BOAR_SPAWN_EGG = ITEMS.register("calydonian_boar_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.CALYDONIAN_BOAR, 0xea9999, 0x990000,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> ERYMANTHIAN_BOAR_SPAWN_EGG = ITEMS.register("erymanthian_boar_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.ERYMANTHIAN_BOAR, 0xf6e0b5, 0xfff4e6,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> MEDUSA_SPAWN_EGG = ITEMS.register("medusa_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.MEDUSA, 0x7e9680, 0xc5d1c5,
+                    new Item.Properties()));
 
     //INGOT
     public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot",
