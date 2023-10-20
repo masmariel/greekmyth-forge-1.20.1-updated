@@ -34,17 +34,17 @@ public class ErymanthianBoarEntity extends Animal {
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
         this.goalSelector.addGoal(1, new ErymanthianBoarAttackGoal(this, 1.0D, false));
         this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 5));
+        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 5));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
         super.registerGoals();
     }
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes().add(Attributes.MAX_HEALTH, 150D)
-                .add(Attributes.MOVEMENT_SPEED, 0.15D)
+                .add(Attributes.MOVEMENT_SPEED, 0.2D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
-                .add(Attributes.ATTACK_DAMAGE, 8f)
+                .add(Attributes.ATTACK_DAMAGE, 12f)
                 .add(Attributes.ATTACK_SPEED, 1.5D)
                 .add(Attributes.ATTACK_KNOCKBACK, 2D);
     }

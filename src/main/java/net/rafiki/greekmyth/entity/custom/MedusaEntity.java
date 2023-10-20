@@ -31,7 +31,6 @@ public class MedusaEntity extends PathfinderMob {
         this.goalSelector.addGoal(1, new MedusaAttackGoal(this, 1.0D, false));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-
         super.registerGoals();
     }
 
@@ -40,9 +39,10 @@ public class MedusaEntity extends PathfinderMob {
                 .add(Attributes.MOVEMENT_SPEED, 0.25D)
                 .add(Attributes.FOLLOW_RANGE, 35D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.3f)
-                .add(Attributes.ATTACK_DAMAGE, 12f)
+                .add(Attributes.ATTACK_DAMAGE, 20f)
                 .add(Attributes.ATTACK_SPEED, 1.5D)
-                .add(Attributes.KNOCKBACK_RESISTANCE, 1D);
+                .add(Attributes.KNOCKBACK_RESISTANCE, 1D)
+                .add(Attributes.ATTACK_KNOCKBACK, 1D);
     }
 
     private void setupAnimationStates() {

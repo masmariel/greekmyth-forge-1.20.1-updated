@@ -168,11 +168,11 @@ public class ModItems {
     public static final RegistryObject<Item> BOW_OF_HERCULES = ITEMS.register("bow_of_hercules",
             () -> new BowOfHerculesItem(new Item.Properties().durability(450).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> SHIELD_OF_ARES = ITEMS.register("shield_of_ares",
-            () -> new ShieldOfAresItem(new Item.Properties().durability(500).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new ShieldOfAresItem(new Item.Properties().durability(800).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> AEGIS = ITEMS.register("aegis",
-            () -> new AegisItem(new Item.Properties().durability(500).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new AegisItem(new Item.Properties().durability(800).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> SHIELD_OF_APOLLO = ITEMS.register("shield_of_apollo",
-            () -> new ShieldOfApolloItem(new Item.Properties().durability(500).rarity(Rarity.EPIC).setNoRepair()));
+            () -> new ShieldOfApolloItem(new Item.Properties().durability(800).rarity(Rarity.EPIC).setNoRepair()));
     public static final RegistryObject<Item> STAFF_OF_APOLLO = ITEMS.register("staff_of_apollo",
             () -> new StaffOfApolloItem(new Item.Properties().durability(350).rarity(Rarity.EPIC).setNoRepair()));
 
