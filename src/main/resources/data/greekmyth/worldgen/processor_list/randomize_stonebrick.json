@@ -12,7 +12,7 @@
             // The block to look for from the nbt file
             // This has a 50% chance of allowing the found stone bricks block to be replaced
           "input_predicate": {
-            "block": "minecraft:stone_bricks",
+            "block": "minecraft:stone",
             "probability": 0.5,
             "predicate_type": "minecraft:random_block_match"
           },
