@@ -136,6 +136,8 @@
   "item.greekmyth.shield_of_ares": "Shield of Ares",
   "item.greekmyth.aegis": "Aegis",
   "item.greekmyth.shield_of_apollo": "Shield of Apollo",
+  "item.greekmyth.staff_of_apollo": "Staff of Apollo",
+
 
   "item.greekmyth.sounds_of_the_angels": "Sounds of the Angels",
 
@@ -252,6 +254,7 @@
   "tooltip.greekmyth.shield_of_ares_ctrl": "Strength I (P)",
   "tooltip.greekmyth.aegis_ctrl": "Slowness III (A)",
   "tooltip.greekmyth.shield_of_apollo_ctrl": "Resistance II (P)",
+  "tooltip.greekmyth.staff_of_apollo_ctrl": "Flame (AoE)",
 
   "tooltip.greekmyth.lyre_of_apollo_shift": "A beautiful melody can be played with the lyre.",
   "tooltip.greekmyth.lyre_of_apollo": "Hold §eSHIFT§r or §aCTRL§r for more Information",
@@ -376,5 +379,7 @@
   "tooltip.greekmyth.aegis_shift": "The shield stuns all that look at it, providing similar effects to the head of Medusa.",
   "tooltip.greekmyth.aegis": "Hold §eSHIFT§r or §aCTRL§r for more Information",
   "tooltip.greekmyth.shield_of_apollo_shift": "Apollo's grace blesses the shield. His power flows through you.",
-  "tooltip.greekmyth.shield_of_apollo": "Hold §eSHIFT§r or §aCTRL§r for more Information"
+  "tooltip.greekmyth.shield_of_apollo": "Hold §eSHIFT§r or §aCTRL§r for more Information",
+  "tooltip.greekmyth.staff_of_apollo_shift": "The staff of the sun god harnesses the power of the sun to bring flame and destruction to all.",
+  "tooltip.greekmyth.staff_of_apollo": "Hold §eSHIFT§r or §aCTRL§r for more Information"
 }
