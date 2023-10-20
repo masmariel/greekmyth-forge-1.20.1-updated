@@ -160,6 +160,7 @@ public class MedusaModel<T extends MedusaEntity> extends HierarchicalModel<T> {
 
 		this.animateWalk(MedusaAnimationDefinitions.MEDUSA_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		this.animate(entity.idleAnimationState, MedusaAnimationDefinitions.MEDUSA_IDLE, ageInTicks, 1f);
+		this.animate(entity.attackAnimationState, MedusaAnimationDefinitions.MEDUSA_ATTACK, ageInTicks, 1f);
 	}
 
 	private void applyHeadRotation(MedusaEntity pEntity, float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {

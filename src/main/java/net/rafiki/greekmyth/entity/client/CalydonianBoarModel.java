@@ -110,6 +110,7 @@ public class CalydonianBoarModel<T extends CalydonianBoarEntity> extends Hierarc
 
 		this.animateWalk(CalydonianBoarAnimationDefinitions.CALYDONIAN_BOAR_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		this.animate(entity.idleAnimationState, CalydonianBoarAnimationDefinitions.CALYDONIAN_BOAR_IDLE, ageInTicks, 1f);
+		this.animate(entity.attackAnimationState, CalydonianBoarAnimationDefinitions.CALYDONIAN_BOAR_ATTACK, ageInTicks, 1f);
 	}
 
 	private void applyHeadRotation(CalydonianBoarEntity pEntity, float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {

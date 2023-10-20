@@ -3143,5 +3143,42 @@ public class MedusaAnimationDefinitions {
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(3.9583435f, KeyframeAnimations.degreeVec(17.5f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR))).build();
+    public static final AnimationDefinition MEDUSA_ATTACK = AnimationDefinition.Builder.withLength(1.5f)
+            .addAnimation("tail1waist",
+                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
+                            new Keyframe(0f, KeyframeAnimations.degreeVec(37.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(1f, KeyframeAnimations.degreeVec(37.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("tail2",
+                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
+                            new Keyframe(0f, KeyframeAnimations.degreeVec(7.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(1.5f, KeyframeAnimations.degreeVec(7.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("upperbodyMain",
+                    new AnimationChannel(AnimationChannel.Targets.POSITION,
+                            new Keyframe(1f, KeyframeAnimations.posVec(0f, -1f, -8f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(1.5f, KeyframeAnimations.posVec(0f, -3f, -10f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("upperbodyMain",
+                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
+                            new Keyframe(1f, KeyframeAnimations.degreeVec(12.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(1.5f, KeyframeAnimations.degreeVec(20f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("rightarm",
+                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
+                            new Keyframe(1.5f, KeyframeAnimations.degreeVec(0f, 0f, 22.5f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("leftarm",
+                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
+                            new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(1f, KeyframeAnimations.degreeVec(-25f, 0f, -55f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(1.5f, KeyframeAnimations.degreeVec(-60f, 0f, -55f),
+                                    AnimationChannel.Interpolations.LINEAR))).build();
 
 }

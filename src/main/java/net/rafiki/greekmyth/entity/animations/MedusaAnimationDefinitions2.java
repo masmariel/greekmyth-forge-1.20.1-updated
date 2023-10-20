@@ -2118,6 +2118,7 @@ public class MedusaAnimationDefinitions2 {
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(3.25f, KeyframeAnimations.degreeVec(-273.39f, -12.89f, 190.83f),
                                     AnimationChannel.Interpolations.LINEAR))).build();
+
     public static final AnimationDefinition MEDUSA_AGGRESSION = AnimationDefinition.Builder.withLength(4f).looping()
             .addAnimation("head",
                     new AnimationChannel(AnimationChannel.Targets.POSITION,
@@ -3129,5 +3130,4 @@ public class MedusaAnimationDefinitions2 {
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(4f, KeyframeAnimations.degreeVec(0f, -32.5f, 0f),
                                     AnimationChannel.Interpolations.LINEAR))).build();
-
 }

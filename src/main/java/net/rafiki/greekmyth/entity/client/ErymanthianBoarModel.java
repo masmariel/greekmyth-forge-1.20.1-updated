@@ -110,6 +110,7 @@ public class ErymanthianBoarModel<T extends ErymanthianBoarEntity> extends Hiera
 
 		this.animateWalk(ErymanthianBoarAnimationDefinitions.ERYMANTHIAN_BOAR_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		this.animate(entity.idleAnimationState, ErymanthianBoarAnimationDefinitions.ERYMANTHIAN_BOAR_IDLE, ageInTicks, 1f);
+		this.animate(entity.attackAnimationState, ErymanthianBoarAnimationDefinitions.ERYMANTHIAN_BOAR_ATTACK, ageInTicks, 1f);
 	}
 
 	private void applyHeadRotation(ErymanthianBoarEntity pEntity, float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {
