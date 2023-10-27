@@ -11,57 +11,27 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 20,
-          "name": "minecraft:saddle"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 15,
+          "weight": 2,
           "name": "minecraft:golden_apple"
         },
         {
           "type": "minecraft:item",
-          "weight": 2,
-          "name": "minecraft:enchanted_golden_apple"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 2,
-          "name": "minecraft:music_disc_otherside"
-        },
-        {
-          "type": "minecraft:item",
           "weight": 15,
-          "name": "minecraft:music_disc_13"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 15,
-          "name": "minecraft:music_disc_cat"
+          "name": "greekmyth:bronze_pickaxe"
         },
         {
           "type": "minecraft:item",
           "weight": 20,
-          "name": "minecraft:name_tag"
+          "name": "minecraft:white_wool"
         },
         {
           "type": "minecraft:item",
           "weight": 10,
-          "name": "minecraft:golden_horse_armor"
+          "name": "greekmyth:bronze_horse_armor"
         },
         {
           "type": "minecraft:item",
-          "weight": 15,
-          "name": "minecraft:iron_horse_armor"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "minecraft:diamond_horse_armor"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 10,
+          "weight": 2,
           "name": "minecraft:book",
           "functions": [
             {
@@ -113,13 +83,13 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 20,
-          "name": "minecraft:bread"
+          "weight": 15,
+          "name": "minecraft:bone_meal"
         },
         {
           "type": "minecraft:item",
-          "weight": 20,
-          "name": "minecraft:wheat",
+          "weight": 25,
+          "name": "greekmyth:bronze_ingot",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -140,23 +110,7 @@
         {
           "type": "minecraft:item",
           "weight": 15,
-          "name": "minecraft:redstone",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 4
-              },
-              "add": false
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 15,
-          "name": "minecraft:coal",
+          "name": "minecraft:mutton",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -172,7 +126,7 @@
         {
           "type": "minecraft:item",
           "weight": 10,
-          "name": "minecraft:melon_seeds",
+          "name": "minecraft:mutton",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -189,22 +143,6 @@
           "type": "minecraft:item",
           "weight": 10,
           "name": "minecraft:pumpkin_seeds",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 2,
-                "max": 4
-              },
-              "add": false
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 10,
-          "name": "minecraft:beetroot_seeds",
           "functions": [
             {
               "function": "minecraft:set_count",
