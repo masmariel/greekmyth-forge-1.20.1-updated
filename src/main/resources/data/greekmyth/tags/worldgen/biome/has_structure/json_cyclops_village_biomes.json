@@ -5,12 +5,13 @@
   "values": [
     "#minecraft:is_jungle",
     "#minecraft:is_taiga",
-    "minecraft:desert",
     "minecraft:plains",
     "minecraft:snowy_plains",
     "minecraft:sunflower_plains",
     "minecraft:savanna",
     "minecraft:meadow",
-    "minecraft:cherry_grove"
+    "minecraft:cherry_grove",
+    "minecraft:dark_forest",
+    "minecraft:forest"
   ]
 }
