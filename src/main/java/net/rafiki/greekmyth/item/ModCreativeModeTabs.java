@@ -195,6 +195,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CALYDONIAN_BOAR_SPAWN_EGG.get());
                         output.accept(ModItems.ERYMANTHIAN_BOAR_SPAWN_EGG.get());
                         output.accept(ModItems.MEDUSA_SPAWN_EGG.get());
+                        output.accept(ModItems.CYCLOPS_SPAWN_EGG.get());
 
                     }).build());
 

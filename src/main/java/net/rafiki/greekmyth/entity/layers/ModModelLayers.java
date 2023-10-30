@@ -11,4 +11,6 @@ public class ModModelLayers {
             new ResourceLocation(GreekMyth.MOD_ID, "calydonian_boar_layer"), "calydonian_boar_layer");
     public static final ModelLayerLocation ERYMANTHIAN_BOAR_LAYER = new ModelLayerLocation(
             new ResourceLocation(GreekMyth.MOD_ID, "erymanthian_boar_layer"), "erymanthian_boar_layer");
+    public static final ModelLayerLocation CYCLOPS_LAYER = new ModelLayerLocation(
+            new ResourceLocation(GreekMyth.MOD_ID, "cyclops_layer"), "cyclops_layer");
 }

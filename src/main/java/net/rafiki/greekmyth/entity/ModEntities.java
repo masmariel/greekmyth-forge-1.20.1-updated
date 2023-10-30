@@ -8,6 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rafiki.greekmyth.GreekMyth;
 import net.rafiki.greekmyth.entity.custom.CalydonianBoarEntity;
+import net.rafiki.greekmyth.entity.custom.CyclopsEntity;
 import net.rafiki.greekmyth.entity.custom.ErymanthianBoarEntity;
 import net.rafiki.greekmyth.entity.custom.MedusaEntity;
 
@@ -24,6 +25,10 @@ public class ModEntities {
     public static final RegistryObject<EntityType<ErymanthianBoarEntity>> ERYMANTHIAN_BOAR =
             ENTITY_TYPES.register("erymanthian_boar", () -> EntityType.Builder.of(ErymanthianBoarEntity::new, MobCategory.CREATURE)
                     .sized(4f, 2.25f).build("erymanthian_boar"));
+
+    public static final RegistryObject<EntityType<CyclopsEntity>> CYCLOPS =
+            ENTITY_TYPES.register("cyclops", () -> EntityType.Builder.of(CyclopsEntity::new, MobCategory.MONSTER)
+                    .sized(1.2f, 3.2f).build("cyclops"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

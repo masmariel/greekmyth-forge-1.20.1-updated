@@ -17,6 +17,7 @@ import net.rafiki.greekmyth.effect.ModEffects;
 import net.rafiki.greekmyth.enchantment.ModEnchantments;
 import net.rafiki.greekmyth.entity.ModEntities;
 import net.rafiki.greekmyth.entity.client.CalydonianBoarRenderer;
+import net.rafiki.greekmyth.entity.client.CyclopsRenderer;
 import net.rafiki.greekmyth.entity.client.ErymanthianBoarRenderer;
 import net.rafiki.greekmyth.entity.client.MedusaRenderer;
 import net.rafiki.greekmyth.item.ModCreativeModeTabs;
@@ -99,6 +100,8 @@ public class GreekMyth
                 EntityRenderers.register(ModEntities.ERYMANTHIAN_BOAR.get(), ErymanthianBoarRenderer::new);
                 EntityRenderers.register(ModEntities.CALYDONIAN_BOAR.get(), CalydonianBoarRenderer::new);
                 EntityRenderers.register(ModEntities.MEDUSA.get(), MedusaRenderer::new);
+                EntityRenderers.register(ModEntities.CYCLOPS.get(), CyclopsRenderer::new);
+
 
             });
         }
