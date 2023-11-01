@@ -51,12 +51,14 @@ public class CyclopsModel<T extends CyclopsEntity> extends HierarchicalModel<T> 
 	this.root().getAllParts().forEach(ModelPart::resetPose);
 	this.animateWalk(CyclopsAnimationDefinition.CYCLOPS_WALK,limbSwing,limbSwingAmount, 2f, 2.5f);
 	this.animate(entity.idleAnimationState, CyclopsAnimationDefinition.CYCLOPS_IDLE,ageInTicks, 1f);
+	this.animate(entity.attackAnimationState, CyclopsAnimationDefinition.CYCLOPS_ATTACK, ageInTicks, 1f);
+
 	this.applyHeadRotation(entity, netHeadYaw, headPitch, ageInTicks);
 
 	}
 	private void applyHeadRotation(CyclopsEntity pEntity, float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {
-		pNetHeadYaw = Mth.clamp(pNetHeadYaw, -30.0F, 30.0F);
-		pHeadPitch = Mth.clamp(pHeadPitch, -25.0F, 45.0F);
+		pNetHeadYaw = Mth.clamp(pNetHeadYaw, -1f, 1f);
+		pHeadPitch = Mth.clamp(pHeadPitch, -1.0F, 1.0F);
 
 		this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180F);
 		this.head.xRot = pHeadPitch * ((float)Math.PI / 180F);
