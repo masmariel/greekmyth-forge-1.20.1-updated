@@ -57,11 +57,15 @@ public class CyclopsModel<T extends CyclopsEntity> extends HierarchicalModel<T> 
 
 	}
 	private void applyHeadRotation(CyclopsEntity pEntity, float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {
-		pNetHeadYaw = Mth.clamp(pNetHeadYaw, -1f, 1f);
-		pHeadPitch = Mth.clamp(pHeadPitch, -1.0F, 1.0F);
+		//pNetHeadYaw = Mth.clamp(pNetHeadYaw, -1f, 1f);
+		//pHeadPitch = Mth.clamp(pHeadPitch, -1.0F, 1.0F);
 
 		this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180F);
 		this.head.xRot = pHeadPitch * ((float)Math.PI / 180F);
+
+
+
+
 	}
 
 
