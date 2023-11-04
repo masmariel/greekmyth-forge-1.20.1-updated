@@ -19,7 +19,9 @@ import net.rafiki.greekmyth.entity.ModEntities;
 import net.rafiki.greekmyth.entity.ai.CyclopsAttackGoal;
 import org.jetbrains.annotations.Nullable;
 
-public class CyclopsEntity extends Animal {
+import java.nio.file.Path;
+
+public class CyclopsEntity extends PathfinderMob {
 
     private static final EntityDataAccessor<Boolean> ATTACKING = SynchedEntityData.defineId(CyclopsEntity.class, EntityDataSerializers.BOOLEAN);
 
@@ -29,7 +31,7 @@ public class CyclopsEntity extends Animal {
     public final AnimationState attackAnimationState = new AnimationState();
     public int attackAnimationTimeout = 0;
 
-    public CyclopsEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+    public CyclopsEntity(EntityType<? extends PathfinderMob> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
@@ -48,7 +50,7 @@ public class CyclopsEntity extends Animal {
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Animal.createLivingAttributes().add(Attributes.MAX_HEALTH, 150D)
+        return PathfinderMob.createLivingAttributes().add(Attributes.MAX_HEALTH, 150D)
                 .add(Attributes.MOVEMENT_SPEED, 1D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
@@ -58,10 +60,10 @@ public class CyclopsEntity extends Animal {
     }
 
     @Nullable
-    @Override
-    public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-        return ModEntities.CYCLOPS.get().create(pLevel);
-    }
+    //@Override
+    //public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
+    //    return ModEntities.CYCLOPS.get().create(pLevel);
+    //}
 
     private void setupAnimationStates() {
         if (this.idleAnimationTimeout <= 0) {
