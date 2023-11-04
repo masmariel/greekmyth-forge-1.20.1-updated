@@ -3,7 +3,6 @@ package net.rafiki.greekmyth.entity.custom;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -12,14 +11,10 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.rafiki.greekmyth.entity.ModEntities;
 import net.rafiki.greekmyth.entity.ai.CyclopsAttackGoal;
 import org.jetbrains.annotations.Nullable;
-
-import java.nio.file.Path;
 
 public class CyclopsEntity extends PathfinderMob {
 
@@ -40,8 +35,6 @@ public class CyclopsEntity extends PathfinderMob {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
         this.goalSelector.addGoal(1, new CyclopsAttackGoal(this, 1.0D, true));
-
-
         this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 5));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
@@ -51,19 +44,20 @@ public class CyclopsEntity extends PathfinderMob {
 
     public static AttributeSupplier.Builder createAttributes() {
         return PathfinderMob.createLivingAttributes().add(Attributes.MAX_HEALTH, 150D)
-                .add(Attributes.MOVEMENT_SPEED, 1D)
+                .add(Attributes.MOVEMENT_SPEED, 0.25D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
                 .add(Attributes.ATTACK_DAMAGE, 12f)
-                .add(Attributes.ATTACK_SPEED, 1.5D)
-                .add(Attributes.ATTACK_KNOCKBACK, 2D);
+                .add(Attributes.ATTACK_SPEED, 1.0D)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 1.0D)
+                .add(Attributes.ATTACK_KNOCKBACK, 1.0D);
     }
 
-    @Nullable
-    //@Override
-    //public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-    //    return ModEntities.CYCLOPS.get().create(pLevel);
-    //}
+    /*@Nullable
+    @Override
+    public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
+        return ModEntities.CYCLOPS.get().create(pLevel);
+    }*/
 
     private void setupAnimationStates() {
         if (this.idleAnimationTimeout <= 0) {

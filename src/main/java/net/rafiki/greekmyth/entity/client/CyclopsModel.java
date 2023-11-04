@@ -49,7 +49,7 @@ public class CyclopsModel<T extends CyclopsEntity> extends HierarchicalModel<T> 
 	@Override
 	public void setupAnim(CyclopsEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 	this.root().getAllParts().forEach(ModelPart::resetPose);
-	this.animateWalk(CyclopsAnimationDefinition.CYCLOPS_WALK,limbSwing,limbSwingAmount, 1.5f, 1.5f);
+	this.animateWalk(CyclopsAnimationDefinition.CYCLOPS_WALK,limbSwing,limbSwingAmount, 2f, 2.5f);
 	this.animate(entity.idleAnimationState, CyclopsAnimationDefinition.CYCLOPS_IDLE,ageInTicks, 1f);
 	this.animate(entity.attackAnimationState, CyclopsAnimationDefinition.CYCLOPS_ATTACK, ageInTicks, 1f);
 

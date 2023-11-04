@@ -9,8 +9,8 @@ import org.jetbrains.annotations.NotNull;
 
 public class CyclopsAttackGoal extends MeleeAttackGoal {
     private final CyclopsEntity entity;
-    private int attackDelay = 10;
-    private int ticksUntilNextAttack = 10;
+    private int attackDelay = 15;
+    private int ticksUntilNextAttack = 15;
     private boolean shouldCountTillNextAttack = false;
     public CyclopsAttackGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
         super(pMob, pSpeedModifier, pFollowingTargetEvenIfNotSeen);
