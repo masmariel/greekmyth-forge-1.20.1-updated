@@ -37,16 +37,19 @@ public class CyclopsEntity extends Animal {
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        this.goalSelector.addGoal(1, new CyclopsAttackGoal(this, 2.0D, true));
+        this.goalSelector.addGoal(1, new CyclopsAttackGoal(this, 1.0D, true));
+
+
         this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 5));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+
 
     }
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes().add(Attributes.MAX_HEALTH, 150D)
-                .add(Attributes.MOVEMENT_SPEED, 3D)
+                .add(Attributes.MOVEMENT_SPEED, 1D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
                 .add(Attributes.ATTACK_DAMAGE, 12f)

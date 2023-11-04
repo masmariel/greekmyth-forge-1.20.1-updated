@@ -40,29 +40,37 @@ public class CyclopsAnimationDefinition {
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(1f, KeyframeAnimations.degreeVec(-45f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR))).build();
-    public static final AnimationDefinition CYCLOPS_WALK = AnimationDefinition.Builder.withLength(1.5f).looping()
+    public static final AnimationDefinition CYCLOPS_WALK = AnimationDefinition.Builder.withLength(0.8343334f).looping()
             .addAnimation("right_arm",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
                             new Keyframe(0f, KeyframeAnimations.degreeVec(-27.5f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(0.375f, KeyframeAnimations.degreeVec(27.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.8343334f, KeyframeAnimations.degreeVec(-27.5f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR)))
             .addAnimation("left_arm",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
                             new Keyframe(0f, KeyframeAnimations.degreeVec(27.5f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(0.375f, KeyframeAnimations.degreeVec(-27.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.8343334f, KeyframeAnimations.degreeVec(27.5f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR)))
             .addAnimation("left_leg",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
                             new Keyframe(0f, KeyframeAnimations.degreeVec(-27.5f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(0.375f, KeyframeAnimations.degreeVec(27.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.8343334f, KeyframeAnimations.degreeVec(-27.5f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR)))
             .addAnimation("right_leg",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
                             new Keyframe(0f, KeyframeAnimations.degreeVec(27.5f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(0.375f, KeyframeAnimations.degreeVec(-27.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.8343334f, KeyframeAnimations.degreeVec(27.5f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR))).build();
 }

@@ -5,6 +5,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.rafiki.greekmyth.entity.custom.CyclopsEntity;
+import org.jetbrains.annotations.NotNull;
 
 public class CyclopsAttackGoal extends MeleeAttackGoal {
     private final CyclopsEntity entity;
@@ -36,6 +37,10 @@ public class CyclopsAttackGoal extends MeleeAttackGoal {
             entity.setAttacking(false);
             entity.attackAnimationTimeout = 0;
         }
+    }
+    @Override
+    protected double getAttackReachSqr(LivingEntity pEnemy) {
+        return this.mob instanceof CyclopsEntity ? 30.0D : super.getAttackReachSqr(entity);
     }
 
     protected boolean isTimeToStartAttackAnimation() {
