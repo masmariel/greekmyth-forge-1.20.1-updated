@@ -8,8 +8,8 @@ import net.rafiki.greekmyth.entity.custom.CyclopsEntity;
 
 public class CyclopsAttackGoal extends MeleeAttackGoal {
     private final CyclopsEntity entity;
-    private int attackDelay = 30;
-    private int ticksUntilNextAttack = 30;
+    private int attackDelay = 10;
+    private int ticksUntilNextAttack = 10;
     private boolean shouldCountTillNextAttack = false;
     public CyclopsAttackGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
         super(pMob, pSpeedModifier, pFollowingTargetEvenIfNotSeen);
