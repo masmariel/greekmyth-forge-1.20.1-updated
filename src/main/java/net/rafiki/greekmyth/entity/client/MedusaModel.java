@@ -156,16 +156,18 @@ public class MedusaModel<T extends MedusaEntity> extends HierarchicalModel<T> {
 	@Override
 	public void setupAnim(MedusaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
-		this.applyHeadRotation(entity, netHeadYaw, headPitch, ageInTicks);
 
 		this.animateWalk(MedusaAnimationDefinitions.MEDUSA_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
-		this.animate(entity.idleAnimationState, MedusaAnimationDefinitions.MEDUSA_IDLE, ageInTicks, 1f);
+		//this.animate(entity.idleAnimationState, MedusaAnimationDefinitions.MEDUSA_IDLE, ageInTicks, 1f);
 		this.animate(entity.attackAnimationState, MedusaAnimationDefinitions.MEDUSA_ATTACK, ageInTicks, 1f);
+
+		this.applyHeadRotation(entity, netHeadYaw, headPitch, ageInTicks);
+
 	}
 
 	private void applyHeadRotation(MedusaEntity pEntity, float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {
-		pNetHeadYaw = Mth.clamp(pNetHeadYaw, -30.0F, 30.0F);
-		pHeadPitch = Mth.clamp(pHeadPitch, -25.0F, 45.0F);
+		//pNetHeadYaw = Mth.clamp(pNetHeadYaw, -30.0F, 30.0F);
+		//pHeadPitch = Mth.clamp(pHeadPitch, -25.0F, 45.0F);
 
 		this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180F);
 		this.head.xRot = pHeadPitch * ((float)Math.PI / 180F);

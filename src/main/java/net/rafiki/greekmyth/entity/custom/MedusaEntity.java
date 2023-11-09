@@ -10,13 +10,15 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.rafiki.greekmyth.entity.ai.ErymanthianBoarAttackGoal;
 import net.rafiki.greekmyth.entity.ai.MedusaAttackGoal;
 
 public class MedusaEntity extends PathfinderMob {
+
     private static final EntityDataAccessor<Boolean> ATTACKING = SynchedEntityData.defineId(MedusaEntity.class, EntityDataSerializers.BOOLEAN);
+
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+
     public final AnimationState attackAnimationState = new AnimationState();
     public int attackAnimationTimeout = 0;
 
@@ -28,22 +30,30 @@ public class MedusaEntity extends PathfinderMob {
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        this.goalSelector.addGoal(1, new MedusaAttackGoal(this, 1.0D, false));
-        this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-        super.registerGoals();
+        this.goalSelector.addGoal(1, new MedusaAttackGoal(this, 1.0D, true));
+        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 5));
+        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+
+
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return PathfinderMob.createLivingAttributes().add(Attributes.MAX_HEALTH, 300D)
+        return PathfinderMob.createLivingAttributes().add(Attributes.MAX_HEALTH, 75D)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D)
-                .add(Attributes.FOLLOW_RANGE, 35D)
-                .add(Attributes.ARMOR_TOUGHNESS, 0.3f)
-                .add(Attributes.ATTACK_DAMAGE, 20f)
-                .add(Attributes.ATTACK_SPEED, 1.5D)
-                .add(Attributes.KNOCKBACK_RESISTANCE, 1D)
-                .add(Attributes.ATTACK_KNOCKBACK, 1D);
+                .add(Attributes.FOLLOW_RANGE, 24D)
+                .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
+                .add(Attributes.ATTACK_DAMAGE, 12f)
+                .add(Attributes.ATTACK_SPEED, 1.0D)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 1.0D)
+                .add(Attributes.ATTACK_KNOCKBACK, 1.0D);
     }
+
+    /*@Nullable
+    @Override
+    public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
+        return ModEntities.CYCLOPS.get().create(pLevel);
+    }*/
 
     private void setupAnimationStates() {
         if (this.idleAnimationTimeout <= 0) {
@@ -63,7 +73,6 @@ public class MedusaEntity extends PathfinderMob {
         if (!this.isAttacking()) {
             attackAnimationState.stop();
         }
-
     }
 
     protected void updateWalkAnimation(float v) {
@@ -85,18 +94,15 @@ public class MedusaEntity extends PathfinderMob {
             this.setupAnimationStates();
         }
     }
-
     public void setAttacking(boolean attacking) {
         this.entityData.set(ATTACKING, attacking);
     }
-
     public boolean isAttacking() {
         return this.entityData.get(ATTACKING);
     }
-
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
-        this.entityData.define(ATTACKING, false);
+        this.entityData.define(ATTACKING,false);
     }
 }

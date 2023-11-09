@@ -40,7 +40,7 @@ public class CyclopsAttackGoal extends MeleeAttackGoal {
     }
     @Override
     protected double getAttackReachSqr(LivingEntity pEnemy) {
-        return this.mob instanceof CyclopsEntity ? 30.0D : super.getAttackReachSqr(entity);
+        return this.mob instanceof CyclopsEntity ? 25.0D : super.getAttackReachSqr(entity);
     }
 
     protected boolean isTimeToStartAttackAnimation() {

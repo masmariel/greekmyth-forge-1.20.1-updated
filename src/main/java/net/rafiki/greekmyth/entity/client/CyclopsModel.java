@@ -5,17 +5,16 @@ package net.rafiki.greekmyth.entity.client;// Made with Blockbench 4.8.3
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HierarchicalModel;
-import net.minecraft.client.model.Model;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.util.Mth;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.rafiki.greekmyth.entity.animations.CyclopsAnimationDefinition;
-import net.rafiki.greekmyth.entity.animations.MedusaAnimationDefinitions;
 import net.rafiki.greekmyth.entity.custom.CyclopsEntity;
-import net.rafiki.greekmyth.entity.custom.MedusaEntity;
+
+import java.util.function.Predicate;
 
 public class CyclopsModel<T extends CyclopsEntity> extends HierarchicalModel<T> {
 	private final ModelPart cyclops;

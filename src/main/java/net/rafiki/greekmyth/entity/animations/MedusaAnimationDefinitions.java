@@ -7,7 +7,7 @@ import net.minecraft.client.animation.KeyframeAnimations;
 
 public class MedusaAnimationDefinitions {
 
-    public static final AnimationDefinition MEDUSA_IDLE = AnimationDefinition.Builder.withLength(5.041677f).looping()
+    /*public static final AnimationDefinition MEDUSA_IDLE = AnimationDefinition.Builder.withLength(5.041677f).looping()
             .addAnimation("tail2",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
                             new Keyframe(2.5f, KeyframeAnimations.degreeVec(0f, -5f, 0f),
@@ -1231,7 +1231,7 @@ public class MedusaAnimationDefinitions {
                             new Keyframe(4.583433f, KeyframeAnimations.degreeVec(17.5f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(4.958343f, KeyframeAnimations.degreeVec(-17.5f, 0f, 0f),
-                                    AnimationChannel.Interpolations.LINEAR))).build();
+                                    AnimationChannel.Interpolations.LINEAR))).build();*/
     public static final AnimationDefinition MEDUSA_WALK = AnimationDefinition.Builder.withLength(4f).looping()
             .addAnimation("rightarm",
                     new AnimationChannel(AnimationChannel.Targets.POSITION,

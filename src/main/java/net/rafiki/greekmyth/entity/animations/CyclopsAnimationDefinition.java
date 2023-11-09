@@ -73,4 +73,5 @@ public class CyclopsAnimationDefinition {
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(0.8343334f, KeyframeAnimations.degreeVec(27.5f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR))).build();
+
 }

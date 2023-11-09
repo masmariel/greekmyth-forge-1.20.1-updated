@@ -11,14 +11,23 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.NonTameRandomTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.TargetGoal;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.rafiki.greekmyth.entity.ai.CyclopsAttackGoal;
-import org.jetbrains.annotations.Nullable;
+
+import java.util.function.Predicate;
 
 public class CyclopsEntity extends PathfinderMob {
 
     private static final EntityDataAccessor<Boolean> ATTACKING = SynchedEntityData.defineId(CyclopsEntity.class, EntityDataSerializers.BOOLEAN);
+
+    private static final Predicate<LivingEntity> PREY_SELECTOR = (p_289448_) -> {
+        EntityType<?> entitytype = p_289448_.getType();
+        return entitytype == EntityType.SHEEP || entitytype == EntityType.RABBIT || entitytype == EntityType.FOX;
+    };
 
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
@@ -39,11 +48,10 @@ public class CyclopsEntity extends PathfinderMob {
         this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 5));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 
-
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return PathfinderMob.createLivingAttributes().add(Attributes.MAX_HEALTH, 150D)
+        return PathfinderMob.createLivingAttributes().add(Attributes.MAX_HEALTH, 75D)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
