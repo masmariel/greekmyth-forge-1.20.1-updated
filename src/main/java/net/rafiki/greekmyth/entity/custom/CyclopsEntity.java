@@ -11,9 +11,6 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.NonTameRandomTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.TargetGoal;
-import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.rafiki.greekmyth.entity.ai.CyclopsAttackGoal;
@@ -28,7 +25,7 @@ public class CyclopsEntity extends PathfinderMob {
         EntityType<?> entitytype = p_289448_.getType();
         return entitytype == EntityType.SHEEP || entitytype == EntityType.RABBIT || entitytype == EntityType.FOX;
     };
-
+//tried to make cyclops target sheep like wolf^Did not try very hard.
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
@@ -37,6 +34,14 @@ public class CyclopsEntity extends PathfinderMob {
 
     public CyclopsEntity(EntityType<? extends PathfinderMob> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+    }
+    @Override
+    public boolean shouldDropExperience() {
+        return true;
+    }
+        public int getExperienceReward() {
+            this.xpReward = (int)((double)this.xpReward * 4.5D);
+            return super.getExperienceReward();
     }
 
     @Override
@@ -57,7 +62,7 @@ public class CyclopsEntity extends PathfinderMob {
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
                 .add(Attributes.ATTACK_DAMAGE, 12f)
                 .add(Attributes.ATTACK_SPEED, 1.0D)
-                .add(Attributes.KNOCKBACK_RESISTANCE, 1.0D)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 0.75D)
                 .add(Attributes.ATTACK_KNOCKBACK, 1.0D);
     }
 
