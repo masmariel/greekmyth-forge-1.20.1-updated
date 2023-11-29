@@ -11,13 +11,14 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.rafiki.greekmyth.entity.ai.CyclopsAttackGoal;
 
 import java.util.function.Predicate;
 
-public class CyclopsEntity extends PathfinderMob {
+public class CyclopsEntity extends Monster {
 
     private static final EntityDataAccessor<Boolean> ATTACKING = SynchedEntityData.defineId(CyclopsEntity.class, EntityDataSerializers.BOOLEAN);
 
@@ -28,19 +29,15 @@ public class CyclopsEntity extends PathfinderMob {
 //tried to make cyclops target sheep like wolf^Did not try very hard.
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
-
     public final AnimationState attackAnimationState = new AnimationState();
     public int attackAnimationTimeout = 0;
 
-    public CyclopsEntity(EntityType<? extends PathfinderMob> pEntityType, Level pLevel) {
+    public CyclopsEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
-    @Override
-    public boolean shouldDropExperience() {
-        return true;
-    }
-        public int getExperienceReward() {
-            this.xpReward = (int)((double)this.xpReward * 4.5D);
+
+    public int getExperienceReward() {
+            this.xpReward = (int)((double)this.xpReward * 10.5D);
             return super.getExperienceReward();
     }
 
@@ -56,11 +53,11 @@ public class CyclopsEntity extends PathfinderMob {
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return PathfinderMob.createLivingAttributes().add(Attributes.MAX_HEALTH, 75D)
+        return PathfinderMob.createLivingAttributes().add(Attributes.MAX_HEALTH, 100D)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
-                .add(Attributes.ATTACK_DAMAGE, 12f)
+                .add(Attributes.ATTACK_DAMAGE, 13f)
                 .add(Attributes.ATTACK_SPEED, 1.0D)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.75D)
                 .add(Attributes.ATTACK_KNOCKBACK, 1.0D);

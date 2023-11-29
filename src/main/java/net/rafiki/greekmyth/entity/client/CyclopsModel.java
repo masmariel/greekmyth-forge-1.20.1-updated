@@ -9,12 +9,8 @@ import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
 import net.rafiki.greekmyth.entity.animations.CyclopsAnimationDefinition;
 import net.rafiki.greekmyth.entity.custom.CyclopsEntity;
-
-import java.util.function.Predicate;
 
 public class CyclopsModel<T extends CyclopsEntity> extends HierarchicalModel<T> {
 	private final ModelPart cyclops;
